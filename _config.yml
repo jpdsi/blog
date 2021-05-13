@@ -3,29 +3,43 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Title (display)
-title: Japan CSS Support Example Blog
+title: Japan Developer Support Internet Team Blog
 # Sub Title (display)
-subtitle: Japan CSS Support Example Blog
+subtitle: '日本マイクロソフトの Azure Bot Service / Internet Information Services (IIS) / Internet Explorer / Microsoft Edge に関するサポート情報のブログです。'
 # Description
-description: Japan CSS Support Example Blog
+description: '日本マイクロソフトの Azure Bot Service / Internet Information Services (IIS) / Internet Explorer / Microsoft Edge に関するサポート情報のブログです。'
 
 # Keywords
 keywords:
-  - Information
+  - Azure Bot Service
+  - Bot
+  - Bot Service
+  - Bot Framework
+  - IIS
+  - Internet Information Services
+  - IE
+  - Internet Explorer
+  - Edge
+  - Microsoft Edge
 
-author: CSS Japan
+author: Developer Support Internet Japan
 
 # Tag (hexo helper)
 root_tag_generator:
   root_tag_names:
-    - Information
+    - Azure Bot Service
+    - Internet Information Services
+    - ASP.NET
+    - ASP.NET Core
+    - Internet Explorer
+    - Microsoft Edge
   sub_tag_limit: 20
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://cssjpn.github.io/example-blog/
+url: https://jpdsi.github.io/blog-test/
 github:
-  url: https://github.com/cssjpn/blog-example/
+  url: https://github.com/jpdsi/blog-test/
   posts_dir: articles
   default_branch: main
 
@@ -44,7 +58,7 @@ deploy:
   branch: gh-pages
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }} [skip ci]"
 
-root: /blog/
+root: /blog-test
 permalink: :title/
 permalink_defaults: 
 
@@ -120,4 +134,4 @@ feed:
 # date: 2020-04-30 10:00
 # disableDisclaimer: true
 # ---
-disclaimer: ※本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。
+disclaimer: "なお、本ブログは弊社の公式見解ではなく、予告なく変更される場合があります。<br>もし公式な見解が必要な場合は、弊社ドキュメント (https://docs.microsoft.com/ や https://support.microsoft.com) をご参照いただく、もしくは私共サポートまでお問い合わせください。"
