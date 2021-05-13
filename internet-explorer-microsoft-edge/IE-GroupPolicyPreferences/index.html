@@ -9,45 +9,45 @@
   <meta name="description" content="※ これまで Japan IE Support Team Blog にて公開していた３つの記事を整理してまとめました。 Internet Explorer 関連の設定を、ドメインのグループ ポリシーを使用してクライアントに配布する方法についての紹介です。 以下の赤枠の部分についてを本記事で扱います。  基本設定ポリシーにて Internet Explorer 関連の設定を構成する場合は以下の 3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基本設定で Internet Explorer 関連の設定を配布する">
-<meta property="og:url" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/index.html">
+<meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
 <meta property="og:description" content="※ これまで Japan IE Support Team Blog にて公開していた３つの記事を整理してまとめました。 Internet Explorer 関連の設定を、ドメインのグループ ポリシーを使用してクライアントに配布する方法についての紹介です。 以下の赤枠の部分についてを本記事で扱います。  基本設定ポリシーにて Internet Explorer 関連の設定を構成する場合は以下の 3">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New2.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Connection.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-LAN.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Common.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Report.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Result.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Security.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory01.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory02.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory03.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory04.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory05.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory06.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory07.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory08.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut01.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut02.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut03.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut04.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut05.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut06.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New2.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Connection.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-LAN.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Common.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Report.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Result.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Security.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory01.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory02.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory03.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory04.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory05.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory06.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory07.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory08.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut01.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut02.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut03.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut04.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut05.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut06.png">
 <meta property="article:published_time" content="2020-04-19T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-13T11:38:42.229Z">
+<meta property="article:modified_time" content="2021-05-13T11:59:03.957Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Internet Explorer">
 <meta property="article:tag" content="基本設定">
 <meta property="article:tag" content="プロキシ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences.png">
+<meta name="twitter:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog" type="application/atom+xml">
   
@@ -80,9 +80,9 @@
         <a id="main-nav-toggle" class="nav-icon"></a>
         <div id="ms-logo"></div>
         
-          <a class="main-nav-link" href="/blog-test/">Home</a>
+          <a class="main-nav-link" href="/blog/">Home</a>
         
-          <a class="main-nav-link" href="/blog-test/archives">Archives</a>
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
         
         <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
       </nav>
@@ -92,7 +92,7 @@
         
       </nav>
       <div id="search-form-wrap">
-        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpdsi.github.io/blog-test"></form>
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpdsi.github.io/blog"></form>
       </div>
     </div>
     <div id="header-title" class="inner">
@@ -130,16 +130,16 @@
 </a>
         
         
-        <a href="https://github.com/jpdsi/blog-test/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+b6e23937-d608-5b77-8e14-d254a3f6b430%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A%E3%81%A7+Internet+Explorer+%E9%96%A2%E9%80%A3%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E9%85%8D%E5%B8%83%E3%81%99%E3%82%8B%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog-test%2Finternet-explorer-microsoft-edge%2FIE-GroupPolicyPreferences%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FIE-GroupPolicyPreferences.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog-test%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FIE-GroupPolicyPreferences.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+fa4d972b-40fb-5cbf-9656-bba77b60a196%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A%E3%81%A7+Internet+Explorer+%E9%96%A2%E9%80%A3%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E9%85%8D%E5%B8%83%E3%81%99%E3%82%8B%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2FIE-GroupPolicyPreferences%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FIE-GroupPolicyPreferences.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FIE-GroupPolicyPreferences.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/" data-id="ckomtjclx000m0mnx8pm4dejh" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/" data-id="ckomu9jp4000m0mtl4fxs3a1i" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>※ これまで Japan IE Support Team Blog にて公開していた３つの記事を整理してまとめました。</p>
 <p>Internet Explorer 関連の設定を、ドメインのグループ ポリシーを使用してクライアントに配布する方法についての紹介です。</p>
-<p>以下の赤枠の部分についてを本記事で扱います。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences.png" alt="GroupPolicyPreferences"></p>
+<p>以下の赤枠の部分についてを本記事で扱います。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences.png" alt="GroupPolicyPreferences"></p>
 <hr>
 <p>基本設定ポリシーにて Internet Explorer 関連の設定を構成する場合は以下の 3 つを使用します。</p>
 <ul>
@@ -156,10 +156,10 @@
 <li>[インターネット設定] を右クリックし、[新規作成] &gt; [Internet Explorer XX] (配布先のバージョン) を選択します。</li>
 </ol>
 <p>※ “Internet Explorer 11” という項目がありませんが、”Internet Explorer 10” を選択することで Internet Explorer 11 への配布が可能です。</p>
-<p><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New.png" alt="GroupPolicyPreferences-New"></p>
+<p><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New.png" alt="GroupPolicyPreferences-New"></p>
 <hr>
 <p><strong><font color="red">重要</font></strong><br><font color="red">各設定項目では『緑は配布する』/『赤は配布しない』を表しています。</font></p>
-<p><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png" alt="GroupPolicyPreferences-New1"></p>
+<p><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png" alt="GroupPolicyPreferences-New1"></p>
 <p>以下のようにファンクション キーで切り替えることができます。</p>
 <ul>
 <li>画面上の全項目を有効(全て緑)にする：F5</li>
@@ -172,37 +172,37 @@
 <p>それでは、例としてプロキシの設定を配布する手順を紹介します。</p>
 <p>なお、プロキシの設定については <a href="../LAN-Settings/">こちらの記事</a> で詳しく説明していますが、「よくあるお問い合わせ」に記載のとおりプロキシの情報はバイナリ データを含む複数のレジストリが自動的に同期をとりながら管理されています。<br>技術的な観点からは、これらのレジストリをまとめて配布することでプロキシの設定を行うことができますが、サポートされる方法としては、基本設定 - インターネット設定を利用することですので、以下の方法での対応をご検討ください。</p>
 <h3 id="インターネット設定の構成手順"><a href="#インターネット設定の構成手順" class="headerlink" title="インターネット設定の構成手順"></a>インターネット設定の構成手順</h3><ol>
-<li>上述の手順で設定画面を開きます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png" alt="GroupPolicyPreferences-New1"></li>
+<li>上述の手順で設定画面を開きます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New1.png" alt="GroupPolicyPreferences-New1"></li>
 </ol>
 <p>先ほどお伝えしたように『緑は配布する』/『赤は配布しない』を表しています。<br>今回はプロキシの設定だけを配布しようと考えていますので、F8 キーなどで画面上に見えている『緑』の項目を『赤』に切り替えます。</p>
-<p><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New2.png" alt="GroupPolicyPreferences-New2"></p>
+<p><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-New2.png" alt="GroupPolicyPreferences-New2"></p>
 <p><font color="red">繰り返しになりますが、全般タブを (緑の項目を目にしたあと) このまま “OK” ボタンで閉じると、[スタートアップ] の設定や [終了時に閲覧の履歴を削除する] の設定も配布対象となり、意図しない設定を配布してしまうことになるのでご注意ください。</font></p>
 <ol start="2">
-<li><p>次に [接続] タブを開きますが、先ほどと同様に『緑』の項目 “プロキシ サーバーを構成する…” を配布つもりがない時は以下のように『赤』に変更しておきます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Connection.png" alt="GroupPolicyPreferences-Connection"></p>
+<li><p>次に [接続] タブを開きますが、先ほどと同様に『緑』の項目 “プロキシ サーバーを構成する…” を配布つもりがない時は以下のように『赤』に変更しておきます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Connection.png" alt="GroupPolicyPreferences-Connection"></p>
 </li>
-<li><p>[LAN の設定] ボタンをクリックします。<br>この例では、自動構成スクリプトのアドレスを明示的に指定したものを配布することにします。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-LAN.png" alt="GroupPolicyPreferences-LAN"><br>pac の URL を入力し、F6 キーで『緑』にします。<br>※ [自動構成スクリプトを使用する] を構成する場合はアドレス欄を構成するのみで自動でチェックが入ります。</p>
+<li><p>[LAN の設定] ボタンをクリックします。<br>この例では、自動構成スクリプトのアドレスを明示的に指定したものを配布することにします。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-LAN.png" alt="GroupPolicyPreferences-LAN"><br>pac の URL を入力し、F6 キーで『緑』にします。<br>※ [自動構成スクリプトを使用する] を構成する場合はアドレス欄を構成するのみで自動でチェックが入ります。</p>
 </li>
 </ol>
 <p>ここでも、<font color="red">配布しない項目は『赤』にしておくこと</font>を忘れずに…</p>
 <ol start="4">
-<li><p>最後に、いま構成した設定をクライアント環境に　“一度だけ”　適用したい場合は、[共通]　タブにおいて [1 度だけ適用し、再適用しない] にチェックを入れます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Common.png" alt="GroupPolicyPreferences-Common"></p>
+<li><p>最後に、いま構成した設定をクライアント環境に　“一度だけ”　適用したい場合は、[共通]　タブにおいて [1 度だけ適用し、再適用しない] にチェックを入れます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Common.png" alt="GroupPolicyPreferences-Common"></p>
 </li>
-<li><p>[OK] で画面を閉じます。<br>実際に配布される項目は、グループ ポリシー オブジェクト (GPO) を選択した際に右側に表示される画面の [設定] タブにて確認できます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Report.png" alt="GroupPolicyPreferences-Report"></p>
+<li><p>[OK] で画面を閉じます。<br>実際に配布される項目は、グループ ポリシー オブジェクト (GPO) を選択した際に右側に表示される画面の [設定] タブにて確認できます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Report.png" alt="GroupPolicyPreferences-Report"></p>
 </li>
-<li><p>クライアントに配布されたプロキシの設定をみてみましょう。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Result.png" alt="GroupPolicyPreferences-Result"></p>
+<li><p>クライアントに配布されたプロキシの設定をみてみましょう。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Result.png" alt="GroupPolicyPreferences-Result"></p>
 </li>
 </ol>
 <p>[自動構成スクリプトを使用する] が、手順 3 で設定した pac の URL になっています。<br>[設定を自動的に検出する] は手順 3 で『赤』にしたのでユーザーが指定した設定が上書きされずに残されています。</p>
 <hr>
 <h2 id="レジストリ"><a href="#レジストリ" class="headerlink" title="レジストリ"></a>レジストリ</h2><p>次に基本設定でレジストリを配布してみます。<br>先ほどの『インターネット設定』はインターネット オプションと類似の設定画面を用いて配布項目を構成 / 配布できる非常に便利な項目ですが、セキュリティ ゾーン の URL の配布に対応していません。<br>(以下の画像のように[サイト]ボタンがグレーアウトしています)</p>
-<p><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Security.png" alt="GroupPolicyPreferences-Security"></p>
+<p><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/GroupPolicyPreferences-Security.png" alt="GroupPolicyPreferences-Security"></p>
 <p>
 <font color="red">
 ※ 管理用テンプレートにある「サイトとゾーンの割り当て一覧」を構成した場合、ユーザーが手動で設定した内容は無視され、本項目で設定した内容に強制されます。
 インターネット オプション上の当該の項目は、グレーアウトした状態でユーザーは変更できず、かつ、本項目で設定したサイト (ドメイン) のみが表示される動作となります。
 このため「サイトとゾーンの割り当て一覧」を使用するかどうかは、よく検討してください。
 </font>
-![AdministrativeTemplates](/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/AdministrativeTemplates.png)
+![AdministrativeTemplates](/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/AdministrativeTemplates.png)
 </p>
 
 <p>そこで、クライアント環境に対して『ユーザーが任意に変更可能な状態』でセキュリティ ゾーンの URL を配布したい場合は、基本設定の『レジストリ項目』を構成します。</p>
@@ -222,11 +222,11 @@
 <li><p>[レジストリ]を右クリックし、[新規作成] &gt; [レジストリ項目] を選択します。</p>
 </li>
 </ol>
-<p><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory.png" alt="Registory"></p>
+<p><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory.png" alt="Registory"></p>
 <ol start="5">
-<li><p>最初に [全般タブ] が開かれます。[アクション] では既定の “更新” を、[ハイブ] は “HKEY_CURRENT_USER” を選択します。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory01.png" alt="Registory01"></p>
+<li><p>最初に [全般タブ] が開かれます。[アクション] では既定の “更新” を、[ハイブ] は “HKEY_CURRENT_USER” を選択します。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory01.png" alt="Registory01"></p>
 </li>
-<li><p>[キーのパス] 項目の […] ボタンをクリックし、[レジストリ項目ブラウザー] から予め登録したドメインを選択します。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory02.png" alt="Registory02"></p>
+<li><p>[キーのパス] 項目の […] ボタンをクリックし、[レジストリ項目ブラウザー] から予め登録したドメインを選択します。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory02.png" alt="Registory02"></p>
 </li>
 </ol>
 <p>※ この例ではレジストリ キーは以下のとおりです。<br>HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\microsoft.com\www</p>
@@ -238,21 +238,21 @@
 <p>なお、IE ESC機能についての詳細は以下をご覧ください。</p>
 <p>Internet Explorer セキュリティ強化の構成による Internet Explorer のユーザー操作の変更<br><a href="https://support.microsoft.com/ja-jp/help/815141/ie-enhanced-security-configuration-changes-browsing-experience" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/815141/ie-enhanced-security-configuration-changes-browsing-experience</a><br></font></p>
 <ol start="7">
-<li>画面下部に表示される [名前] / [種類] / [データ] 欄の [名前] をクリック (反転します) し、[選択] ボタンを押下します。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory03.png" alt="Registory03"></li>
+<li>画面下部に表示される [名前] / [種類] / [データ] 欄の [名前] をクリック (反転します) し、[選択] ボタンを押下します。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory03.png" alt="Registory03"></li>
 </ol>
-<p>自動的に値が入力されます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory04.png" alt="Registory04"><br>※ 手順 6 をせずに直接入力することも可能ですが、パスや値を間違えないように気を付けてください。</p>
+<p>自動的に値が入力されます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory04.png" alt="Registory04"><br>※ 手順 6 をせずに直接入力することも可能ですが、パスや値を間違えないように気を付けてください。</p>
 <font color="red">
 注意
 
 <p>IE ESC が有効な場合、手順 6 で “～～～ZoneMap\EscDomains” のパスを選択していると思いますが、クライアント OS には IE ESC が存在しないため、配布先のパスは “～～～ZoneMap\EscDomains” ではなく “～～～ZoneMap\Domains” にする必要があります。<br>そのため、自動的に入力されたキーのパスで、EscDomains の部分を Domains に書き換えてください。<br></font></p>
 <ol start="8">
-<li><p>クライアント環境に “一度だけ” 適用したい場合は、[共通] タブにおいて [1 度だけ適用し、再適用しない] にチェックを入れます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory05.png" alt="Registory05"></p>
+<li><p>クライアント環境に “一度だけ” 適用したい場合は、[共通] タブにおいて [1 度だけ適用し、再適用しない] にチェックを入れます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory05.png" alt="Registory05"></p>
 </li>
-<li><p>[OK] で設定画面を閉じると、作成した設定が登録されます。(ログオン等の GPO 適用のタイミングでクライアント環境に値が反映されるようになります)<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory06.png" alt="Registory06"></p>
+<li><p>[OK] で設定画面を閉じると、作成した設定が登録されます。(ログオン等の GPO 適用のタイミングでクライアント環境に値が反映されるようになります)<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory06.png" alt="Registory06"></p>
 </li>
-<li><p>実際に配布される項目は、グループ ポリシー オブジェクト (GPO) を選択した際に右側に表示される画面の [設定] タブにて確認可能です。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory07.png" alt="Registory07"></p>
+<li><p>実際に配布される項目は、グループ ポリシー オブジェクト (GPO) を選択した際に右側に表示される画面の [設定] タブにて確認可能です。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory07.png" alt="Registory07"></p>
 </li>
-<li><p>クライアントに配布された信頼済みサイトの設定をみてみましょう。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory08.png" alt="Registory08"></p>
+<li><p>クライアントに配布された信頼済みサイトの設定をみてみましょう。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Registory08.png" alt="Registory08"></p>
 </li>
 </ol>
 <hr>
@@ -262,20 +262,20 @@
 </li>
 <li><p>[ユーザーの構成] &gt; [基本設定] &gt; [Windows の設定] &gt; [ショートカット] を選択します。</p>
 </li>
-<li><p>[ショートカット] を右クリックし、[新規作成] &gt; [ショートカット] を選択します。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut.png" alt="Shortcut"></p>
+<li><p>[ショートカット] を右クリックし、[新規作成] &gt; [ショートカット] を選択します。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut.png" alt="Shortcut"></p>
 </li>
-<li><p>最初に [全般タブ] が開かれます。[アクション] は既定の “更新” のままとします。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut01.png" alt="Shortcut01"></p>
+<li><p>最初に [全般タブ] が開かれます。[アクション] は既定の “更新” のままとします。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut01.png" alt="Shortcut01"></p>
 </li>
 </ol>
-<p>[名前] は %userprofile%\Favorites\ &lt;ショートカット名&gt; と入力します。<br>[ターゲットの種類] は “URL” を、[場所] は “&lt;完全なパスの指定&gt;” を選択します。<br>[ターゲット URL] に URL (この例では <a href="https://www.microsoft.com" target="_blank" rel="noopener">https://www.microsoft.com</a>) を指定します。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut02.png" alt="Shortcut02"></p>
+<p>[名前] は %userprofile%\Favorites\ &lt;ショートカット名&gt; と入力します。<br>[ターゲットの種類] は “URL” を、[場所] は “&lt;完全なパスの指定&gt;” を選択します。<br>[ターゲット URL] に URL (この例では <a href="https://www.microsoft.com" target="_blank" rel="noopener">https://www.microsoft.com</a>) を指定します。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut02.png" alt="Shortcut02"></p>
 <ol start="5">
-<li><p>[共通タブ] の [ログインしているユーザーのセキュリティ コンテキストで実行する (ユーザー ポリシーオプション)] はそのままにしておきます。<br>クライアント環境に “一度だけ” 適用したい場合は、[共通] タブにおいて [1 度だけ適用し、再適用しない] にチェックを入れます。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut03.png" alt="Shortcut03"></p>
+<li><p>[共通タブ] の [ログインしているユーザーのセキュリティ コンテキストで実行する (ユーザー ポリシーオプション)] はそのままにしておきます。<br>クライアント環境に “一度だけ” 適用したい場合は、[共通] タブにおいて [1 度だけ適用し、再適用しない] にチェックを入れます。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut03.png" alt="Shortcut03"></p>
 </li>
-<li><p>[OK] で設定画面を閉じると、作成した設定が登録されます。(ログオン等の GPO 適用のタイミングでクライアント環境に値が反映されるようになります)<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut04.png" alt="Shortcut04"></p>
+<li><p>[OK] で設定画面を閉じると、作成した設定が登録されます。(ログオン等の GPO 適用のタイミングでクライアント環境に値が反映されるようになります)<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut04.png" alt="Shortcut04"></p>
 </li>
-<li><p>実際に配布される項目は、グループ ポリシー オブジェクト (GPO) を選択した際に右側に表示される画面の [設定] タブにて確認可能です。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut05.png" alt="Shortcut05"></p>
+<li><p>実際に配布される項目は、グループ ポリシー オブジェクト (GPO) を選択した際に右側に表示される画面の [設定] タブにて確認可能です。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut05.png" alt="Shortcut05"></p>
 </li>
-<li><p>クライアントに配布されたお気に入りをみてみましょう。<br><img src="/blog-test/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut06.png" alt="Shortcut06"></p>
+<li><p>クライアントに配布されたお気に入りをみてみましょう。<br><img src="/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/Shortcut06.png" alt="Shortcut06"></p>
 </li>
 </ol>
 
@@ -294,7 +294,7 @@
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Internet-Explorer/" rel="tag">Internet Explorer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7/" rel="tag">プロキシ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A/" rel="tag">基本設定</a></li></ul>
 
         
-        <a href="https://github.com/jpdsi/blog-test/edit/main/articles/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpdsi/blog/edit/main/articles/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>

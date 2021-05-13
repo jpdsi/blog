@@ -9,34 +9,34 @@
   <meta name="description" content="今回は Internet Explorer を利用している場合に発生するメモリ使用量が増える現象についてお話しします。なお、本記事に掲載している内容は、Internet Explorer 以外の、例えば Microsoft Edge や Google Chrome、Firefox といったほかのブラウザーでも有効な部分があります。ぜひ参考にしてみてください。 もともと二回シリーズでの執筆を検討して">
 <meta property="og:type" content="article">
 <meta property="og:title" content="メモリ使用量が増える現象 (メモリリーク)">
-<meta property="og:url" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/index.html">
+<meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
 <meta property="og:description" content="今回は Internet Explorer を利用している場合に発生するメモリ使用量が増える現象についてお話しします。なお、本記事に掲載している内容は、Internet Explorer 以外の、例えば Microsoft Edge や Google Chrome、Firefox といったほかのブラウザーでも有効な部分があります。ぜひ参考にしてみてください。 もともと二回シリーズでの執筆を検討して">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/14_vmmap1.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/15_vmmap2.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/16_vmmap3.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/17_vmmap4.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/1_taskmgr1.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/2_taskmgr2.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/3_taskmgr3.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/4_taskmgr4.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/5_taskmgr5.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/6_notificationbar.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/7_eventlog.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/8_taskmgr6.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/9_taskmgr7.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/10_taskmgr8.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/11_taskmgr9.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/12_extoff.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/13_addon.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/14_vmmap1.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/15_vmmap2.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/16_vmmap3.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/17_vmmap4.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/1_taskmgr1.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/2_taskmgr2.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/3_taskmgr3.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/4_taskmgr4.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/5_taskmgr5.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/6_notificationbar.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/7_eventlog.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/8_taskmgr6.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/9_taskmgr7.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/10_taskmgr8.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/11_taskmgr9.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/12_extoff.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/13_addon.png">
 <meta property="article:published_time" content="2020-04-16T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-13T11:38:42.221Z">
+<meta property="article:modified_time" content="2021-05-13T11:59:03.949Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Internet Explorer">
 <meta property="article:tag" content="メモリ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/14_vmmap1.png">
+<meta name="twitter:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/14_vmmap1.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog" type="application/atom+xml">
   
@@ -69,9 +69,9 @@
         <a id="main-nav-toggle" class="nav-icon"></a>
         <div id="ms-logo"></div>
         
-          <a class="main-nav-link" href="/blog-test/">Home</a>
+          <a class="main-nav-link" href="/blog/">Home</a>
         
-          <a class="main-nav-link" href="/blog-test/archives">Archives</a>
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
         
         <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
       </nav>
@@ -81,7 +81,7 @@
         
       </nav>
       <div id="search-form-wrap">
-        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpdsi.github.io/blog-test"></form>
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpdsi.github.io/blog"></form>
       </div>
     </div>
     <div id="header-title" class="inner">
@@ -119,9 +119,9 @@
 </a>
         
         
-        <a href="https://github.com/jpdsi/blog-test/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+4179a452-1d3e-5ce0-a7a5-739db48c2a06%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%83%A1%E3%83%A2%E3%83%AA%E4%BD%BF%E7%94%A8%E9%87%8F%E3%81%8C%E5%A2%97%E3%81%88%E3%82%8B%E7%8F%BE%E8%B1%A1+%28%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%AF%29%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog-test%2Finternet-explorer-microsoft-edge%2FHighMemoryUsage%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FHighMemoryUsage.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog-test%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FHighMemoryUsage.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+21ac5b9a-c618-57f4-b09c-64f40d31a9ac%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%83%A1%E3%83%A2%E3%83%AA%E4%BD%BF%E7%94%A8%E9%87%8F%E3%81%8C%E5%A2%97%E3%81%88%E3%82%8B%E7%8F%BE%E8%B1%A1+%28%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%AF%29%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2FHighMemoryUsage%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FHighMemoryUsage.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FHighMemoryUsage.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/" data-id="ckomtjclv000i0mnxhv3q3qjc" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/" data-id="ckomu9jp2000i0mtl59k32ifv" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -148,33 +148,33 @@
 <p>Windows Sysinternals ツールの 1 つに、プロセスの仮想メモリと物理メモリの割り当て状況をグラフィカルに表示してくれるツールとして VMMap というものがありますので紹介します。</p>
 <p><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/vmmap" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/sysinternals/downloads/vmmap</a></p>
 <p>vmmmap.exe を起動し、確認したいプロセスを選びます。</p>
-<p><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/14_vmmap1.png" alt="VMMap1"></p>
-<p>このようにメモリの使用状況について詳細を把握することができます。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/15_vmmap2.png" alt="VMMap2"></p>
-<p>メニューの View - Fragmentation View を選択します。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/16_vmmap3.png" alt="VMMap3"></p>
-<p>以下のようにメモリの割り当て状況をグラフィカルに表示してくれますので、未使用を示す “白色の領域” が充分にあるかどうか確認ができます。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/17_vmmap4.png" alt="VMMap4"></p>
+<p><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/14_vmmap1.png" alt="VMMap1"></p>
+<p>このようにメモリの使用状況について詳細を把握することができます。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/15_vmmap2.png" alt="VMMap2"></p>
+<p>メニューの View - Fragmentation View を選択します。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/16_vmmap3.png" alt="VMMap3"></p>
+<p>以下のようにメモリの割り当て状況をグラフィカルに表示してくれますので、未使用を示す “白色の領域” が充分にあるかどうか確認ができます。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/17_vmmap4.png" alt="VMMap4"></p>
 <p>このツールを使えば、上述の断片化状態かどうかも視覚的に把握することができますので、ぜひご利用ください。</p>
 <hr>
 <p><strong><font color="red">重要 : メモリ使用量の見方について</font></strong></p>
 <p>プロセスで実際にメモリ不足の問題が発生するかどうかは、「ワーキング セット」ではなく、「コミット サイズ」に着目することが重要です。<br>「ワーキング セット」とは、プロセスが利用しているメモリ領域のうち「物理メモリ上に展開されている部分」を指すものであり、「プロセスが使用しているメモリ全体のサイズ」はわかりません。<br>「プロセスが使用しているメモリ全体のサイズ」を示しているのは「コミット サイズ」です。</p>
-<p>実際の例をみてみましょう。<br>タスク マネージャーでは既定では「メモリ (アクティブなプライベート ワーキング セット)」という項目が表示されています。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/1_taskmgr1.png" alt="TaskMgr1"></p>
+<p>実際の例をみてみましょう。<br>タスク マネージャーでは既定では「メモリ (アクティブなプライベート ワーキング セット)」という項目が表示されています。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/1_taskmgr1.png" alt="TaskMgr1"></p>
 <p>ここで問題です。このふたつのプログラムのうち、どちらがメモリを多く使用しているでしょうか？</p>
-<p>上述のことを思い出してください。「コミット サイズ」を見なければ答えられません。<br>それではタスク マネージャーの表示項目にコミット サイズを追加してみましょう。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/2_taskmgr2.png" alt="TaskMgr2"></p>
-<p>結果はこの通りです。片方はコミット サイズが 800MB ほどなのに対して、もう片方は 1MB ほどであることがわかります。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/3_taskmgr3.png" alt="TaskMgr3"></p>
+<p>上述のことを思い出してください。「コミット サイズ」を見なければ答えられません。<br>それではタスク マネージャーの表示項目にコミット サイズを追加してみましょう。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/2_taskmgr2.png" alt="TaskMgr2"></p>
+<p>結果はこの通りです。片方はコミット サイズが 800MB ほどなのに対して、もう片方は 1MB ほどであることがわかります。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/3_taskmgr3.png" alt="TaskMgr3"></p>
 <p>「プロセスが使用しているメモリ全体のサイズ」を示しているのは「コミット サイズ」なので、「PID:17652 の方が多くのメモリを使用している」が答えになります。</p>
 <hr>
 <p><strong><u>3. メモリリークなのか？</u></strong><br>タスク マネージャーなどで、メモリの使用量が多いことがわかったとしても、メモリリークが発生しているとは一概には言えません。<br>右肩上がりにメモリ使用量が増えるのか、ある一定の使用量を上限に横ばいとなるのか確認しましょう。<br>ある一定の使用量を上限に横ばいとなる場合には、Web コンテンツ上の構成が非常に大量のメモリを必要とするものの、コンテンツとしても、Internet Explorer の動作としても問題ない動作であると判断ができます。</p>
 <p>Internet Explorer では、Web コンテンツを表示 / 動作させるためにメモリ領域を確保する動作となるため、一定量増えることは Web コンテンツを表示 / 動作させるうえでの想定動作となります。ページ遷移などに伴い、不要となったメモリ領域については “ガベージ コレクション” という仕組みの下で一定時間後に自動的に解放される動作となります。</p>
-<p>ここで一つ例を挙げます。<br>ある Web アプリケーションで使い始めは以下のように 130 MB ほどのメモリが使用されていました。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/4_taskmgr4.png" alt="TaskMgr4"></p>
-<p>アプリケーションを操作していると、いつのまにか 1GB 近くまでメモリ使用量が増えてしまいました。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/5_taskmgr5.png" alt="TaskMgr5"></p>
-<p>もう少し操作をしていると、ブラウザーが応答しなくなり、数秒後に以下の通知バーが表示されました。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/6_notificationbar.png" alt="NotificationBar"></p>
-<p>何が起きたのでしょう？イベント ログをみてみると、iexplore.exe がクラッシュ (異常終了) してしまったことがわかります。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/7_eventlog.png" alt="EventLog"></p>
+<p>ここで一つ例を挙げます。<br>ある Web アプリケーションで使い始めは以下のように 130 MB ほどのメモリが使用されていました。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/4_taskmgr4.png" alt="TaskMgr4"></p>
+<p>アプリケーションを操作していると、いつのまにか 1GB 近くまでメモリ使用量が増えてしまいました。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/5_taskmgr5.png" alt="TaskMgr5"></p>
+<p>もう少し操作をしていると、ブラウザーが応答しなくなり、数秒後に以下の通知バーが表示されました。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/6_notificationbar.png" alt="NotificationBar"></p>
+<p>何が起きたのでしょう？イベント ログをみてみると、iexplore.exe がクラッシュ (異常終了) してしまったことがわかります。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/7_eventlog.png" alt="EventLog"></p>
 <p>※ この例では例外コード 0x8007000e (E_OUTOFMEMORY) というメモリ不足を示すものでしたが、別の例外コードが記録されることもあります。</p>
 <p>これはメモリリークが起きたことで、メモリ不足に陥ってクラッシュしてしまったのでしょうか？<br>もちろんそういう場合もありますが、この例では、多少はメモリリークしている状況ではあったものの、それが一番の理由ではありませんでした。<br>どのようにしてみていけばよいのでしょうか？</p>
 <p>ポイントは繰り返しになりますが「右肩上がりにメモリ使用量が増えるのか、ある一定の使用量を上限に横ばいとなるのか」です。<br>先ほどは 32bit プロセスではメモリ不足の状態に陥ってしまいましたが、<a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/process-model/">IE のプロセスを 64bit で動作させて</a> 同じ Web アプリケーションでメモリ使用量の上がり具合をみていきます。</p>
-<p>初めは 170MB くらいです。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/8_taskmgr6.png" alt="TaskMgr6"></p>
-<p>しばらく操作をしていると 1.3GB ほどまで増えました。<br>32bit プロセスであれば、表示が崩れたり、クラッシュしてしまうなどの異常がいつ発生してもおかしくない状況です。<br>今回は 64bit プロセスなので問題なく動作しつづけます。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/9_taskmgr7.png" alt="TaskMgr7"></p>
-<p>さらに操作をすると一時的に 2GB ほどまで上昇することがありました。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/10_taskmgr8.png" alt="TaskMgr8"></p>
-<p>しかし、その直後に以下のように 1.5GB ほどまで下がり、このあとは、操作を繰り返しても、1.5 GB ～ 2 GB あたりを行き来するようになりました。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/11_taskmgr9.png" alt="TaskMgr9"></p>
+<p>初めは 170MB くらいです。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/8_taskmgr6.png" alt="TaskMgr6"></p>
+<p>しばらく操作をしていると 1.3GB ほどまで増えました。<br>32bit プロセスであれば、表示が崩れたり、クラッシュしてしまうなどの異常がいつ発生してもおかしくない状況です。<br>今回は 64bit プロセスなので問題なく動作しつづけます。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/9_taskmgr7.png" alt="TaskMgr7"></p>
+<p>さらに操作をすると一時的に 2GB ほどまで上昇することがありました。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/10_taskmgr8.png" alt="TaskMgr8"></p>
+<p>しかし、その直後に以下のように 1.5GB ほどまで下がり、このあとは、操作を繰り返しても、1.5 GB ～ 2 GB あたりを行き来するようになりました。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/11_taskmgr9.png" alt="TaskMgr9"></p>
 <p>つまり、「右肩上がりにメモリ使用量が増える」状況ではないことが明らかになりました。</p>
 <p>ここでのポイントは、いったんは上昇したメモリ使用量が下がった、つまり、不要となったメモリ領域を解放する “ガベージ コレクション” が実行されたことです。<br>もし、ガベージ コレクションで解放されないような参照状態をもつオブジェクトが存在した場合には、そのオブジェクトに紐づくメモリ領域は解放できないまま残り続けますので、メモリ使用量は右肩上がりになります。<br>今回は、ガベージ コレクションが有効に働き、ある一定の使用量を上限に横ばいとなりました。<br>つまり、Web アプリケーションの構造上非常に大量のメモリを必要とするものの、コンテンツとしても、Internet Explorer の動作としても問題ない動作であると言えます。</p>
 <hr>
@@ -203,8 +203,8 @@
 <p>なお、下記の方法で一時的なアドオンの無効化を試すことも可能です。</p>
 <p>方法 1)<br>Windows キー + R キーで起動する “ファイル名を指定して実行” で、下記を実行することでアドオン無効モードで Internet Explorer を起動することができます。</p>
 <p>iexplore.exe -extoff</p>
-<p>このような画面で Internet Explorer が起動します。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/12_extoff.png" alt="extoff"></p>
-<p>方法 2)<br>Internet Explorer を起動し、[ツール] メニューの [アドオンの管理] 画面で、個別にアドオンを無効にすることができます。<br><img src="/blog-test/internet-explorer-microsoft-edge/HighMemoryUsage/13_addon.png" alt="addon"><br>左ペインで [ツール バーと拡張機能] を選択し、”表示” 欄で [すべてのアドオン] を選択します。<br>その後、右ペインで無効にしたいアドオンを選択し、画面右下に表示されている [無効にする] ボタンをクリックすることでアドオンを無効とすることができます。<br>無効にした後、Internet Explorer を再起動します。</p>
+<p>このような画面で Internet Explorer が起動します。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/12_extoff.png" alt="extoff"></p>
+<p>方法 2)<br>Internet Explorer を起動し、[ツール] メニューの [アドオンの管理] 画面で、個別にアドオンを無効にすることができます。<br><img src="/blog/internet-explorer-microsoft-edge/HighMemoryUsage/13_addon.png" alt="addon"><br>左ペインで [ツール バーと拡張機能] を選択し、”表示” 欄で [すべてのアドオン] を選択します。<br>その後、右ペインで無効にしたいアドオンを選択し、画面右下に表示されている [無効にする] ボタンをクリックすることでアドオンを無効とすることができます。<br>無効にした後、Internet Explorer を再起動します。</p>
 <p><strong><u>サードパーティー製ソフトウェアをアンインストールする</u></strong><br>Windows OS 上に、サードパーティー製のソフトウェアが導入されている場合、製品を一つずつアンインストールしていき、いずれかのソフトウェアの動作が影響していないかどうか確認しましょう。</p>
 <p>なお、一部のソフトウェアでは、ソフトウェアが動作しないように “無効” とする設定がありますが、当該ソフトウェアが動作していない状態でも Internet Explorer が起動する際に自動的に読み込まれてしまうような DLL もあるため、可能な限りアンインストールを試してください。</p>
 <p>サードパーティー製のソフトウェアをアンインストールして改善する場合には、当該のソフトウェアの動作が影響していると判断することができます。<br>この状況の場合には、ソフトウェアの開発元にお問い合わせしてみてください。</p>
@@ -236,7 +236,7 @@
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Internet-Explorer/" rel="tag">Internet Explorer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%A1%E3%83%A2%E3%83%AA/" rel="tag">メモリ</a></li></ul>
 
         
-        <a href="https://github.com/jpdsi/blog-test/edit/main/articles/internet-explorer-microsoft-edge/HighMemoryUsage.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpdsi/blog/edit/main/articles/internet-explorer-microsoft-edge/HighMemoryUsage.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>

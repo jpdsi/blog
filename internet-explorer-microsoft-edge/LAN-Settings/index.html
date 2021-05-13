@@ -9,22 +9,22 @@
   <meta name="description" content="これまで Japan IE Support Team Blog にて公開していた記事のうち、プロキシ関連の記事を整理しました。長い記事になってしまうため、下記の 4 つの記事に分けています。 (今回の記事) ローカル エリア ネットワーク (LAN) の設定についてIE からみるプロキシの設定についてPAC についてWPAD について  1. ローカルエリアネットワーク(LAN) の設定プロキシの">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ローカル エリア ネットワーク (LAN) の設定について">
-<meta property="og:url" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/index.html">
+<meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
 <meta property="og:description" content="これまで Japan IE Support Team Blog にて公開していた記事のうち、プロキシ関連の記事を整理しました。長い記事になってしまうため、下記の 4 つの記事に分けています。 (今回の記事) ローカル エリア ネットワーク (LAN) の設定についてIE からみるプロキシの設定についてPAC についてWPAD について  1. ローカルエリアネットワーク(LAN) の設定プロキシの">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/OS-Proxy.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings2.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings3.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/ProxySettings.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/OS-Proxy.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings2.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings3.png">
+<meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/ProxySettings.png">
 <meta property="article:published_time" content="2020-04-19T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-13T11:38:42.241Z">
+<meta property="article:modified_time" content="2021-05-13T11:59:03.969Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Internet Explorer">
 <meta property="article:tag" content="プロキシ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings.png">
+<meta name="twitter:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog" type="application/atom+xml">
   
@@ -57,9 +57,9 @@
         <a id="main-nav-toggle" class="nav-icon"></a>
         <div id="ms-logo"></div>
         
-          <a class="main-nav-link" href="/blog-test/">Home</a>
+          <a class="main-nav-link" href="/blog/">Home</a>
         
-          <a class="main-nav-link" href="/blog-test/archives">Archives</a>
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
         
         <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
       </nav>
@@ -69,7 +69,7 @@
         
       </nav>
       <div id="search-form-wrap">
-        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpdsi.github.io/blog-test"></form>
+        <form action="//www.bing.com/search" method="get" accept-charset="UTF-8" name="bing-search" onsubmit="var f=this;if(f['q'].value){var searchUrl =  'https://www.bing.com/search?q=' +  encodeURIComponent(f['q'].value + ' site:' + f['sitesearch'].value) ;window.open(searchUrl, 'blank') };return false;" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" id="nav-search-btn" class="search-form-submit"></button><input type="hidden" name="sitesearch" value="https://jpdsi.github.io/blog"></form>
       </div>
     </div>
     <div id="header-title" class="inner">
@@ -107,9 +107,9 @@
 </a>
         
         
-        <a href="https://github.com/jpdsi/blog-test/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+8c4899a4-a58c-5757-be3a-c096c4e88637%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB+%E3%82%A8%E3%83%AA%E3%82%A2+%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF+%28LAN%29+%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog-test%2Finternet-explorer-microsoft-edge%2FLAN-Settings%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FLAN-Settings.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog-test%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FLAN-Settings.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+bfd07902-07fa-5f08-8820-0306b414c169%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB+%E3%82%A8%E3%83%AA%E3%82%A2+%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF+%28LAN%29+%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2FLAN-Settings%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FLAN-Settings.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FLAN-Settings.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog-test/internet-explorer-microsoft-edge/LAN-Settings/" data-id="ckomtjcm1000t0mnxhg9e3vhg" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/" data-id="ckomu9jp8000t0mtl560xcvdn" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -117,16 +117,16 @@
         <p>これまで Japan IE Support Team Blog にて公開していた記事のうち、プロキシ関連の記事を整理しました。<br>長い記事になってしまうため、下記の 4 つの記事に分けています。</p>
 <p><strong>(今回の記事) ローカル エリア ネットワーク (LAN) の設定について</strong><br><a href="../ProxySettings/">IE からみるプロキシの設定について</a><br><a href="../pac/">PAC について</a><br><a href="../wpad/">WPAD について</a></p>
 <hr>
-<h3 id="1-ローカルエリアネットワーク-LAN-の設定"><a href="#1-ローカルエリアネットワーク-LAN-の設定" class="headerlink" title="1. ローカルエリアネットワーク(LAN) の設定"></a>1. ローカルエリアネットワーク(LAN) の設定</h3><p>プロキシの設定は、Internet Explorer のインターネット オプション - [接続] タブの [LAN の設定] ボタンから開ける [ローカル エリア ネットワーク (LAN) の設定] ダイアログで行います。<br><img src="/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings.png" alt="LANSettings"></p>
-<p>Windows 10 では、[Windows の設定] – [ネットワークとインターネット] – [プロキシ] とも連動しています。<br><img src="/blog-test/internet-explorer-microsoft-edge/LAN-Settings/OS-Proxy.png" alt="OSProxy"></p>
+<h3 id="1-ローカルエリアネットワーク-LAN-の設定"><a href="#1-ローカルエリアネットワーク-LAN-の設定" class="headerlink" title="1. ローカルエリアネットワーク(LAN) の設定"></a>1. ローカルエリアネットワーク(LAN) の設定</h3><p>プロキシの設定は、Internet Explorer のインターネット オプション - [接続] タブの [LAN の設定] ボタンから開ける [ローカル エリア ネットワーク (LAN) の設定] ダイアログで行います。<br><img src="/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings.png" alt="LANSettings"></p>
+<p>Windows 10 では、[Windows の設定] – [ネットワークとインターネット] – [プロキシ] とも連動しています。<br><img src="/blog/internet-explorer-microsoft-edge/LAN-Settings/OS-Proxy.png" alt="OSProxy"></p>
 <p>ここでは [ローカル エリア ネットワーク (LAN) の設定] ダイアログの表示内容に沿って解説します。</p>
 <p>なお、よくあるお問い合せについて後述しましたので、そちらもご覧いただければと思います。</p>
 <hr>
-<h3 id="2-プロキシサーバーの利用を構成するための設定"><a href="#2-プロキシサーバーの利用を構成するための設定" class="headerlink" title="2. プロキシサーバーの利用を構成するための設定"></a>2. プロキシサーバーの利用を構成するための設定</h3><p>プロキシ サーバーの利用を構成するための設定は大きく分けると、赤い枠で囲んだ『プロキシ自動構成 (Proxy Auto-Configuration, PAC) スクリプトを使う方法』と、青い枠で囲んだ『プロキシ サーバーのアドレスやポートを直接指定する方法』の二つがあります。<br><img src="/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings2.png" alt="LANSettings2"></p>
+<h3 id="2-プロキシサーバーの利用を構成するための設定"><a href="#2-プロキシサーバーの利用を構成するための設定" class="headerlink" title="2. プロキシサーバーの利用を構成するための設定"></a>2. プロキシサーバーの利用を構成するための設定</h3><p>プロキシ サーバーの利用を構成するための設定は大きく分けると、赤い枠で囲んだ『プロキシ自動構成 (Proxy Auto-Configuration, PAC) スクリプトを使う方法』と、青い枠で囲んだ『プロキシ サーバーのアドレスやポートを直接指定する方法』の二つがあります。<br><img src="/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings2.png" alt="LANSettings2"></p>
 <p>それぞれの項目について順に説明します。</p>
 <p><strong>(1) 自動構成</strong><br>『自動構成』の欄では、『自動構成スクリプト ファイルの取得先を自動的に検出する』か、『自動構成スクリプト ファイルの取得先を手動で指定する』かを設定します。<br>※ 自動構成スクリプト (PAC) とは、<a href="https://docs.microsoft.com/ja-jp/internet-explorer/ie11-ieak/proxy-auto-config-examples" target="_blank" rel="noopener">アクセス先の URL や IP アドレスなどの条件</a> を基に、『プロキシ サーバーを経由せずに直接通信する』か『指定したプロキシ サーバーを経由して通信する』かのどちらかの結果を返す JavaScript で記述されたファイルです。</p>
 <p>[設定を自動的に検出する] のチェックをオンにすると、WPAD (Web Proxy Auto-Discovery) という技術を利用して、PAC ファイルの取得先 (<a href="http://contoso.com/proxy.pac" target="_blank" rel="noopener">http://contoso.com/proxy.pac</a> や <a href="http://wpad.contoso.com/wpad.dat" target="_blank" rel="noopener">http://wpad.contoso.com/wpad.dat</a> のような URL) を自動的に検出してファイルをダウンロードします。<br>自動的な検出を構成せずに、PAC ファイルの取得先を直接指定する場合には、[自動構成スクリプトを使用する] のチェックをオンにして [アドレス] 欄に PAC ファイルの取得先を入力します。</p>
-<p><strong>(2) プロキシ サーバー</strong><br><img src="/blog-test/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings3.png" alt="LANSettings3"></p>
+<p><strong>(2) プロキシ サーバー</strong><br><img src="/blog/internet-explorer-microsoft-edge/LAN-Settings/LAN-Settings3.png" alt="LANSettings3"></p>
 <p>『プロキシ サーバー』の欄では、利用するプロキシ サーバーのアドレスやポートを直接指定します。<br>[LAN にプロキシ サーバーを使用する] のチェックをオンにして設定します。<br>[アドレス] には、ホスト名、FQDN名、IPアドレスが使用できます。<br>[詳細設定] ボタンを押すと、[プロキシの設定] ダイアログが表示されます。こちらについては後述します。<br>[ローカル アドレスにはプロキシ サーバーを使用しない] のチェックをオンにすると、”ローカル アドレス” でアクセスした場合に、指定されたプロキシ サーバーを経由せずに直接通信します。</p>
 <p><u>“ローカル アドレス” とは？</u><br><a href="http://contoso" target="_blank" rel="noopener">http://contoso</a> のように、ホスト名のみで指定された宛先です。簡単な見分け方は、ピリオド (.) を含んでいるかどうかです。IP アドレス (<a href="http://192.168.1.1" target="_blank" rel="noopener">http://192.168.1.1</a> など) や FQDN (<a href="http://contoso.com" target="_blank" rel="noopener">http://contoso.com</a> など) はピリオドを含んでいるためローカル アドレスではありません。</p>
 <p>たとえば、contoso の IP アドレスが 192.168.1.1 だったとした場合に、[ローカル アドレスにはプロキシ サーバーを使用しない] のチェックをオンにした状態で通信すると、宛先によって以下のようになります。</p>
@@ -135,7 +135,7 @@
 <p>(参考情報)<br>Internet Explorer Uses Proxy Server for Local IP Address Even if the “Bypass Proxy Server for Local Addresses” Option Is Turned On<br><a href="https://support.microsoft.com/en-us/help/262981/" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/262981/</a></p>
 <p>&lt;自動日本語訳版&gt;<br>[ローカル アドレスにはプロキシ サーバを使用しない] オプションが有効であるにもかかわらず、Internet Explorer がローカル IP アドレスにプロキシ サーバーを使用する<br><a href="https://support.microsoft.com/ja-jp/help/262981/" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/262981/</a></p>
 <p><br><br></p>
-<p>[詳細設定] ボタンを押すと表示される [プロキシの設定] ダイアログについて説明します。<br><img src="/blog-test/internet-explorer-microsoft-edge/LAN-Settings/ProxySettings.png" alt="ProxySettings"></p>
+<p>[詳細設定] ボタンを押すと表示される [プロキシの設定] ダイアログについて説明します。<br><img src="/blog/internet-explorer-microsoft-edge/LAN-Settings/ProxySettings.png" alt="ProxySettings"></p>
 <p><strong><u>使用するプロキシのアドレス/ポート</u></strong></p>
 <p>プロキシ サーバーのアドレスとポート番号を入力します。プロトコル (http://、ftp:// など) で始まらない場合、HTTP プロキシであると見なされます。たとえば、「proxy」と入力すると、「http://proxy」として扱われます。<br>また、すべての種類で同じプロキシ サーバー設定を使用するときは、”すべてのプロトコルに同じプロキシ サーバーを使用する” をオンにします。この場合は上のスクリーンショットでお分かりいただけるかと思いますが、HTTP に指定したプロキシ サーバー情報が適用されます。<br>(Internet Explorer 8 以降では、プロトコルの種類 gopher: は存在しません)</p>
 <p><strong><u>次で始まるアドレスにはプロキシを利用しない</u></strong></p>
@@ -228,7 +228,7 @@
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Internet-Explorer/" rel="tag">Internet Explorer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7/" rel="tag">プロキシ</a></li></ul>
 
         
-        <a href="https://github.com/jpdsi/blog-test/edit/main/articles/internet-explorer-microsoft-edge/LAN-Settings.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="https://github.com/jpdsi/blog/edit/main/articles/internet-explorer-microsoft-edge/LAN-Settings.md" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         
     </footer>
   </div>
