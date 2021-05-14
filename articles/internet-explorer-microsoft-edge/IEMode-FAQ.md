@@ -37,11 +37,11 @@ IE モードで表示されている Web コンテンツをデバッグするに
 3. 以下のようなウィンドウが表示されますので、IE モードで表示されている Web コンテンツをクリックします。
 なお、以下のウィンドウ内には、IE11 および IE モードで表示されている Web コンテンツのファイル名またはタイトルが表示されますので、その情報を基に対象の Web コンテンツを選択します。
 
-![IEChooser1](/articles/internet-explorer-microsoft-edge/IEMode-FAQ/IEChooser1.png)
+![IEChooser1](./IEMode-FAQ/IEChooser1.png)
 
 4. 開発者ツールが起動しますので、Web コンテンツをデバッグします。
 
-![IEChooser2](/articles/internet-explorer-microsoft-edge/IEMode-FAQ/IEChooser2.png)
+![IEChooser2](./IEMode-FAQ/IEChooser2.png)
 
 ---
 
@@ -50,14 +50,14 @@ Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジン�
 
 IE モードでは、Web ページ コンテンツの表示 (レンダリング) やスクリプトは IE11 のブラウザー エンジンによって処理されますが、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。具体的には、以下の図の緑色の枠線内は IE モードによって処理されますが、枠の外側は Microsoft Edge によって処理されます。
 
-![WindowOpen1](/articles/internet-explorer-microsoft-edge/IEMode-FAQ/windowopen1.png)
+![WindowOpen1](./IEMode-FAQ/windowopen1.png)
 
 上記動作に伴い、window.open(url, windowName, windowFeatures) の引数 windowFeatures で指定する以下のオプションは反映されません。
 なお、この動作は Microsoft Edge における想定された動作となります。
 
 - location
 引数 url で指定されるサイトがローカル イントラネットや信頼済みサイト ゾーンで、かつ、引数 windowFeatures において location=no と指定していても、以下のようにアドレス バーは表示されます (ただし、アドレス バーでの操作はできません)。
-![WindowOpen2](/articles/internet-explorer-microsoft-edge/IEMode-FAQ/windowopen2.png)
+![WindowOpen2](./IEMode-FAQ/windowopen2.png)
 
 - resizable
 resizable オプション指定は常に無視され、ユーザーはウィンドウ サイズを変更することができます。
@@ -147,14 +147,10 @@ B) "--ie-mode-test" オプションを付加して msedge.exe を実行する
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --ie-mode-test
 
 これらの方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。
-![IEModeTest](/articles/internet-explorer-microsoft-edge/IEMode-FAQ/iemodetest.png)
+![IEModeTest](./IEMode-FAQ/iemodetest.png)
 
 なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のドキュメントでもご案内している手順にて、IE モードを有効に設定してください。
 
 グループ ポリシーを使用して Internet Explorer 統合を有効にする
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy
 
----
-
-なお、本ブログは弊社の公式見解ではなく、予告なく変更される場合があります。
-もし公式な見解が必要な場合は、弊社ドキュメント (https://docs.microsoft.com/ や https://support.microsoft.com) をご参照いただく、もしくは私共サポートまでお問い合わせください。
