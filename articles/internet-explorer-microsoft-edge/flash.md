@@ -43,9 +43,9 @@ tags:
 ロールアップ更新への組み込みについて
 以下のスケジュールで各更新プログラムに『[KB4577586 Update for Removal of Adobe Flash Player](https://support.microsoft.com/en-us/help/4577586/update-for-removal-of-adobe-flash-player)』が組み込まれ、<span style="color: #ff0000;font-weight:bold;">更新プログラムの適用により Flash が永久的に削除されます。</span>
 
-- (Windows 10 LTSC 2019 および Windows 10 1909 以上) 2021 年 6 月のプレビューのロールアップ更新から
-- (Windows 10 LTSB 2015, LTSC 2016) 2021 年 7 月のロールアップ更新から
-- (Windows 8.1, Windows Server 2012 and Windows Embedded 8 Standard) 2021 年 7 月から (マンスリー ロールアップおよびセキュリティのみの更新)
+- (Windows 10 LTSC 2019 および Windows 10 1909 以上, Windows Server 2019) 2021 年 6 月のプレビューのロールアップ更新から
+- (Windows 10 LTSB 2015, LTSC 2016, Windows Server 2016) 2021 年 7 月のロールアップ更新から
+- (Windows 8.1, Windows Server 2012 R2, Windows Server 2012 and Windows Embedded 8 Standard) 2021 年 7 月から (マンスリー ロールアップおよびセキュリティのみの更新)
 
 #### Adobe 社公開情報
 
