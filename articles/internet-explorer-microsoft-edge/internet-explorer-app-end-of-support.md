@@ -15,7 +15,7 @@ tags:
 
 [Internet Explorer は Microsoft Edge へ – Windows 10 の Internet Explorer 11 デスクトップアプリは 2022 年 6 月 15 日にサポート終了](https://blogs.windows.com/japan/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
-- [「Internet Explorer 11 デスクトップ アプリケーションのサポート終了」の発表に関連する FAQ](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/)
+[「Internet Explorer 11 デスクトップ アプリケーションのサポート終了」の発表に関連する FAQ](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/)
 
 ---
 
@@ -37,7 +37,7 @@ tags:
     - Windows 10 Server LTSC (all versions)
     - Windows 10 client LTSC (all versions)
 
-なお、上記 Windows OS のサポート終了日は [こちら](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/) の "8) IE モードはいつまでサポートされますか？" の部分にある表をご覧ください。
+なお、上記 Windows OS のサポート終了日は [こちらの "8) IE モードはいつまでサポートされますか？" の部分にある表](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/) をご覧ください。
 
 * IE でなければ閲覧できない古い技術を使って作成されたレガシーな Web サイトは、2022 年 6 月 15 日以降は IE モードで閲覧してください。(以下のイメージをご覧ください)
 * スタンドアロンの IE についてはサポートを終了しますが、IE モードは少なくとも 2029 年まではサポートされますので、IE モードへの移行、さらには Edge への移行 (HTML5 に対応したモダンなウェブ アプリへの移行) を計画的に進めていただくことをお勧めします。
