@@ -55,6 +55,8 @@ Microsoft は Internet Explorer (以降 IE) デスクトップ アプリのサ�
 
 ![ポリシーの設定](./guidelines-for-migrating-from-ie-to-microsoft-edge/1.png)
 
+なお [こちら](https://youtu.be/XPFx4A32npk) で動画による解説もしていますのでぜひご覧ください。
+
 #### 1-3. サイト一覧 (.xml) ファイルの作成とポリシーの設定
 IE モードで問題なくサイトが動作することを確認したら、サイト一覧ファイルに IE モードで表示したいサイトを定義します。
 サイト一覧の作り方については [こちらの記事](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/) がありますので参考にしてみてください。
@@ -123,6 +125,7 @@ IE デスクトップ アプリから IE モードへの移行にあたり、互
 
 - IE モードについて
     * [Internet Explorer モードとは](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode)
+    * [(動画) Microsoft Edge で IE モードを使ってみよう (IT 管理者向け)](https://youtu.be/XPFx4A32npk)
 
 - エンタープライズ モード サイト一覧について
     * [エンタープライズ モードとエンタープライズ モード サイト一覧 (IT 担当者向け Internet Explorer 11)](https://docs.microsoft.com/ja-jp/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode)
