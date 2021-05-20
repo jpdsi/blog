@@ -28,9 +28,10 @@ tags:
 ## 2022 年 6 月 15 日に Windows 10 の Internet Explorer 11 "デスクトップ アプリ" のサポートを終了し、Microsoft Edge に組み込まれている "IE モード" で少なくとも 2029 年までは引き続きサポートします。
 
 ### サポート終了対象
-- 以下の OS 上の Internet Explorer 11 デスクトップ アプリ (スタンドアロンの IE11)
+- <span style="color: #ff0000;font-weight:bold;">半期チャネル (SAC) で配信される</span>以下の OS 上の Internet Explorer 11 デスクトップ アプリ (スタンドアロンの IE11)
     - Windows 10 desktop 全エディション (20H2 およびそれ以降にリリースされるバージョン) 
     - Windows 10 IoT (20H2 およびそれ以降にリリースされるバージョン)
+
 
 ### サポート終了対象外
 - IE モード
