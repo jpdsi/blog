@@ -32,6 +32,19 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq
 
 ---
 
+## 目次
+- [Web コンテンツのデバッグ方法](#Web-コンテンツのデバッグ方法)
+- [window.open による子ウィンドウの扱い](#window-open-による子ウィンドウの扱い)
+- [Cookie の共有](#Cookie-の共有)
+- [ページ遷移時のブラウザー エンジンの切り替え](#ページ遷移時のブラウザー-エンジンの切り替え)
+- [ブラウザー エンジンの切り替え時の通信で起こること](#ブラウザー-エンジンの切り替え時の通信で起こること)
+- [IE モードでの表示をテストしたい](#IE-モードでの表示をテストしたい)
+- [サイトリストで指定しているサイトが IE モードで表示されない](#サイトリストで指定しているサイトが-IE-モードで表示されない)
+- [ドキュメント モードを確認したい](#ドキュメント-モードを確認したい)
+- [ニュートラル サイト](#ニュートラル-サイト)
+
+---
+
 ## Web コンテンツのデバッグ方法
 Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツに対して、Microsoft Edge の F12 開発者ツールを使用することはできません。
 IE モードで表示されている Web コンテンツをデバッグするには、IEChooser (Microsoft Edge 開発者ツール) を使用します。具体的には、以下の手順にてデバッグ作業を行います。
@@ -49,9 +62,10 @@ IE モードで表示されている Web コンテンツをデバッグするに
 
 ![開発者ツール画面](./ie-mode-faq/IEChooser2.png)
 
+- [目次へ](#目次)
 ---
 
-## window.open() による子ウィンドウの扱い
+## window.open による子ウィンドウの扱い
 Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツ内で window.open() メソッドを実行して表示される子ウィンドウは新しい Microsoft Edge のウィンドウとなります。
 
 IE モードでは、Web ページ コンテンツの表示 (レンダリング) やスクリプトは IE11 のブラウザー エンジンによって処理されますが、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。具体的には、以下の図の緑色の枠線内は IE モードによって処理されますが、枠の外側は Microsoft Edge によって処理されます。
@@ -75,6 +89,7 @@ fullscreen オプション指定は常に無視され、全画面表示とはな
 window.open - Web API | MDN
 https://developer.mozilla.org/ja/docs/Web/API/Window/open
 
+- [目次へ](#目次)
 ---
 
 ## Cookie の共有
@@ -86,6 +101,7 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshar
 
 <span style="color: #ff0000;font-weight:bold;">※ 共有できる Cookie の種類は、有効期限のある永続 Cookie ではなく、有効期間のないセッション Cookie のみですのでご注意ください。</span>
 
+- [目次へ](#目次)
 ---
 
 ## ページ遷移時のブラウザー エンジンの切り替え
@@ -122,6 +138,7 @@ B) 遷移先のページが IE モードで表示される。
 - すべてのページ内ナビゲーション を Internet Explorer モードで維持する
 A, B) 遷移先のページが IE モードで表示される。
 
+- [目次へ](#目次)
 ---
 
 ## ブラウザー エンジンの切り替え時の通信で起こること
@@ -136,6 +153,7 @@ POST リクエストが GET リクエストとなる動作は、異なるプロ�
 元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。
 対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。
 
+- [目次へ](#目次)
 ---
 
 ## IE モードでの表示をテストしたい
@@ -160,6 +178,7 @@ B) "--ie-mode-test" オプションを付加して msedge.exe を実行する
 グループ ポリシーを使用して Internet Explorer 統合を有効にする
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy
 
+- [目次へ](#目次)
 ---
 
 ## サイトリストで指定しているサイトが IE モードで表示されない
@@ -191,6 +210,7 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 
 設定について [IE モード ポリシーの構成](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies) のドキュメントをみながら構成を確認します。
 
+- [目次へ](#目次)
 ---
 
 ## ドキュメント モードを確認したい
@@ -199,6 +219,7 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 
 ![ドキュメント モードなどの確認](./ie-mode-faq/docmode.png)
 
+- [目次へ](#目次)
 ---
 
 ## ニュートラル サイト
@@ -308,4 +329,5 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist
 Internet Explorer モードでページ内ナビゲーションを保持する
 https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav
 
+- [目次へ](#目次)
 ---
