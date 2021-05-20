@@ -9,13 +9,16 @@ tags:
 
 みなさんこんにちは。日本マイクロソフトの IE/Edge サポートチームです。
 
-本日、以下の情報が公開されました。ここでは要点のみ簡潔にまとめますので、公式ドキュメントと併せてご覧ください。
+本日、以下の情報が公開されました。
+<span style="color: #ff0000;font-weight:bold;">FAQ を含め日本語での資料が充実していますので、まず以下の公式ドキュメントを一通りご覧ください。</span>
 
 [The future of Internet Explorer on Windows 10 is in Microsoft Edge—the Internet Explorer 11 desktop application will be retired on June 15, 2022](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 [Internet Explorer は Microsoft Edge へ – Windows 10 の Internet Explorer 11 デスクトップアプリは 2022 年 6 月 15 日にサポート終了](https://blogs.windows.com/japan/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 [「Internet Explorer 11 デスクトップ アプリケーションのサポート終了」の発表に関連する FAQ](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/)
+
+以下には上記の公式ドキュメントにある内容から要点のみ簡潔にまとめています。
 
 ---
 
