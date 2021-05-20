@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/docmode.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/owa.png">
 <meta property="article:published_time" content="2021-05-13T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-19T22:29:49.852Z">
+<meta property="article:modified_time" content="2021-05-20T00:41:36.839Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="IE モード">
@@ -114,7 +114,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+cc68aecc-1400-5be9-87dc-9911a9983fc4%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BIE+%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fie-mode-faq%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fie-mode-faq.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fie-mode-faq.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/" data-id="ckow1fuc3001g0mqu7eiqc330" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/" data-id="ckow65auv001g0mrn1wp0eesn" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -129,6 +129,18 @@
 <p>Internet Explorer (IE) モードとは<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode</a></p>
 <p>IE モードのトラブルシューティングと FAQ<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq</a></p>
 <hr>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><ul>
+<li><a href="#Web-コンテンツのデバッグ方法">Web コンテンツのデバッグ方法</a></li>
+<li><a href="#window-open-による子ウィンドウの扱い">window.open による子ウィンドウの扱い</a></li>
+<li><a href="#Cookie-の共有">Cookie の共有</a></li>
+<li><a href="#ページ遷移時のブラウザー-エンジンの切り替え">ページ遷移時のブラウザー エンジンの切り替え</a></li>
+<li><a href="#ブラウザー-エンジンの切り替え時の通信で起こること">ブラウザー エンジンの切り替え時の通信で起こること</a></li>
+<li><a href="#IE-モードでの表示をテストしたい">IE モードでの表示をテストしたい</a></li>
+<li><a href="#サイトリストで指定しているサイトが-IE-モードで表示されない">サイトリストで指定しているサイトが IE モードで表示されない</a></li>
+<li><a href="#ドキュメント-モードを確認したい">ドキュメント モードを確認したい</a></li>
+<li><a href="#ニュートラル-サイト">ニュートラル サイト</a></li>
+</ul>
+<hr>
 <h2 id="Web-コンテンツのデバッグ方法"><a href="#Web-コンテンツのデバッグ方法" class="headerlink" title="Web コンテンツのデバッグ方法"></a>Web コンテンツのデバッグ方法</h2><p>Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツに対して、Microsoft Edge の F12 開発者ツールを使用することはできません。<br>IE モードで表示されている Web コンテンツをデバッグするには、IEChooser (Microsoft Edge 開発者ツール) を使用します。具体的には、以下の手順にてデバッグ作業を行います。</p>
 <p>※ このトピックは、Windows 10 および Windows Server 2016、Windows Server 2019 以上の環境を前提としています。Windows 8.1 および Windows Server 2012 R2 以前の Windows プラットフォームについては、恐れ入りますが、後述の方法で IE モードで表示されている Web コンテンツをデバッグすることはできません。</p>
 <ol>
@@ -141,8 +153,11 @@
 <li>開発者ツールが起動しますので、Web コンテンツをデバッグします。</li>
 </ol>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/IEChooser2.png" alt="開発者ツール画面"></p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
-<h2 id="window-open-による子ウィンドウの扱い"><a href="#window-open-による子ウィンドウの扱い" class="headerlink" title="window.open() による子ウィンドウの扱い"></a>window.open() による子ウィンドウの扱い</h2><p>Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツ内で window.open() メソッドを実行して表示される子ウィンドウは新しい Microsoft Edge のウィンドウとなります。</p>
+<h2 id="window-open-による子ウィンドウの扱い"><a href="#window-open-による子ウィンドウの扱い" class="headerlink" title="window.open による子ウィンドウの扱い"></a>window.open による子ウィンドウの扱い</h2><p>Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツ内で window.open() メソッドを実行して表示される子ウィンドウは新しい Microsoft Edge のウィンドウとなります。</p>
 <p>IE モードでは、Web ページ コンテンツの表示 (レンダリング) やスクリプトは IE11 のブラウザー エンジンによって処理されますが、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。具体的には、以下の図の緑色の枠線内は IE モードによって処理されますが、枠の外側は Microsoft Edge によって処理されます。</p>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/windowopen1.png" alt="ウィンドウの構造"></p>
 <p>上記動作に伴い、window.open(url, windowName, windowFeatures) の引数 windowFeatures で指定する以下のオプションは反映されません。<br>なお、この動作は Microsoft Edge における想定された動作となります。</p>
@@ -155,10 +170,16 @@
 </li>
 </ul>
 <p>(参考情報)<br>window.open - Web API | MDN<br><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/open" target="_blank" rel="noopener">https://developer.mozilla.org/ja/docs/Web/API/Window/open</a></p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 <h2 id="Cookie-の共有"><a href="#Cookie-の共有" class="headerlink" title="Cookie の共有"></a>Cookie の共有</h2><p>以下のドキュメントに詳細がまとまっていますが、<span style="color: #ff0000">セッション Cookie</span> に関して、Edge から IE モードにのみ共有することができます。<br><span style="color: #ff0000">セッション Cookie</span>を逆方向へ (IE モードから Edge へ) 共有することはできません。</p>
 <p>Microsoft Edge から Internet Explorer への Cookie の共有<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare</a></p>
 <p><span style="color: #ff0000;font-weight:bold;">※ 共有できる Cookie の種類は、有効期限のある永続 Cookie ではなく、有効期間のないセッション Cookie のみですのでご注意ください。</span></p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 <h2 id="ページ遷移時のブラウザー-エンジンの切り替え"><a href="#ページ遷移時のブラウザー-エンジンの切り替え" class="headerlink" title="ページ遷移時のブラウザー エンジンの切り替え"></a>ページ遷移時のブラウザー エンジンの切り替え</h2><p>以下のポリシーの設定状態によって、IE モードで表示しているページからの遷移時の動作が変わります。</p>
 <p>InternetExplorerIntegrationSiteRedirect<br><a href="https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect</a></p>
@@ -175,6 +196,8 @@
 </li>
 <li><p>すべてのページ内ナビゲーション を Internet Explorer モードで維持する<br>A, B) 遷移先のページが IE モードで表示される。</p>
 </li>
+<li><p><a href="#目次">目次へ</a></p>
+</li>
 </ul>
 <hr>
 <h2 id="ブラウザー-エンジンの切り替え時の通信で起こること"><a href="#ブラウザー-エンジンの切り替え時の通信で起こること" class="headerlink" title="ブラウザー エンジンの切り替え時の通信で起こること"></a>ブラウザー エンジンの切り替え時の通信で起こること</h2><p>ブラウザー エンジンの切り替え時 (Edge から IE モード、およびその逆) の通信は以下のようになります。</p>
@@ -184,6 +207,9 @@
 </ul>
 <p>ページ遷移時に POST リクエストではなく GET リクエストが Web サーバーに送信されている場合には、こちらの制限に該当していると言えます。<br>POST リクエストが GET リクエストとなる動作は、異なるプロセス間での POST データのやり取りに対するセキュリティ的な懸念の観点と、技術的な制約からなる想定された動作となり、この動作を変更することはできません。</p>
 <p>元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。<br>対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。</p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 <h2 id="IE-モードでの表示をテストしたい"><a href="#IE-モードでの表示をテストしたい" class="headerlink" title="IE モードでの表示をテストしたい"></a>IE モードでの表示をテストしたい</h2><p>IE モードのテストのために、毎回サイトリストを書き替えたり、ポリシーを設定しなおすことは大変な手間がかかります。<br>この手間を解消するために、以下の A, B どちらかの方法でメニューから IE モードもしくは Edge モードを切り替え、コンテンツを表示することが可能です。</p>
 <p><span style="color: #ff0000">これらの機能はテストを目的に用意されており、意図しないサイトで IE モードを利用することは、想定しない ActiveX の実行など、セキュリティのリスクがありますので十分ご注意ください。</span></p>
@@ -192,6 +218,9 @@
 <p>これらの方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。<br><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/iemodetest.png" alt="選択したモードで開く操作"></p>
 <p>なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のドキュメントでもご案内している手順にて、IE モードを有効に設定してください。</p>
 <p>グループ ポリシーを使用して Internet Explorer 統合を有効にする<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy</a></p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 <h2 id="サイトリストで指定しているサイトが-IE-モードで表示されない"><a href="#サイトリストで指定しているサイトが-IE-モードで表示されない" class="headerlink" title="サイトリストで指定しているサイトが IE モードで表示されない"></a>サイトリストで指定しているサイトが IE モードで表示されない</h2><p>まずは edge://compat を開いて、Edge が読み込んでいるサイトリストの内容を確認します。</p>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/compat_enterprise.png" alt="Edge が読み込んでいるサイトリストの内容"></p>
@@ -216,9 +245,15 @@
 <li>“グループ ポリシーの設定” が想定したとおりになっているかどうか。</li>
 </ul>
 <p>設定について <a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies" target="_blank" rel="noopener">IE モード ポリシーの構成</a> のドキュメントをみながら構成を確認します。</p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 <h2 id="ドキュメント-モードを確認したい"><a href="#ドキュメント-モードを確認したい" class="headerlink" title="ドキュメント モードを確認したい"></a>ドキュメント モードを確認したい</h2><p>アドレス バーの横にある IE モードのアイコンをクリックすると確認できます。</p>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/docmode.png" alt="ドキュメント モードなどの確認"></p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 <h2 id="ニュートラル-サイト"><a href="#ニュートラル-サイト" class="headerlink" title="ニュートラル サイト"></a>ニュートラル サイト</h2><p>ニュートラルの機能は、<font color="red">その URL に遷移してきた際の直前のブラウザーを維持することです。</font><br>つまり、Edge で遷移してきた場合には Edge を維持し、IE モードで遷移してきた場合には IE モードを維持するにようにできます。</p>
 <p>以下のような場面で利用します。</p>
@@ -258,6 +293,9 @@
 <p>エンタープライズ モード サイト リストでのサイトの構成<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist</a></p>
 <p>一時的な対応策としては [Internet Explorer モード ページから起動したときに未構成サイトへの「ページ内」ナビゲーションの動作を指定する] というポリシーが利用できますので、状況に合わせた対応をご検討いただければと思います。</p>
 <p>Internet Explorer モードでページ内ナビゲーションを保持する<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav</a></p>
+<ul>
+<li><a href="#目次">目次へ</a></li>
+</ul>
 <hr>
 
       
