@@ -39,9 +39,9 @@ tags:
     - Windows 8.1
     - Windows 7 ESU
     - Windows 10 Server SAC (all versions)
-    - Windows 10 IoT LTSC/LTSB (all versions)
-    - Windows 10 Server LTSC/LTSB (all versions)
-    - Windows 10 client LTSC/LTSB (all versions)
+    - Windows 10 IoT LTSC (旧 LTSB 含む) (all versions)
+    - Windows 10 Server LTSC (旧 LTSB 含む) (all versions)
+    - Windows 10 client LTSC (旧 LTSB 含む) (all versions)
 
 なお、上記 Windows OS のサポート終了日は [こちらの "8) IE モードはいつまでサポートされますか？" の部分にある表](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/) をご覧ください。
 
