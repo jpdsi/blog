@@ -14,7 +14,7 @@
 <meta property="og:description" content="本記事は Technet Blog の更新停止に伴い、もとの 記事 からの複写となります。元の記事の最新の更新情報については、本内容をご参照ください。  今回は IIS の観点より、アンチ ウイルス スキャン対象から除外すべきフォルダーについてご紹介します。 アンチ ウィルス ソフトのようなセキュリティ関連ソフトや、バックアップ ソフト等の予期しない動作によって、IIS が動作するために必要なモ">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2020-02-17T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-21T02:30:32.996Z">
+<meta property="article:modified_time" content="2021-05-21T07:37:51.037Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Internet Information Services">
 <meta name="twitter:card" content="summary">
@@ -36,7 +36,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -54,7 +54,7 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -102,13 +102,13 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+adb5c0c0-adb5-5eb6-aaf4-6c199621b63f%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BIIS+%E8%A6%B3%E7%82%B9%E3%81%A7%E3%82%A2%E3%83%B3%E3%83%81+%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9+%E3%82%B9%E3%82%AD%E3%83%A3%E3%83%B3%E5%AF%BE%E8%B1%A1%E3%81%8B%E3%82%89%E9%99%A4%E5%A4%96%E3%81%97%E3%81%9F%E3%81%84%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%83%BC%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Fweb-apps%2Fiis-exclude-antivirus-scanning%2F%29%0A*+Content+Source%3A+%5Barticles%2Fweb-apps%2Fiis-exclude-antivirus-scanning.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Fweb-apps%2Fiis-exclude-antivirus-scanning.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/web-apps/iis-exclude-antivirus-scanning/" data-id="ckoxpha5a002u0nr97s5rd485" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/web-apps/iis-exclude-antivirus-scanning/" data-id="ckoy0gg2a002k0npjeucae9q5" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>本記事は Technet Blog の更新停止に伴い、もとの <a href="https://docs.microsoft.com/ja-jp/archive/blogs/jpiis/iis_antivirus" target="_blank" rel="noopener">記事</a> からの複写となります。<br>元の記事の最新の更新情報については、本内容をご参照ください。</p>
+<p>本記事は Technet Blog の更新停止に伴い、もとの <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/archive/blogs/jpiis/iis_antivirus">記事</a> からの複写となります。<br>元の記事の最新の更新情報については、本内容をご参照ください。</p>
 </blockquote>
 <p>今回は IIS の観点より、アンチ ウイルス スキャン対象から除外すべきフォルダーについてご紹介します。</p>
 <p>アンチ ウィルス ソフトのようなセキュリティ関連ソフトや、バックアップ ソフト等の予期しない動作によって、IIS が動作するために必要なモジュールやファイルの処理時に影響が発生し、後述の事例のような現象が発生する場合があります。</p>
@@ -130,7 +130,7 @@
 <h3 id="アプリケーションが配置されているフォルダー"><a href="#アプリケーションが配置されているフォルダー" class="headerlink" title="アプリケーションが配置されているフォルダー"></a>アプリケーションが配置されているフォルダー</h3><p>IIS で公開されるコンテンツへのアクセス時に阻害されるようなことがあった場合、コンテンツが正常に応答できず、クライアント側でエラーとなる可能性があるため、除外をお勧めしています。</p>
 <h2 id="■-セキュリティ関連ソフトの影響により発生する事例"><a href="#■-セキュリティ関連ソフトの影響により発生する事例" class="headerlink" title="■ セキュリティ関連ソフトの影響により発生する事例"></a>■ セキュリティ関連ソフトの影響により発生する事例</h2><h3 id="1-アプリケーション-ドメインの再起動"><a href="#1-アプリケーション-ドメインの再起動" class="headerlink" title="1) アプリケーション ドメインの再起動"></a>1) アプリケーション ドメインの再起動</h3><p>アプリケーション ドメインの再起動は、web.config などの構成ファイルの変更や、bin フォルダー配下のファイルの編集をトリガーとして行われます。<br>再起動されると次回アクセス時にアセンブリのロード等が再度行われるため、他のタイミングよりリクエストの処理に時間がかかることがあります。</p>
 <p>ASP.NET にてヘルス モニタリングのイベントを有効にしている場合、以下のイベント ID : 1305 が記録されます。</p>
-<h5 id="へルス-モニタリングを有効にする構成"><a href="#へルス-モニタリングを有効にする構成" class="headerlink" title="へルス モニタリングを有効にする構成"></a>へルス モニタリングを有効にする構成</h5><figure class="highlight xml"><figcaption><span>web.config</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">healthMonitoring</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">rules</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">"myLifeTimeLogs"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">eventName</span>=<span class="string">"Application Lifetime Events"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">provider</span>=<span class="string">"EventLogProvider"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rules</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">healthMonitoring</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="へルス-モニタリングを有効にする構成"><a href="#へルス-モニタリングを有効にする構成" class="headerlink" title="へルス モニタリングを有効にする構成"></a>へルス モニタリングを有効にする構成</h5><figure class="highlight xml"><figcaption><span>web.config</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">healthMonitoring</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">rules</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">add</span> <span class="attr">name</span>=<span class="string">&quot;myLifeTimeLogs&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">eventName</span>=<span class="string">&quot;Application Lifetime Events&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">provider</span>=<span class="string">&quot;EventLogProvider&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rules</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">healthMonitoring</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="イベント-ログ"><a href="#イベント-ログ" class="headerlink" title="イベント ログ"></a>イベント ログ</h5><blockquote>
 <p>ログの名前: Application<br>ソース: ASP.NET 4.0.30319.0<br>日付: 2018/08/17 11:34:21<br>イベント ID: 1305<br>タスクのカテゴリ: Web Event<br>レベル: 情報<br>キーワード: クラシック<br>説明: Event code: 1002 Event message: アプリケーションをシャットダウンしています。<br>原因: 構成が変更されました。</p>
@@ -154,8 +154,8 @@
 <hr>
 <p>上記事例以外にも、セキュリティ関連ソフトの影響により、予期しない動作となる可能性がありますため、除外設定についてご検討いただけますと幸いです。</p>
 <p>※ただし、アンチ ウィルス ソフトの種類によってはスキャンの除外対象のフォルダーやファイルに対してもアクセスが発生してしまう場合もあります。<br>アンインストールを行わなければそのアプリケーションの動作の影響を抑えることができなかったという事例もあります。<br>除外や停止のみでは改善されない場合は、アンインストールにより事象が改善されるかもご確認いただけますと幸いです。</p>
-<h2 id="■-参考情報"><a href="#■-参考情報" class="headerlink" title="■ 参考情報"></a>■ 参考情報</h2><p>ASP.NET アプリケーションでのウイルス対策スキャンから除外するフォルダー<br><a href="https://support.microsoft.com/ja-jp/help/3126034/folders-to-exclude-from-antivirus-scanning-in-asp-net-apps" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/3126034/folders-to-exclude-from-antivirus-scanning-in-asp-net-apps</a></p>
-<p>fltmc.exe の使い方<br><a href="https://docs.microsoft.com/ja-jp/archive/blogs/jpwdkblog/fltmc-exe" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/archive/blogs/jpwdkblog/fltmc-exe</a></p>
+<h2 id="■-参考情報"><a href="#■-参考情報" class="headerlink" title="■ 参考情報"></a>■ 参考情報</h2><p>ASP.NET アプリケーションでのウイルス対策スキャンから除外するフォルダー<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/3126034/folders-to-exclude-from-antivirus-scanning-in-asp-net-apps">https://support.microsoft.com/ja-jp/help/3126034/folders-to-exclude-from-antivirus-scanning-in-asp-net-apps</a></p>
+<p>fltmc.exe の使い方<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/archive/blogs/jpwdkblog/fltmc-exe">https://docs.microsoft.com/ja-jp/archive/blogs/jpwdkblog/fltmc-exe</a></p>
 <p>※fltmc.exeを用いてセキュリティ関連ソフト等のフィルター ドライバーのインストール状況を確認できます。</p>
 <p>それでは、また！</p>
 

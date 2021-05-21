@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/Step4.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/Step5.png">
 <meta property="article:published_time" content="2020-06-22T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-21T02:30:32.972Z">
+<meta property="article:modified_time" content="2021-05-21T07:37:51.017Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Internet Explorer">
 <meta property="article:tag" content="Dump">
@@ -44,7 +44,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -62,7 +62,7 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -110,7 +110,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+3da3e6ea-dffb-5549-8457-bad459e0314a%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BIE+%E3%81%AE%E8%AA%BF%E6%9F%BB%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%80%E3%83%B3%E3%83%97+%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%8E%A1%E5%8F%96%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fdump%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fdump.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fdump.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/" data-id="ckoxpha4a00150nr9f69v6ahq" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/" data-id="ckoy0gg1k00140npjfa0pg0zl" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -134,26 +134,28 @@
 <p>1．タスクバーを右クリックして、タスク マネージャーを起動します。 </p>
 <p> <img src="/blog/internet-explorer-microsoft-edge/dump/Step1.png" alt="Step1"></p>
 <ol start="2">
-<li><p>[詳細] タブを開きます。</p>
-<p><img src="/blog/internet-explorer-microsoft-edge/dump/Step2.png" alt="Step2"></p>
-</li>
+<li>[詳細] タブを開きます。</li>
+</ol>
+<p> <img src="/blog/internet-explorer-microsoft-edge/dump/Step2.png" alt="Step2"></p>
+<ol start="3">
 <li><p>[名前] 列をクリックしてソートし、”iexplore.exe” を探します。<br>※ “iexplore.exe” のプロセスは複数存在しますので、すべてのプロセスに対して取得してください。</p>
 </li>
 <li><p>3 で探したすべての iexplore.exe に対して 1 つずつ、右クリック メニューから [ダンプ ファイルの作成] を選択します。</p>
-<p><img src="/blog/internet-explorer-microsoft-edge/dump/Step4.png" alt="Step4"></p>
-</li>
-<li><p>ダンプ ファイルの作成に成功すると、ダイアログで保存場所が表示されるため、確認しておきます。<br>※ 既定では、環境変数 TEMP フォルダー以下に作成され、iexplore.DMP、iexplore (2).DMP のようなファイル名となります。</p>
-<p><img src="/blog/internet-explorer-microsoft-edge/dump/Step5.png" alt="Step5"></p>
 </li>
 </ol>
+<p> <img src="/blog/internet-explorer-microsoft-edge/dump/Step4.png" alt="Step4"></p>
+<ol start="5">
+<li>ダンプ ファイルの作成に成功すると、ダイアログで保存場所が表示されるため、確認しておきます。<br>※ 既定では、環境変数 TEMP フォルダー以下に作成され、iexplore.DMP、iexplore (2).DMP のようなファイル名となります。</li>
+</ol>
+<p> <img src="/blog/internet-explorer-microsoft-edge/dump/Step5.png" alt="Step5"></p>
 <p>※    クラッシュの場合の手順はここまでです。</p>
 <h3 id="★ハング事象の場合"><a href="#★ハング事象の場合" class="headerlink" title="★ハング事象の場合"></a>★ハング事象の場合</h3><p>上述の手順3～5 を間隔を空けながら 2、3 回繰り返します。<br>※ 例えば、事象が 2 ～ 3 分続く場合は、30 秒ごとに採取するなど、事象発生時間に合わせて採取します。<br>※ 上記のスクリーンショットの例では、３つの iexplore.exe が存在したため、同じ操作を2回ずつ実施すると、iexplore.DMP、iexplore (2).DMP、iexplore (3).DMP、… と6つのファイルができます。</p>
 <h3 id="★ハング事象の発生時間が短いなら"><a href="#★ハング事象の発生時間が短いなら" class="headerlink" title="★ハング事象の発生時間が短いなら"></a>★ハング事象の発生時間が短いなら</h3><p>ハングの場合は事象発生中に複数回実施する必要があるため、事象発生時間が短い場合は上述の手順では採取が難しいことがあります。<br>その場合、ProcDump というツールを利用すると、上述の手順 4 でご紹介しているIE のすべてのプロセスのダンプ ファイルを一気に取得できます。<br>タスクマネージャーから手動で実行する手間がないので、ハング事象が 30 秒などと短い場合にはこちらの方法で取得することをお勧めしております。</p>
 <p>1．ProcDump ツールは以下のサイトから実行ファイルをダウンロードできます。</p>
-<p>　<a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/sysinternals/downloads/procdump</a></p>
+<p>　<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">https://docs.microsoft.com/en-us/sysinternals/downloads/procdump</a></p>
 <p>2．ProcDump の実行ファイルと以下の VBScript を事前に端末に配置します。<br>　※　いつでも実行できますので、IE を起動して、コマンドを実行したときに、ダンプ ファイルが取得できるかを事前にご確認ください。</p>
 <p>なお、以下のサンプルスクリプトでは、C:\dump フォルダーに procdump.exe を格納し、コマンド実行すると、c:\dump フォルダーに、IE のダンプを出力するという例になります。<br>※    フォルダーは任意の場所を指定してください。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Set objWMIService &#x3D; GetObject(&quot;winmgmts:\\.\root\cimv2&quot;) </span><br><span class="line">Set colItems &#x3D; objWMIService.ExecQuery(&quot;Select * From Win32_Process&quot;) </span><br><span class="line"></span><br><span class="line">Set WshShell &#x3D; WScript.CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line"></span><br><span class="line">For Each objItem in colItems </span><br><span class="line">    If InStr(LCase(objItem.CommandLine), &quot;iexplore.exe&quot;) Then </span><br><span class="line">        WshShell.Exec(&quot;c:\dump\procdump.exe -accepteula -ma &quot;&amp;objItem.ProcessID&amp;&quot; c:\dump\ie&quot;&amp;objItem.ProcessID&amp;&quot;.dmp&quot;)</span><br><span class="line">    End If </span><br><span class="line">Next</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Set objWMIService = GetObject(&quot;winmgmts:\\.\root\cimv2&quot;) </span><br><span class="line">Set colItems = objWMIService.ExecQuery(&quot;Select * From Win32_Process&quot;) </span><br><span class="line"></span><br><span class="line">Set WshShell = WScript.CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line"></span><br><span class="line">For Each objItem in colItems </span><br><span class="line">    If InStr(LCase(objItem.CommandLine), &quot;iexplore.exe&quot;) Then </span><br><span class="line">        WshShell.Exec(&quot;c:\dump\procdump.exe -accepteula -ma &quot;&amp;objItem.ProcessID&amp;&quot; c:\dump\ie&quot;&amp;objItem.ProcessID&amp;&quot;.dmp&quot;)</span><br><span class="line">    End If </span><br><span class="line">Next</span><br></pre></td></tr></table></figure>
 
 <p>3．IE を起動して、ハングの事象が発生しましたら、発生中に間隔をあけて手順 2 の VBScript を数回実行します。</p>
 <p>原因究明の最初の一歩となるダンプファイルが取得できましたら、発生する現象について詳細なご説明を添えて、私共、サポートチームへお問い合せください！</p>

@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/docmode.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/owa.png">
 <meta property="article:published_time" content="2021-05-13T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-21T02:30:32.980Z">
+<meta property="article:modified_time" content="2021-05-21T07:37:51.025Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="IE モード">
@@ -48,7 +48,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -66,7 +66,7 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -114,7 +114,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+cc68aecc-1400-5be9-87dc-9911a9983fc4%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BIE+%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fie-mode-faq%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fie-mode-faq.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fie-mode-faq.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/" data-id="ckoxpha4l001m0nr9gmuod81v" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/" data-id="ckoy0gg3q007i0npj4tte1pka" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -126,19 +126,19 @@
 <p>新しいバージョンの Microsoft Edge の “IE モード” について<br><a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/">https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/</a></p>
 <p>まだデフォルトIE？ 新しい Microsoft Edge を使いませんか？<br><a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/">https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/</a></p>
 <p>なお、IE モードに関する公式ドキュメントは以下にまとまっていますので、基本的な内容についてはこちらをご覧ください。</p>
-<p>Internet Explorer (IE) モードとは<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode</a></p>
-<p>IE モードのトラブルシューティングと FAQ<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq</a></p>
+<p>Internet Explorer (IE) モードとは<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode</a></p>
+<p>IE モードのトラブルシューティングと FAQ<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq</a></p>
 <hr>
 <h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a>目次</h2><ul>
-<li><a href="#Web-コンテンツのデバッグ方法">Web コンテンツのデバッグ方法</a></li>
-<li><a href="#window-open-による子ウィンドウの扱い">window.open による子ウィンドウの扱い</a></li>
-<li><a href="#Cookie-の共有">Cookie の共有</a></li>
-<li><a href="#ページ遷移時のブラウザー-エンジンの切り替え">ページ遷移時のブラウザー エンジンの切り替え</a></li>
-<li><a href="#ブラウザー-エンジンの切り替え時の通信で起こること">ブラウザー エンジンの切り替え時の通信で起こること</a></li>
-<li><a href="#IE-モードでの表示をテストしたい">IE モードでの表示をテストしたい</a></li>
-<li><a href="#サイトリストで指定しているサイトが-IE-モードで表示されない">サイトリストで指定しているサイトが IE モードで表示されない</a></li>
-<li><a href="#ドキュメント-モードを確認したい">ドキュメント モードを確認したい</a></li>
-<li><a href="#ニュートラル-サイト">ニュートラル サイト</a></li>
+<li><a href="#Web-%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E6%96%B9%E6%B3%95">Web コンテンツのデバッグ方法</a></li>
+<li><a href="#window-open-%E3%81%AB%E3%82%88%E3%82%8B%E5%AD%90%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%81%AE%E6%89%B1%E3%81%84">window.open による子ウィンドウの扱い</a></li>
+<li><a href="#Cookie-%E3%81%AE%E5%85%B1%E6%9C%89">Cookie の共有</a></li>
+<li><a href="#%E3%83%9A%E3%83%BC%E3%82%B8%E9%81%B7%E7%A7%BB%E6%99%82%E3%81%AE%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%83%BC-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88">ページ遷移時のブラウザー エンジンの切り替え</a></li>
+<li><a href="#%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%83%BC-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E6%99%82%E3%81%AE%E9%80%9A%E4%BF%A1%E3%81%A7%E8%B5%B7%E3%81%93%E3%82%8B%E3%81%93%E3%81%A8">ブラウザー エンジンの切り替え時の通信で起こること</a></li>
+<li><a href="#IE-%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E3%83%86%E3%82%B9%E3%83%88%E3%81%97%E3%81%9F%E3%81%84">IE モードでの表示をテストしたい</a></li>
+<li><a href="#%E3%82%B5%E3%82%A4%E3%83%88%E3%83%AA%E3%82%B9%E3%83%88%E3%81%A7%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8C-IE-%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84">サイトリストで指定しているサイトが IE モードで表示されない</a></li>
+<li><a href="#%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88-%E3%83%A2%E3%83%BC%E3%83%89%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%9F%E3%81%84">ドキュメント モードを確認したい</a></li>
+<li><a href="#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%A9%E3%83%AB-%E3%82%B5%E3%82%A4%E3%83%88">ニュートラル サイト</a></li>
 </ul>
 <hr>
 <h2 id="Web-コンテンツのデバッグ方法"><a href="#Web-コンテンツのデバッグ方法" class="headerlink" title="Web コンテンツのデバッグ方法"></a>Web コンテンツのデバッグ方法</h2><p>Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツに対して、Microsoft Edge の F12 開発者ツールを使用することはできません。<br>IE モードで表示されている Web コンテンツをデバッグするには、IEChooser (Microsoft Edge 開発者ツール) を使用します。具体的には、以下の手順にてデバッグ作業を行います。</p>
@@ -154,7 +154,7 @@
 </ol>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/IEChooser2.png" alt="開発者ツール画面"></p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="window-open-による子ウィンドウの扱い"><a href="#window-open-による子ウィンドウの扱い" class="headerlink" title="window.open による子ウィンドウの扱い"></a>window.open による子ウィンドウの扱い</h2><p>Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツ内で window.open() メソッドを実行して表示される子ウィンドウは新しい Microsoft Edge のウィンドウとなります。</p>
@@ -169,26 +169,26 @@
 <li><p>fullscreen<br>fullscreen オプション指定は常に無視され、全画面表示とはなりません。</p>
 </li>
 </ul>
-<p>(参考情報)<br>window.open - Web API | MDN<br><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/open" target="_blank" rel="noopener">https://developer.mozilla.org/ja/docs/Web/API/Window/open</a></p>
+<p>(参考情報)<br>window.open - Web API | MDN<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/ja/docs/Web/API/Window/open">https://developer.mozilla.org/ja/docs/Web/API/Window/open</a></p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="Cookie-の共有"><a href="#Cookie-の共有" class="headerlink" title="Cookie の共有"></a>Cookie の共有</h2><p>以下のドキュメントに詳細がまとまっていますが、<span style="color: #ff0000">セッション Cookie</span> に関して、Edge から IE モードにのみ共有することができます。<br><span style="color: #ff0000">セッション Cookie</span>を逆方向へ (IE モードから Edge へ) 共有することはできません。</p>
-<p>Microsoft Edge から Internet Explorer への Cookie の共有<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare</a></p>
+<p>Microsoft Edge から Internet Explorer への Cookie の共有<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare</a></p>
 <p><span style="color: #ff0000;font-weight:bold;">※ 共有できる Cookie の種類は、有効期限のある永続 Cookie ではなく、有効期間のないセッション Cookie のみですのでご注意ください。</span></p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="ページ遷移時のブラウザー-エンジンの切り替え"><a href="#ページ遷移時のブラウザー-エンジンの切り替え" class="headerlink" title="ページ遷移時のブラウザー エンジンの切り替え"></a>ページ遷移時のブラウザー エンジンの切り替え</h2><p>以下のポリシーの設定状態によって、IE モードで表示しているページからの遷移時の動作が変わります。</p>
-<p>InternetExplorerIntegrationSiteRedirect<br><a href="https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect</a></p>
+<p>InternetExplorerIntegrationSiteRedirect<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect">https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationsiteredirect</a></p>
 <p>実際の動きをみてみましょう。(ポリシー変更後はいったん Edge を再起動させてください)</p>
 <p>サイトリストには以下のふたつの URL を登録した状態にします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url&#x3D;&quot;docs.microsoft.com&#x2F;ja-jp&#x2F;deployedge&#x2F;edge-ie-mode&quot;&gt;</span><br><span class="line">&lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;aka.ms&quot;&gt;</span><br><span class="line">&lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url=&quot;docs.microsoft.com/ja-jp/deployedge/edge-ie-mode&quot;&gt;</span><br><span class="line">&lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;aka.ms&quot;&gt;</span><br><span class="line">&lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br></pre></td></tr></table></figure>
 
 <p>このサイトリストが反映された状態で以下の A, B の操作をすると、ポリシーの設定状態によって下記のとおりになります。</p>
-<p>A) <a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode</a> を (IE モードで) 開いたあと、ページ左側の目次から任意の別のページを開く<br>B) <a href="https://aka.ms/windows/releaseinfo" target="_blank" rel="noopener">https://aka.ms/windows/releaseinfo</a> を開く</p>
+<p>A) <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode</a> を (IE モードで) 開いたあと、ページ左側の目次から任意の別のページを開く<br>B) <a target="_blank" rel="noopener" href="https://aka.ms/windows/releaseinfo">https://aka.ms/windows/releaseinfo</a> を開く</p>
 <ul>
 <li><p>未構成もしくは既定<br>A, B) 遷移先のページが Edge モードで表示される。</p>
 </li>
@@ -196,7 +196,7 @@
 </li>
 <li><p>すべてのページ内ナビゲーション を Internet Explorer モードで維持する<br>A, B) 遷移先のページが IE モードで表示される。</p>
 </li>
-<li><p><a href="#目次">目次へ</a></p>
+<li><p><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></p>
 </li>
 </ul>
 <hr>
@@ -208,18 +208,18 @@
 <p>ページ遷移時に POST リクエストではなく GET リクエストが Web サーバーに送信されている場合には、こちらの制限に該当していると言えます。<br>POST リクエストが GET リクエストとなる動作は、異なるプロセス間での POST データのやり取りに対するセキュリティ的な懸念の観点と、技術的な制約からなる想定された動作となり、この動作を変更することはできません。</p>
 <p>元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。<br>対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。</p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="IE-モードでの表示をテストしたい"><a href="#IE-モードでの表示をテストしたい" class="headerlink" title="IE モードでの表示をテストしたい"></a>IE モードでの表示をテストしたい</h2><p>IE モードのテストのために、毎回サイトリストを書き替えたり、ポリシーを設定しなおすことは大変な手間がかかります。<br>この手間を解消するために、以下の A, B どちらかの方法でメニューから IE モードもしくは Edge モードを切り替え、コンテンツを表示することが可能です。</p>
 <p><span style="color: #ff0000">これらの機能はテストを目的に用意されており、意図しないサイトで IE モードを利用することは、想定しない ActiveX の実行など、セキュリティのリスクがありますので十分ご注意ください。</span></p>
-<p>A) InternetExplorerIntegrationTestingAllowed ポリシーを有効に設定する<br><a href="https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed</a></p>
+<p>A) InternetExplorerIntegrationTestingAllowed ポリシーを有効に設定する<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed">https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed</a></p>
 <p>B) “–ie-mode-test” オプションを付加して msedge.exe を実行する<br>実行例)<br>“C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe” –ie-mode-test</p>
 <p>これらの方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。<br><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/iemodetest.png" alt="選択したモードで開く操作"></p>
 <p>なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のドキュメントでもご案内している手順にて、IE モードを有効に設定してください。</p>
-<p>グループ ポリシーを使用して Internet Explorer 統合を有効にする<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy</a></p>
+<p>グループ ポリシーを使用して Internet Explorer 統合を有効にする<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy</a></p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="サイトリストで指定しているサイトが-IE-モードで表示されない"><a href="#サイトリストで指定しているサイトが-IE-モードで表示されない" class="headerlink" title="サイトリストで指定しているサイトが IE モードで表示されない"></a>サイトリストで指定しているサイトが IE モードで表示されない</h2><p>まずは edge://compat を開いて、Edge が読み込んでいるサイトリストの内容を確認します。</p>
@@ -234,7 +234,7 @@
 <p>確認ポイント</p>
 <ul>
 <li>サイトリストのバージョンを更新したか。</li>
-<li><a href="https://docs.microsoft.com/ja-jp/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance" target="_blank" rel="noopener">エンタープライズ モード スキーマ v.2 ガイダンス</a> に沿っているか。</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance">エンタープライズ モード スキーマ v.2 ガイダンス</a> に沿っているか。</li>
 <li>シンプルに１つだけ登録した状態であれば、Edge に反映されるか。</li>
 </ul>
 <p>サイトリストの内容には問題がない場合、edge://compat/iediagnostic を開いて、ポリシーの設定状態を確認します。</p>
@@ -244,22 +244,22 @@
 <li>“Internet Explorer モードの設定” で上記のようになっているかどうか。</li>
 <li>“グループ ポリシーの設定” が想定したとおりになっているかどうか。</li>
 </ul>
-<p>設定について <a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies" target="_blank" rel="noopener">IE モード ポリシーの構成</a> のドキュメントをみながら構成を確認します。</p>
+<p>設定について <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies">IE モード ポリシーの構成</a> のドキュメントをみながら構成を確認します。</p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="ドキュメント-モードを確認したい"><a href="#ドキュメント-モードを確認したい" class="headerlink" title="ドキュメント モードを確認したい"></a>ドキュメント モードを確認したい</h2><p>アドレス バーの横にある IE モードのアイコンをクリックすると確認できます。</p>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/docmode.png" alt="ドキュメント モードなどの確認"></p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 <h2 id="ニュートラル-サイト"><a href="#ニュートラル-サイト" class="headerlink" title="ニュートラル サイト"></a>ニュートラル サイト</h2><p>ニュートラルの機能は、<font color="red">その URL に遷移してきた際の直前のブラウザーを維持することです。</font><br>つまり、Edge で遷移してきた場合には Edge を維持し、IE モードで遷移してきた場合には IE モードを維持するにようにできます。</p>
 <p>以下のような場面で利用します。</p>
 <h3 id="認証がうまくいかないケース"><a href="#認証がうまくいかないケース" class="headerlink" title="認証がうまくいかないケース"></a>認証がうまくいかないケース</h3><p>IE モードを利用するとき『認証がうまくいかない』というお問い合せをよくいただきますので、ここで紹介します。</p>
 <p>認証がうまくいかないという話では <a href="../cross-protected-mode-cookie/">保護モードをまたいだ Cookie について</a> という記事で、Azure AD (AAD) 認証を必要とする Web アプリケーションを例としました。<br>対象の Web アプリケーションのドメインと認証時にアクセスする login.microsoftonline.com が異なったセキュリティ ゾーンに属していた場合、認証済みを示す Cookie がリクエストに含まれないことで、ユーザーがログオンしていないと判断され、再度認証を求められてしまうという現象を解説しました。</p>
-<p>IE モードを利用するとき『どの URL を IE モードで表示するか』を設定しますが、対象の Web アプリケーションの URL に加えて、<strong><font color="red">認証サーバー / シングル サインオン サーバーに対してのアクセスも IE モードで動作するように明示的に構成する</font></strong> 必要があります。<br>認証サーバーも含めておかないと、以下のように IE モードと Edge とで行き来するときに認証に必要な Cookie が共有されずに認証ができません。</p>
+<p>IE モードを利用するとき『どの URL を IE モードで表示するか』を設定しますが、対象の Web アプリケーションの URL に加えて、**<font color="red">認証サーバー / シングル サインオン サーバーに対してのアクセスも IE モードで動作するように明示的に構成する</font>** 必要があります。<br>認証サーバーも含めておかないと、以下のように IE モードと Edge とで行き来するときに認証に必要な Cookie が共有されずに認証ができません。</p>
 <ol>
 <li>対象の Web アプリケーションの URL にアクセスします。(IE モードで動作します)</li>
 <li>認証のために認証サーバーにアクセスします。(Edge で通信します)</li>
@@ -271,14 +271,14 @@
 <p>ただ、認証時に通信するサーバーをすべて IE モードで動作するように明示的に指定してしまうと、逆に Edge でアクセスする必要があるパターンでうまくいきません。</p>
 <p>具体例として、Azure AD (AAD) 認証を必要とする Web アプリケーションとして Office.com を使って試してみます。<br>(本来は IE モードを使わずに Edge でご覧いただくことをおすすめします)</p>
 <p>まずは以下のように対象サイト (office.com) だけを登録してみます。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url&#x3D;&quot;office.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url=&quot;office.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br></pre></td></tr></table></figure>
 
 <p>このサイト リストを読み込んで、office.com にアクセスすると IE モードで開きます。<br>サインインの操作をしてみるとわかりますが、サインインが完了しません。(場合によっては、認証画面の表示がループしてしまうこともあります)<br>これは、上述のとおり、認証済みを示す Cookie がリクエストに含まれないことで、ユーザーがログオンしていないと判断されたためです。</p>
 <p>そこで以下のように、今回の認証時に経由する可能性がある、login.microsoftonline.com, login.windows.net, login.live.com に対しても IE モードになるように &lt;open-in&gt;IE11&lt;/open-in&gt; を設定してみます。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url&#x3D;&quot;office.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;login.microsoftonline.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;login.windows.net&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;login.live.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url=&quot;office.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;login.microsoftonline.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;login.windows.net&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;login.live.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br></pre></td></tr></table></figure>
 
 <p>これにより、認証時に通信するサーバーすべてが IE モードで動作し、認証完了まで進みます。</p>
-<p>それでは、この状態で <a href="https://outlook.live.com/owa/" target="_blank" rel="noopener">Outlook on the web (OWA)</a> を開いてみましょう。<br>OWA は IE モードで開くように登録をしていないので、通常の Edge で開きます。<br>サインインをしようとすると、login.live.com が IE モードとして登録されているので、サインイン画面が IE モードで開きます。<br>アカウント情報を入力してみると…</p>
+<p>それでは、この状態で <a target="_blank" rel="noopener" href="https://outlook.live.com/owa/">Outlook on the web (OWA)</a> を開いてみましょう。<br>OWA は IE モードで開くように登録をしていないので、通常の Edge で開きます。<br>サインインをしようとすると、login.live.com が IE モードとして登録されているので、サインイン画面が IE モードで開きます。<br>アカウント情報を入力してみると…</p>
 <p>エラーになってしまいました :(</p>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/owa.png" alt="サインインのエラー画面"></p>
 <p>認証サーバー (login.microsoftonline.com, login.windows.net, login.live.com) を IE モードの対象から外せば、OWA は開きます。<br>でもそうすると、先ほどの Office.com がまたダメになってしまいます。</p>
@@ -286,15 +286,15 @@
 <p><strong><font color="red">Edge と IE のどちらからも経由され得るサイトを『ニュートラル』に登録することで解決できます！</font></strong></p>
 <p>冒頭に記述したように、ニュートラルの機能は、<font color="red">その URL に遷移してきた際の直前のブラウザーを維持することです。</font><br>つまり、Edge で遷移してきた場合には Edge を維持し、IE モードで遷移してきた場合には IE モードを維持するにようにできます。</p>
 <p>それでは、先ほどのサイト リストを以下のように認証サーバー (login.microsoftonline.com, login.windows.net, login.live.com) に対してそれぞれ &lt;open-in&gt;None&lt;/open-in&gt; に変えます。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url&#x3D;&quot;office.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;login.microsoftonline.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;None&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;login.windows.net&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;None&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br><span class="line">&lt;site url&#x3D;&quot;login.live.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;None&lt;&#x2F;open-in&gt;</span><br><span class="line">&lt;&#x2F;site&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;site url=&quot;office.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;IE11&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;login.microsoftonline.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;None&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;login.windows.net&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;None&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br><span class="line">&lt;site url=&quot;login.live.com&quot;&gt;</span><br><span class="line">    &lt;open-in&gt;None&lt;/open-in&gt;</span><br><span class="line">&lt;/site&gt;</span><br></pre></td></tr></table></figure>
 
 <p>こうすると、IE モードで開く Office.com から認証サーバーにアクセスするときは IE モードが維持され、Edge で開く OWA から認証サーバーにアクセスするときは Edge が維持されますので、認証処理の途中でモードが変わってしまうことを回避できます。</p>
 <p>なお、下記ドキュメントの「ニュートラル サイトを構成する」の部分にも記載がありますが、上記の例のように Edge と IE のどちらからも経由され得るサイトはすべてニュートラルに登録する必要があります。</p>
-<p>エンタープライズ モード サイト リストでのサイトの構成<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist</a></p>
+<p>エンタープライズ モード サイト リストでのサイトの構成<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist</a></p>
 <p>一時的な対応策としては [Internet Explorer モード ページから起動したときに未構成サイトへの「ページ内」ナビゲーションの動作を指定する] というポリシーが利用できますので、状況に合わせた対応をご検討いただければと思います。</p>
-<p>Internet Explorer モードでページ内ナビゲーションを保持する<br><a href="https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav</a></p>
+<p>Internet Explorer モードでページ内ナビゲーションを保持する<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav">https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav</a></p>
 <ul>
-<li><a href="#目次">目次へ</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
 

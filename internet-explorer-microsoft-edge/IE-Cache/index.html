@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-Cache/Cache-iis85.jpg">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-Cache/DeleteBrowsingHistory.jpg">
 <meta property="article:published_time" content="2020-04-19T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-21T02:30:32.944Z">
+<meta property="article:modified_time" content="2021-05-21T07:37:50.993Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Internet Explorer">
 <meta property="article:tag" content="キャッシュ">
@@ -42,7 +42,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -60,7 +60,7 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -108,14 +108,14 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+2c1b8323-7378-5637-a178-430ef4b3506d%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BWeb+%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E5%81%B4%E3%81%A7%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%97%E3%81%A6%E3%82%82+IE+%E4%B8%8A%E3%81%AB%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84+%28%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%81%AE%E3%81%8A%E8%A9%B1%29%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2FIE-Cache%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FIE-Cache.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FIE-Cache.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-Cache/" data-id="ckoxpha3p000k0nr9b7gzfq8p" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-Cache/" data-id="ckoy0gg17000i0npjc7ef7y8g" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>※ これまで Japan IE Support Team Blog にて公開していた記事を移しました。</p>
 <p>「IE8 では Web サーバー側でファイルを更新したらすぐクライアントに反映されていたのに、IE9 以降にしたらすぐに反映されなくなった。。」というお問い合わせをいただくことがあります。<br>この現象は、IE9 以降の IE で [インターネット オプション] の [全般タブ] [インターネット一時ファイルと履歴の設定] で [自動的に確認する] (既定値) が設定されている場合に 発生することがあり、以下の技術文書でもご案内しています。</p>
-<p>Internet Explorer 9 において Webサーバーとの通信なしでキャッシュからコンテンツを表示する場合がある<br><a href="https://support.microsoft.com/ja-jp/help/2530998" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/2530998</a></p>
+<p>Internet Explorer 9 において Webサーバーとの通信なしでキャッシュからコンテンツを表示する場合がある<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2530998">https://support.microsoft.com/ja-jp/help/2530998</a></p>
 <p>今回は、この IE の “キャッシュ” の動作について詳しくご紹介いたします。</p>
 <hr>
 <h2 id="まず最初に、キャッシュとは"><a href="#まず最初に、キャッシュとは" class="headerlink" title="まず最初に、キャッシュとは"></a>まず最初に、キャッシュとは</h2><p>Internet Explorer における “キャッシュ” とは、<strong>閲覧しているページを次回もっと早く表示できるように、PC に保存しておく Web ページ (html、aspx など)、画像 (jpg、gif など)、その他リソースファイル (スタイルシートファイル (.css)、JavaScript ファイル (.js)、動画や音声ファイル などなど) 等などのコピー</strong> のことです。<br>次回同じページにアクセスした時、Web サーバー側で特に更新されていなければキャッシュからファイルを取得することで、通信量を抑えたりページ表示の速度を速めたりするための仕組みです。</p>
@@ -131,12 +131,12 @@
 <p>IE9 以降の IE では、以下両方に該当する場合、更新確認も行わずにコンテンツをキャッシュから取得するようになっています。</p>
 <p>クライアント側の IE で [インターネット オプション] [インターネット一時ファイルと履歴の設定] で [自動的に確認する] (既定値) が設定されている<br>Web サーバー側で “有効期限日時” を指定していないコンテンツである</p>
 <p>この動作変更は、IE9 以降 RFC2616 に準拠して、”表示の高速化、効率化のため、より積極的にキャッシュを利用する” ために行われました。</p>
-<p>具体的には、<strong>[インターネット一時ファイルと履歴の設定] で [自動的に確認する] が設定されている場合、Web サーバーから “有効期限の指定のない” コンテンツを取得すると、IE は独自に有効期限を計算して設定し、キャッシュを作成する</strong> ようになりました。</p>
+<p>具体的には、**[インターネット一時ファイルと履歴の設定] で [自動的に確認する] が設定されている場合、Web サーバーから “有効期限の指定のない” コンテンツを取得すると、IE は独自に有効期限を計算して設定し、キャッシュを作成する** ようになりました。</p>
 <p>この機能は “ヒューリスティックキャッシュ” と呼ばれます。</p>
 <hr>
 <p>(※) ヒューリスティック キャッシュについて</p>
 <p>有効期限の指定のないコンテンツについて、従来の IE では限定されたリソース (画像ファイル) にのみ独自に期限を設定していましたが、IE9 以降ではキャッシュ可能な全てのリソースについて独自に期限を設定するようにしました。<br>ヒューリスティック キャッシュの詳細については、以下のブログ記事で紹介されています。</p>
-<p>Caching Improvements in Internet Explorer 9<br><a href="https://docs.microsoft.com/en-us/archive/blogs/ie/caching-improvements-in-internet-explorer-9" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/archive/blogs/ie/caching-improvements-in-internet-explorer-9</a></p>
+<p>Caching Improvements in Internet Explorer 9<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/archive/blogs/ie/caching-improvements-in-internet-explorer-9">https://docs.microsoft.com/en-us/archive/blogs/ie/caching-improvements-in-internet-explorer-9</a></p>
 <p>ヒューリスティック キャッシュでは、以下の計算式で有効期限を算出します。最初にコンテンツを取得してキャッシュを作成するとき、算出した有効期限を設定します。</p>
 <p>有効期間 = (最終チェック日時 - 最終更新日時) * 0.1</p>
 <p>つまり最終チェック日時と最終更新時間の差が大きい、つまり更新されていない期間が長いコンテンツは有効期間が長く設定され、クライアントからの更新確認の頻度が下がる仕組みです。</p>
@@ -159,20 +159,20 @@
 <p><img src="/blog/internet-explorer-microsoft-edge/IE-Cache/DeleteBrowsingHistory.jpg" alt="DeleteBrowsingHistory"></p>
 <p>“キャッシュ” を削除するには、”インターネット一時ファイルおよび Web サイトのファイル” にチェックを入れて [削除] ボタンをクリックします。<br>Cookie や、フォームへの入力内容などを削除したくない場合には該当のチェックは外しても大丈夫です。</p>
 <p>他の項目についての詳細は、以下の技術文書にてご案内しています。</p>
-<p>Internet Explorer の閲覧履歴の表示および削除<br><a href="https://support.microsoft.com/ja-jp/help/17438/windows-internet-explorer-view-delete-browsing-history" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/17438/windows-internet-explorer-view-delete-browsing-history</a></p>
+<p>Internet Explorer の閲覧履歴の表示および削除<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/17438/windows-internet-explorer-view-delete-browsing-history">https://support.microsoft.com/ja-jp/help/17438/windows-internet-explorer-view-delete-browsing-history</a></p>
 <p>社内の Active Directory 環境のクライアント端末を管理されているような方で、 ドメインに参加しているクライアント全部、キャッシュを削除したい、、ということであれば、 一つの手として「グループ ポリシーで [終了時に閲覧の履歴を削除する] を有効とするポリシーをクライアントに配布する」という方法もあります。<br>これが適用されたクライアントでは、IE を終了するときにキャッシュが削除されます。</p>
 <hr>
 <h2 id="今後、Web-サーバー側で更新したコンテンツを、すぐクライアントに反映させるためにはどうすればいい？"><a href="#今後、Web-サーバー側で更新したコンテンツを、すぐクライアントに反映させるためにはどうすればいい？" class="headerlink" title="今後、Web サーバー側で更新したコンテンツを、すぐクライアントに反映させるためにはどうすればいい？"></a>今後、Web サーバー側で更新したコンテンツを、すぐクライアントに反映させるためにはどうすればいい？</h2><p>頻繁に更新されるようなコンテンツでは、”Web サーバー側でコンテンツの有効期限を指定する” 方法をお勧めしています。<br>例えば以下のような HTTP 応答ヘッダー指定を行い、コンテンツのキャッシュの有効期限を制御します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control : no-cache</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control : no-cache</span><br></pre></td></tr></table></figure>
 
 <p>IE11 では、上記の HTTP 応答ヘッダーを含むファイルを受信すると有効期限切れのキャッシュを作成します。そのため次回アクセス時には Web サーバーへ更新確認を行い、更新されていれば Web サーバーから取得、更新がなければキャッシュから取得する、という動作になります。</p>
 <p>なお HTTP 応答ヘッダーによる指定をクライアントのキャッシュに反映させるためには、Web サーバー側で指定を行った後、やっぱりクライアントのキャッシュを削除する必要がありますのでご注意ください。</p>
 <p>キャッシュの有効期限を指定する HTTP 応答ヘッダーには以下があります。</p>
-<p>Expires<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires</a><br>キャッシュを有効期限切れとする日時を指定します。</p>
-<p>Cache-Control<br><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a><br>キャッシュを有効とする期間 (秒) を指定します。キャッシュの作成を抑止する指定も可能です。</p>
+<p>Expires<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires</a><br>キャッシュを有効期限切れとする日時を指定します。</p>
+<p>Cache-Control<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a><br>キャッシュを有効とする期間 (秒) を指定します。キャッシュの作成を抑止する指定も可能です。</p>
 <hr>
 <h3 id="ご参考-META-タグによるキャッシュ制御の指定について"><a href="#ご参考-META-タグによるキャッシュ制御の指定について" class="headerlink" title="ご参考 : META タグによるキャッシュ制御の指定について"></a>ご参考 : META タグによるキャッシュ制御の指定について</h3><p>Web ページ (HTML、ASPX 等) 内では以下のような META 要素でキャッシュを制御できます。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;META http-equiv&#x3D;cache-control content&#x3D;no-cache&gt;</span><br><span class="line">&lt;META http-equiv&#x3D;expires content&#x3D;0&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;META http-equiv=cache-control content=no-cache&gt;</span><br><span class="line">&lt;META http-equiv=expires content=0&gt;</span><br></pre></td></tr></table></figure>
 
 <p>ただしこの指定は、”記載されている Web ページ” のみが対象であり、ページに読み込まれる .css や .js 等の Web リソースファイルに対しては有効ではありません。Web リソースファイルのキャッシュを制御するには、後述の通り Web サーバーにて設定を行う必要があります。</p>
 <p>また Web ページにおいても、キャッシュを確実に制御されたい場合、以下の理由から META タグではなく HTTP 応答ヘッダーによる指定を強くお勧めしております。</p>
@@ -185,7 +185,7 @@
 <li>キャッシュ削除のためのアプリケーションを開発、実行して削除 (※)</li>
 </ul>
 <p>(※) キャッシュ削除のために用意された “DeleteURLCacheEntry” API を利用したアプリケーションを作成し、実行することによって削除できます。<br>“インターネット一時ファイルおよびWebサイトのファイル” のみを削除するような処理も実装可能です。</p>
-<p>DeleteUrlCacheEntry function<br><a href="https://docs.microsoft.com/ja-jp/windows/win32/api/wininet/nf-wininet-deleteurlcacheentry" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/windows/win32/api/wininet/nf-wininet-deleteurlcacheentry</a></p>
+<p>DeleteUrlCacheEntry function<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/windows/win32/api/wininet/nf-wininet-deleteurlcacheentry">https://docs.microsoft.com/ja-jp/windows/win32/api/wininet/nf-wininet-deleteurlcacheentry</a></p>
 
       
       

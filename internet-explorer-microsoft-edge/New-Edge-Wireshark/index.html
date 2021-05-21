@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/wireshark.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/clearcache.png">
 <meta property="article:published_time" content="2020-05-31T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-21T02:30:32.964Z">
+<meta property="article:modified_time" content="2021-05-21T07:37:51.009Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="ログ採取">
 <meta property="article:tag" content="Microsoft Edge">
@@ -46,7 +46,7 @@
   
 <link rel="stylesheet" href="../../css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -64,7 +64,7 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
-        <a class="main-nav-link" href="https://cssjpn.github.io/" target="_blank" rel="noopener">サポート情報</a>
+        <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
       </nav>
       <nav id="sub-nav">
         
@@ -112,7 +112,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+f070c304-eddc-5c2e-8810-79e1c06eb634%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BWireshark+%E3%81%AB%E3%82%88%E3%82%8B+New+Microsoft+Edge+%E3%81%AE%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2FNew-Edge-Wireshark%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FNew-Edge-Wireshark.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FNew-Edge-Wireshark.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/" data-id="ckoxpha3y000x0nr96m202fyt" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/" data-id="ckoy0gg1d000t0npj6gu15qt9" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -125,10 +125,10 @@
 <hr>
 <h2 id="0-前提"><a href="#0-前提" class="headerlink" title="0. 前提"></a>0. 前提</h2><ul>
 <li><p>再現手順が確立されており、Chromium ベースの New Microsoft Edge にてネットワークに関する事象が再現可能</p>
-<p>新しい Microsoft Edge ブラウザーをダウンロード | Microsoft<br><a href="https://www.microsoft.com/ja-jp/edge?form=MA13DE&amp;OCID=MA13DE" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/edge?form=MA13DE&amp;OCID=MA13DE</a></p>
+<p>新しい Microsoft Edge ブラウザーをダウンロード | Microsoft<br><a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/edge?form=MA13DE&amp;OCID=MA13DE">https://www.microsoft.com/ja-jp/edge?form=MA13DE&amp;OCID=MA13DE</a></p>
 </li>
 <li><p>Wireshark がダウンロード済み</p>
-<p>Download Wireshark<br><a href="https://www.wireshark.org/download.html" target="_blank" rel="noopener">https://www.wireshark.org/download.html</a></p>
+<p>Download Wireshark<br><a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></p>
 </li>
 </ul>
 <hr>
@@ -144,14 +144,14 @@
 <li><p>コマンドプロンプトを開き、以下のコマンドで上記で作成した任意のフォルダ (ここでは C:\tmp と仮定) に空の新規ファイルを作成または既に存在する場合は同ファイルを空に上書きします。</p>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &gt; C:\tmp\ssl.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &gt; C:\tmp\ssl.txt</span><br></pre></td></tr></table></figure>
 
 <br />
 <br />
 
 <hr>
 <h2 id="2-ユーザー環境変数の設定"><a href="#2-ユーザー環境変数の設定" class="headerlink" title="2. ユーザー環境変数の設定"></a>2. ユーザー環境変数の設定</h2><p>ツールバーの検索等から “環境変数を編集” を開き、ユーザー環境変数の “新規” ボタンを<br>クリックし、”ユーザー変数の編集” にて、以下のように、ユーザー変数の環境変数を設定します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">変数名 : SSLKEYLOGFILE</span><br><span class="line">変数値 : C:\tmp\ssl.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">変数名 : SSLKEYLOGFILE</span><br><span class="line">変数値 : C:\tmp\ssl.txt</span><br></pre></td></tr></table></figure>
 
 <br />
 <br />
@@ -225,17 +225,17 @@
 </ol>
 <p>4-1. New Microsoft Edge を InPrivate ウィンドウで開く。<br>(タスクバー等の Edge アイコンを右クリックで “新しい InPrivate ウィンドウ” で開けます)<br>※ InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。手順は上述の補足をご覧ください。</p>
 <p>4-2. 管理者権限でコマンド プロンプトを開き、次のコマンドを実行し、キャプチャを開始します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　netsh trace start capture&#x3D;yes maxSize&#x3D;2000MB</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　netsh trace start capture=yes maxSize=2000MB</span><br></pre></td></tr></table></figure>
 
 <p>4-3. New Microsoft Edge にて該当のサイトを開き、素早く事象の再現を行う。</p>
 <p>4-4. 次のコマンドを実行して、キャプチャを停止します (しばらく時間がかかります)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　netsh trace stop</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　netsh trace stop</span><br></pre></td></tr></table></figure>
 
 <p>4-5. もし私共サポートから本 Blog による New Microsoft Edge の netsh の情報採取をご依頼された場合は、トレースの .etl ファイルと .cab ファイルと C:\tmp\ssl.txt の 3 つ両方とも提供します。</p>
 <p>(参考) 以下の etl2pcapng を利用すると、.etl を Wireshark で開ける .pcapng　形式に変換できます。</p>
-<p>etl2pcapng<br><a href="https://github.com/microsoft/etl2pcapng" target="_blank" rel="noopener">https://github.com/microsoft/etl2pcapng</a></p>
+<p>etl2pcapng<br><a target="_blank" rel="noopener" href="https://github.com/microsoft/etl2pcapng">https://github.com/microsoft/etl2pcapng</a></p>
 <p>コマンド例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">etl2pcapng in.etl out.pcapng</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">etl2pcapng in.etl out.pcapng</span><br></pre></td></tr></table></figure>
 
 <hr>
 <hr>
@@ -252,15 +252,15 @@
 </ol>
 <p>4-1. New Microsoft Edge を InPrivate ウィンドウで開く。<br>(タスクバー等の Edge アイコンを右クリックで “新しい InPrivate ウィンドウ” で開けます)<br>※ InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。手順は上述の補足をご覧ください。</p>
 <p>4-2. 管理者権限でコマンド プロンプトを開き、次のコマンドを実行し、キャプチャを開始します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　pktmon start --etw -p 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　pktmon start --etw -p 0</span><br></pre></td></tr></table></figure>
 
 <p>4-3. New Microsoft Edge にて該当のサイトを開き、素早く事象の再現を行う。</p>
 <p>4-4. 次のコマンドを実行して、キャプチャを停止します</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　pktmon stop</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　pktmon stop</span><br></pre></td></tr></table></figure>
 
 <p>4-5. もし私共サポートから本 Blog による New Microsoft Edge の pktmon の情報採取をご依頼された場合は、トレースの .etl ファイルと C:\tmp\ssl.txt の両方とも提供します。</p>
 <p>(参考) 以下のコマンドを実行すると、Wireshark で開ける .pcapng　形式に変換できます。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pktmon pcapng PktMon.etl -o PktMon.pcapng</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pktmon pcapng PktMon.etl -o PktMon.pcapng</span><br></pre></td></tr></table></figure>
 
 <hr>
 <p>以上で今回のご紹介は終了です。</p>
