@@ -62,10 +62,16 @@ tags:
 
 #### (参考) 関連する記事
 - [「Internet Explorer 11 デスクトップ アプリケーションのサポート終了」の発表に関連する FAQ](https://blogs.windows.com/japan/2021/05/19/internet-explorer-11-desktop-app-retirement-faq/)
-- [IE モードのよくあるご質問](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/)
 
 ##### これまでに当サポート チームで公開した記事
 - [Internet Explorer の今後について](https://social.msdn.microsoft.com/Forums/ja-JP/47290e24-fc66-4d3e-a2de-429643758d40/internet-explorer-12398201702446012395123881235612390?forum=edgeiesupportteamja)
 - [まだデフォルトIE？ 新しい Microsoft Edge を使いませんか？](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/)
+
+- [IE モードのよくあるご質問](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/)
+- [Internet Explorer から Microsoft Edge への移行ガイドライン](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/)
+- [Microsoft Edge 組み込みのサイト リスト マネージャーについて](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/)
+
+##### その他弊社社員が作成した資料
+- [(動画) Microsoft Edge で IE モードを使ってみよう (IT 管理者向け)](https://youtu.be/XPFx4A32npk)
 
 ---
