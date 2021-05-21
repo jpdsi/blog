@@ -73,5 +73,6 @@ tags:
 
 ##### その他弊社社員が作成した資料
 - [(動画) Microsoft Edge で IE モードを使ってみよう (IT 管理者向け)](https://youtu.be/XPFx4A32npk)
+- [(スライド) IT エンジニアのための 流し読み Windows 10 - IE11 のサポート終了と Microsoft Edge について](https://www.slideshare.net/takuyaot/it-windows-10-ie11-microsoft-edge)
 
 ---
