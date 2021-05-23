@@ -24,11 +24,11 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 
 なお、IE モードに関する公式ドキュメントは以下にまとまっていますので、基本的な内容についてはこちらをご覧ください。
 
-Internet Explorer (IE) モードとは
-https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode
+[Internet Explorer (IE) モードとは](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode)
 
-IE モードのトラブルシューティングと FAQ
-https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq
+[IE モードのトラブルシューティングと FAQ](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq)
+
+[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/31/2021/05/a837387e3dad2d655f50ebc0e83c8edf.pdf)
 
 ---
 
@@ -166,9 +166,11 @@ IE モードのテストのために、毎回サイトリストを書き替え�
 A) InternetExplorerIntegrationTestingAllowed ポリシーを有効に設定する
 https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed
 
-B) "--ie-mode-test" オプションを付加して msedge.exe を実行する
+B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 実行例)
+```
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --ie-mode-test
+```
 
 これらの方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。
 ![選択したモードで開く操作](./ie-mode-faq/iemodetest.png)
