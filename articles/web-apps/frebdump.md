@@ -22,7 +22,7 @@ FREBDump とは、ProcDump の一種で、失敗した要求トレース (通称
 
 このログ取得のポイントは FREB の発火点によって ProcDump を制御するところにあります。
 
-## FREBDumpのメリット <!-- omit in toc -->
+## FREBDump のメリット <!-- omit in toc -->
 
 FREBDump でのダンプ採取のメリットは、ProcDump よりも柔軟なタイミングでのダンプの取得ができることです。  
 例えば以下は ProcDump では難しいですが、 FREBDump では可能になります。
