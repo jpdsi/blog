@@ -14,6 +14,8 @@ Microsoft は Internet Explorer (以降 IE) デスクトップ アプリのサ�
 
 [Internet Explorer 11 デスクトップ アプリのサポート終了へ! IE モードへの移行を進めましょう!](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/)
 
+[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/31/2021/05/a837387e3dad2d655f50ebc0e83c8edf.pdf)
+
 これに伴い IE から Microsoft Edge (以降 Edge) やモダン ブラウザーへの移行を本格的に検討される方が多くなることを予想しています。
 そんなことで今日は IE から Microsoft Edge へのステージ別移行ガイドライン的なブログを書きたいと思います。
 
@@ -117,6 +119,8 @@ IE デスクトップ アプリから IE モードへの移行にあたり、互
 
 
 <参考リンク>
+[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/31/2021/05/a837387e3dad2d655f50ebc0e83c8edf.pdf)
+
 - Edge のポリシーを使うための情報
     * [Windows 用に Microsoft Edge を構成する](https://docs.microsoft.com/ja-jp/deployedge/configure-microsoft-edge)
 
