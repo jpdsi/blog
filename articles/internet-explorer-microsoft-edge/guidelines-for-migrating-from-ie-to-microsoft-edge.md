@@ -49,7 +49,7 @@ Microsoft は Internet Explorer (以降 IE) デスクトップ アプリのサ�
 
 ※ 参考 [IE モードでの表示をテストしたい](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/#IE-%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E3%83%86%E3%82%B9%E3%83%88%E3%81%97%E3%81%9F%E3%81%84)
 
-      [コンピューターの構成]or[ユーザーの構成]
+      [コンピューターの構成] or [ユーザーの構成]
        ＋[管理用テンプレート]
         ＋[Microsoft Edge]
       「Internet Explorer 統合を構成する」有効にし IE モードを選択
@@ -64,7 +64,7 @@ IE モードで問題なくサイトが動作することを確認したら、�
 サイト一覧の作り方については [こちらの記事](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/) がありますので参考にしてみてください。
 そして以下のポリシーを使って、作成したサイト一覧の取得先を設定します。
 
-      [コンピューターの構成]or[ユーザーの構成]
+      [コンピューターの構成] or [ユーザーの構成]
        ＋[管理用テンプレート]
         ＋[Microsoft Edge]
        「エンタープライズ モード サイト一覧を構成する」有効にしサイト一覧の取得先を設定
@@ -94,13 +94,15 @@ IE デスクトップ アプリ依存のサイトの改修が完了したら、�
 ---
 
 ## ステージ 3. IE モードを部分的に利用しているが IE デスクトップ アプリはもう使っていない
-IE モードがあれば IE デスクトップ アプリは必要ない状況になったら、IE デスクトップ アプリの起動を無効化する以下ポリシーを配布し、IE モードのみを使用できるようにします。
+IE モードがあれば IE デスクトップ アプリは必要ない状況になったら、IE デスクトップ アプリの起動を無効化する以下のポリシーを配布し、IE モードのみを使用できるようにします。
 
-        [コンピューターの構成]or[ユーザーの構成]
+        [コンピューターの構成] or [ユーザーの構成]
        ＋[管理用テンプレート]
         ＋[Windows コンポーネント]
          ＋[Internet Explorer]
       「Internet Explorer 11 をスタンドアロンブラウザーとして無効にする」
+
+参考 : [Internet Explorer 11 を無効にする](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-disable-ie11)
 
 - [目次へ](#目次)
 ---
