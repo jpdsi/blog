@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/1.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/2.png">
 <meta property="article:published_time" content="2021-05-19T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-24T00:03:20.045Z">
+<meta property="article:modified_time" content="2021-05-24T07:15:01.762Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="IEからEdgeへの移行">
@@ -106,7 +106,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+4e54d4b8-153b-58d8-843d-a71b3c5c8329%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BInternet+Explorer+%E3%81%8B%E3%82%89+Microsoft+Edge+%E3%81%B8%E3%81%AE%E7%A7%BB%E8%A1%8C%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fguidelines-for-migrating-from-ie-to-microsoft-edge%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fguidelines-for-migrating-from-ie-to-microsoft-edge.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fguidelines-for-migrating-from-ie-to-microsoft-edge.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/" data-id="ckp1ujilq00190mry2mgv4ruv" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/" data-id="ckp29yq0b00190mpb7ertfx7d" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -130,7 +130,7 @@
 <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-site-discovery">Enterprise Site Discovery ステップ バイ ステップ ガイド</a></p>
 <h4 id="1-2-IE-モードでの動作確認"><a href="#1-2-IE-モードでの動作確認" class="headerlink" title="1-2. IE モードでの動作確認"></a>1-2. IE モードでの動作確認</h4><p>洗い出したサイトが Edge の IE モードで動作するかテストを行い、動作しない場合は改修もしくは Microsoft のサポートに問い合わせてください。<br>なお、簡易的に IE モードでの動作を確認したい場合は IE モード テスト機能が便利です。<br>この機能は IE モードをタブ全体で有効にし、そのタブで開いたサイトはすべて IE モードになる機能です。<br>以下 2 つのポリシーを設定することで「…」-&gt;「その他のツール」-&gt;に「サイトを Internet Explorer モードで開く」のメニューが追加され使用できるようになります。</p>
 <p>※ 参考 <a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/#IE-%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%E3%81%AE%E8%A1%A8%E7%A4%BA%E3%82%92%E3%83%86%E3%82%B9%E3%83%88%E3%81%97%E3%81%9F%E3%81%84">IE モードでの表示をテストしたい</a></p>
-<pre><code>  [コンピューターの構成]or[ユーザーの構成]
+<pre><code>  [コンピューターの構成] or [ユーザーの構成]
    ＋[管理用テンプレート]
     ＋[Microsoft Edge]
   「Internet Explorer 統合を構成する」有効にし IE モードを選択
@@ -139,7 +139,7 @@
 <p><img src="/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/1.png" alt="ポリシーの設定"></p>
 <p>なお <a target="_blank" rel="noopener" href="https://youtu.be/XPFx4A32npk">こちら</a> で動画による解説もしていますのでぜひご覧ください。</p>
 <h4 id="1-3-サイト一覧-xml-ファイルの作成とポリシーの設定"><a href="#1-3-サイト一覧-xml-ファイルの作成とポリシーの設定" class="headerlink" title="1-3. サイト一覧 (.xml) ファイルの作成とポリシーの設定"></a>1-3. サイト一覧 (.xml) ファイルの作成とポリシーの設定</h4><p>IE モードで問題なくサイトが動作することを確認したら、サイト一覧ファイルに IE モードで表示したいサイトを定義します。<br>サイト一覧の作り方については <a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/">こちらの記事</a> がありますので参考にしてみてください。<br>そして以下のポリシーを使って、作成したサイト一覧の取得先を設定します。</p>
-<pre><code>  [コンピューターの構成]or[ユーザーの構成]
+<pre><code>  [コンピューターの構成] or [ユーザーの構成]
    ＋[管理用テンプレート]
     ＋[Microsoft Edge]
    「エンタープライズ モード サイト一覧を構成する」有効にしサイト一覧の取得先を設定
@@ -159,13 +159,14 @@
 <li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
 <hr>
-<h2 id="ステージ-3-IE-モードを部分的に利用しているが-IE-デスクトップ-アプリはもう使っていない"><a href="#ステージ-3-IE-モードを部分的に利用しているが-IE-デスクトップ-アプリはもう使っていない" class="headerlink" title="ステージ 3. IE モードを部分的に利用しているが IE デスクトップ アプリはもう使っていない"></a>ステージ 3. IE モードを部分的に利用しているが IE デスクトップ アプリはもう使っていない</h2><p>IE モードがあれば IE デスクトップ アプリは必要ない状況になったら、IE デスクトップ アプリの起動を無効化する以下ポリシーを配布し、IE モードのみを使用できるようにします。</p>
-<pre><code>    [コンピューターの構成]or[ユーザーの構成]
+<h2 id="ステージ-3-IE-モードを部分的に利用しているが-IE-デスクトップ-アプリはもう使っていない"><a href="#ステージ-3-IE-モードを部分的に利用しているが-IE-デスクトップ-アプリはもう使っていない" class="headerlink" title="ステージ 3. IE モードを部分的に利用しているが IE デスクトップ アプリはもう使っていない"></a>ステージ 3. IE モードを部分的に利用しているが IE デスクトップ アプリはもう使っていない</h2><p>IE モードがあれば IE デスクトップ アプリは必要ない状況になったら、IE デスクトップ アプリの起動を無効化する以下のポリシーを配布し、IE モードのみを使用できるようにします。</p>
+<pre><code>    [コンピューターの構成] or [ユーザーの構成]
    ＋[管理用テンプレート]
     ＋[Windows コンポーネント]
      ＋[Internet Explorer]
   「Internet Explorer 11 をスタンドアロンブラウザーとして無効にする」
 </code></pre>
+<p>参考 : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-disable-ie11">Internet Explorer 11 を無効にする</a></p>
 <ul>
 <li><a href="#%E7%9B%AE%E6%AC%A1">目次へ</a></li>
 </ul>
