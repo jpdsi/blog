@@ -163,8 +163,20 @@ IE モードのテストのために、毎回サイトリストを書き替え�
 
 <span style="color: #ff0000">これらの機能はテストを目的に用意されており、意図しないサイトで IE モードを利用することは、想定しない ActiveX の実行など、セキュリティのリスクがありますので十分ご注意ください。</span>
 
-A) InternetExplorerIntegrationTestingAllowed ポリシーを有効に設定する
+なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のポリシーで IE モードを有効に設定してください。
+
+      [コンピューターの構成] or [ユーザーの構成]
+       ＋[管理用テンプレート]
+        ＋[Microsoft Edge]
+      「Internet Explorer 統合を構成する」有効にし IE モードを選択
+
+A) InternetExplorerIntegrationTestingAllowed (Internet Explorer モードのテストを許可) ポリシーを有効に設定する
 https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed
+
+      [コンピューターの構成] or [ユーザーの構成]
+       ＋[管理用テンプレート]
+        ＋[Microsoft Edge]
+      「Internet Explorer モードのテストを許可」有効
 
 B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 実行例)
@@ -172,11 +184,10 @@ B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --ie-mode-test
 ```
 
-これらの方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。
+上記 A, B の方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。
 ![選択したモードで開く操作](./ie-mode-faq/iemodetest.png)
 
-なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のドキュメントでもご案内している手順にて、IE モードを有効に設定してください。
-
+(参考)
 グループ ポリシーを使用して Internet Explorer 統合を有効にする
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy
 
