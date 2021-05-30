@@ -11,9 +11,8 @@ tags:
 
 こんにちは。IIS サポート チームです！  
 
-弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てる内容をご提供させていただきます。
-
-今回は DebugDiag によりメモリダンプを取得する手順についてご説明させていただきます。
+弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てる内容をご提供しております。
+今回は DebugDiag によりメモリダンプを取得する手順についてご説明いたします。
 
 ## DebugDiag とは<!-- omit in toc -->
 
@@ -39,19 +38,19 @@ DebugDiag でのダンプ採取のメリットとして、
 
 ## 目次 <!-- omit in toc -->
 
-- [1. 前提条件](#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6)
-  - [1.1. 事前に準備が必要なものについて](#11-%E4%BA%8B%E5%89%8D%E3%81%AB%E6%BA%96%E5%82%99%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
-- [2. DebugDiag の取得設定](#2-DebugDiag-%E3%81%AE%E5%8F%96%E5%BE%97%E8%A8%AD%E5%AE%9A)
-  - [2.1. Enable/Disable Performance Logging の 無効化](#21-EnableDisable-Performance-Logging-%E3%81%AE-%E7%84%A1%E5%8A%B9%E5%8C%96)
-  - [2.2. Rule Type と Target Type の選択](#22-Rule-Type-%E3%81%A8-Target-Type-%E3%81%AE%E9%81%B8%E6%8A%9E)
-- [3. <対象となる Target Type> が A specific IIS web application pool の場合](#3-%E5%AF%BE%E8%B1%A1%E3%81%A8%E3%81%AA%E3%82%8B-Target-Type-%E3%81%8C-A-specific-IIS-web-application-pool-%E3%81%AE%E5%A0%B4%E5%90%88)
-  - [3.1. 特定の例外コードかつ First Chance でダンプを取得する場合](#31-%E7%89%B9%E5%AE%9A%E3%81%AE%E4%BE%8B%E5%A4%96%E3%82%B3%E3%83%BC%E3%83%89%E3%81%8B%E3%81%A4-First-Chance-%E3%81%A7%E3%83%80%E3%83%B3%E3%83%97%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88)
-- [4. ダンプ生成後ファイルの取得](#4-%E3%83%80%E3%83%B3%E3%83%97%E7%94%9F%E6%88%90%E5%BE%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E5%8F%96%E5%BE%97)
-- [5. DebugDiag のアンインストール方法について](#5-DebugDiag-%E3%81%AE%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
-- [6. DebugDiag の検証方法について](#6-DebugDiag-%E3%81%AE%E6%A4%9C%E8%A8%BC%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
-  - [6.1. 前提条件](#61-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6)
-  - [6.2. 例外を意図的に発生させるアプリケーションの配置](#62-%E4%BE%8B%E5%A4%96%E3%82%92%E6%84%8F%E5%9B%B3%E7%9A%84%E3%81%AB%E7%99%BA%E7%94%9F%E3%81%95%E3%81%9B%E3%82%8B%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E9%85%8D%E7%BD%AE)
-  - [6.3. 確認方法](#63-%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95)
+- [1. 前提条件](#1-前提条件)
+  - [1.1. 事前に準備が必要なものについて](#1-1-事前に準備が必要なものについて)
+- [2. DebugDiag の取得設定](#2-DebugDiag-の取得設定)
+  - [2.1. Enable Disable Performance Logging の 無効化](#2-1-Enable-Disable-Performance-Logging-の-無効化)
+  - [2.2. Rule Type と Target Type の選択](#2-2-Rule-Type-と-Target-Type-の選択)
+- [3. 対象となる DebudDiag のターゲットタイプ が A specific IIS web application pool の場合](#3-対象となる-DebudDiag-のターゲットタイプ-が-A-specific-IIS-web-application-pool-の場合)
+  - [3.1. 特定の例外コードかつ First Chance でダンプを取得する場合](#3-1-特定の例外コードかつ-First-Chance-でダンプを取得する場合)
+- [4. ダンプ生成後ファイルの取得](#4-ダンプ生成後ファイルの取得)
+- [5. DebugDiag のアンインストール方法について](#5-DebugDiag-のアンインストール方法について)
+- [6. DebugDiag の検証方法について](#6-DebugDiag-の検証方法について)
+  - [6.1. 前提条件](#6-1-前提条件)
+  - [6.2. 例外を意図的に発生させるアプリケーションの配置](#6-2-例外を意図的に発生させるアプリケーションの配置)
+  - [6.3. 確認方法](#6-3-確認方法)
 
 ## 1. 前提条件
 
@@ -80,21 +79,21 @@ msi ファイルをダウンロードできたら、以下の手順でインス�
 ## 2. DebugDiag の取得設定
 
 [すべてのプログラム] - [Debug Diagnostic Tool 2.0] - [Debug Diagnostics Tool 2.0 Collection] を起動します。  
-"Select Rule Type" 画面が自動的に表示された場合、一旦 [キャンセル] ボタンを押してダイアログを閉じます。
+[Select Rule Type] 画面が自動的に表示された場合、一旦 [キャンセル] ボタンを押してダイアログを閉じます。
 
 ![DebugDiag 2 Collection の起動画面](./debugdiag/debugdiag_2021-05-23-23-57-29.png)
 
-### 2.1. Enable/Disable Performance Logging の 無効化
+### 2.1. Enable Disable Performance Logging の 無効化
 
 - Debug Diagnostics Tool の [Tools] - [Options And Settings] メニューをクリックします。  
-- [Performance log] タブの “Enable/Disable Performance Logging” にて、[Disable Performance Counter Data Logging] のラジオボタンにチェックがある状態にして、[OK] ボタンを押して閉じます。
+- [Performance log] - [Enable/Disable Performance Logging] にて、[Disable Performance Counter Data Logging] のラジオボタンにチェックがある状態にして、[OK] ボタンを押して閉じます。
 
-![Enable/Disable Performance Logging の無効化の設定図](./debugdiag/debugdiag_2021-05-24-00-06-11.png)
+![Enable-Disable Performance Logging の無効化の設定図](./debugdiag/debugdiag_2021-05-24-00-06-11.png)
 
 ### 2.2. Rule Type と Target Type の選択
 
 続けて、ウィンドウ下部の [Add Rules] ボタンを押します。
-表示された “Select Rule Type” 画面にて、<対象となる DebudDiag のルールタイプ> を選択し、[次へ] ボタンを押します。  
+表示された [Select Rule Type] 画面にて、<対象となる DebudDiag のルールタイプ> を選択し、[次へ] ボタンを押します。  
 ※ 弊社から特別指定がない場合は [Crash] を選択してください。
 
 <!-- 
@@ -115,7 +114,9 @@ Target Type は a specific IIS webapplication pool 以外も選択したこと�
 
 ![Rule Type と Target Type の選択画面図](./debugdiag/debugdiag_2021-05-24-00-17-36.png)
 
-## 3. <対象となる Target Type> が A specific IIS web application pool の場合
+## 3. 対象となる DebudDiag のターゲットタイプ が A specific IIS web application pool の場合
+
+<対象となる DebugDiag のターゲットタイプ> が A specific IIS web application pool の場合は、First Chance 等の要件により以下の手順を参考に設定してください。
 
 ### 3.1. 特定の例外コードかつ First Chance でダンプを取得する場合
 
@@ -138,7 +139,7 @@ First Chance とは、例外発生したタイミングでダンプを取得す�
 
 弊社より指示がない場合は、画像のように Access Violation による例外発生によるダンプの取得を行います。
 
-- [Exception Code (hex)] : C0000005 Access Violation
+- [Exception Code (hex)] : C0000005 (Access Violation)
 - [Action Type] : Full Userdump
 - [Action Limit] : 2
 
