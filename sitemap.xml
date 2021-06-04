@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/web-apps/frebdump-faq/</loc>
     
     <lastmod>2021-06-04</lastmod>
@@ -23,7 +30,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/Rapid-Fail-Protection/</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/VirtualDirectory/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
@@ -86,27 +100,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/Rapid-Fail-Protection/</loc>
-    
-    <lastmod>2021-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/VirtualDirectory/</loc>
-    
-    <lastmod>2021-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/ConfigurationEditor/</loc>
-    
-    <lastmod>2021-06-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
     
     <lastmod>2021-06-04</lastmod>
@@ -114,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/side-by-side/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/wpad/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/wpad/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/ConfigurationEditor/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
@@ -157,6 +150,13 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/protected-mode/</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/side-by-side/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
@@ -226,6 +226,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ProxySettings/</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/SkypeMeetingWithEdge/</loc>
     
     <lastmod>2021-06-04</lastmod>
@@ -261,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ProxySettings/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
@@ -289,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/</loc>
-    
-    <lastmod>2021-06-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-SecurityZones/</loc>
     
     <lastmod>2021-06-04</lastmod>
@@ -311,6 +311,13 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-Cache/</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
@@ -360,13 +367,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/FileProtocol/</loc>
-    
-    <lastmod>2021-06-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/</loc>
     
     <lastmod>2021-06-04</lastmod>
     
