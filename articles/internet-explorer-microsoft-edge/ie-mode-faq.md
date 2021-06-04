@@ -193,9 +193,13 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 
 ### Internet Explorerモードでサイトの再読み込みを許可
 この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
-Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
+Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
+(なお上記は OS のエディションについてであり、Edge 自体に OOOO エディションのようなものはありません。)
 
 ![Internet Explorer モードでサイトの再読み込みを許可](./ie-mode-faq/reload-in-internet-explorer-mode.png)
+
+(参考) 以下の注釈部分でも触れています。
+[Microsoft Edge の Internet Explorer モード](https://support.microsoft.com/ja-jp/office/microsoft-edge-%e3%81%ae-internet-explorer-%e3%83%a2%e3%83%bc%e3%83%89-6604162f-e38a-48b2-acd2-682dbac6f0de?ui=ja-jp&rs=ja-jp&ad=jp)
 
 - [目次へ](#目次)
 ---
