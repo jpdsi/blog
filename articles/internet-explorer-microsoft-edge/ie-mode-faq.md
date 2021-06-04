@@ -242,6 +242,12 @@ Windows 10 Enterprise エディションやドメイン参加環境の Pro エ�
 
 ![ドキュメント モードなどの確認](./ie-mode-faq/docmode.png)
 
+なお、ドキュメント モードはスタンドアロン IE と同じく [こちらにあるフロー](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/dn384051(v=vs.85)) に従って決定されます。
+
+たとえば、エンタープライズ モードで Web ページを表示するように指定している場合に、対象の Web ページにて meta タグ (X-UA-Compatible) の指定や !DOCTYPE 宣言がないとドキュメント モードは IE5 となります。
+
+![エンタープライズ モードでドキュメント モードが IE5 の例](./ie-mode-faq/docmode2.png)
+
 - [目次へ](#目次)
 ---
 
