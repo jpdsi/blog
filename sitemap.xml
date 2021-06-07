@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/frebdump-faq/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/frebdump-faq/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -45,13 +45,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/web-apps/freb/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/Rapid-Fail-Protection/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -100,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/Rapid-Fail-Protection/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -115,6 +108,20 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/web-apps/ConfigurationEditor/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -156,7 +163,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-uninstall-edge/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-use-net-export/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -198,34 +212,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-uninstall-edge/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-use-net-export/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/cross-protected-mode-cookie/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/</loc>
     
     <lastmod>2021-06-07</lastmod>
@@ -233,14 +219,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-via-WU/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -261,7 +240,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/cross-protected-mode-cookie/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -275,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-via-WU/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -289,7 +275,21 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -311,6 +311,20 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-portal-log-collection/</loc>
+    
+    <lastmod>2021-06-07</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/how-to-create-faq-bot/</loc>
     
     <lastmod>2021-06-07</lastmod>
     
@@ -353,20 +367,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-plan/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-portal-log-collection/</loc>
-    
-    <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/how-to-create-faq-bot/</loc>
     
     <lastmod>2021-06-07</lastmod>
     

@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/docmode2.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/owa.png">
 <meta property="article:published_time" content="2021-05-13T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-07T08:28:06.822Z">
+<meta property="article:modified_time" content="2021-06-07T08:55:00.391Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="IE モード">
@@ -117,7 +117,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+cc68aecc-1400-5be9-87dc-9911a9983fc4%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BIE+%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fie-mode-faq%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fie-mode-faq.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fie-mode-faq.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/" data-id="ckpmcqlm400820nowhvmk7218" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/" data-id="ckpmdp6lq00820nmyeeej4ynm" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -166,8 +166,10 @@
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/windowopen1.png" alt="ウィンドウの構造"></p>
 <p>上記動作に伴い、window.open(url, windowName, windowFeatures) の引数 windowFeatures で指定する以下のオプションは反映されません。<br>なお、この動作は Microsoft Edge における想定された動作となります。</p>
 <ul>
-<li><p>location<br>引数 url で指定されるサイトがローカル イントラネットや信頼済みサイト ゾーンで、かつ、引数 windowFeatures において location=no と指定していても、以下のようにアドレス バーは表示されます (ただし、アドレス バーでの操作はできません)。<br><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/windowopen2.png" alt="画面例"></p>
-</li>
+<li>location<br>引数 url で指定されるサイトがローカル イントラネットや信頼済みサイト ゾーンで、かつ、引数 windowFeatures において location=no と指定していても、以下のようにアドレス バーは表示されます (ただし、アドレス バーでの操作はできません)。</li>
+</ul>
+<p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/windowopen2.png" alt="画面例"></p>
+<ul>
 <li><p>resizable<br>resizable オプション指定は常に無視され、ユーザーはウィンドウ サイズを変更することができます。</p>
 </li>
 <li><p>fullscreen<br>fullscreen オプション指定は常に無視され、全画面表示とはなりません。</p>
@@ -216,8 +218,10 @@
 </ul>
 <hr>
 <h2 id="IE-モードでの表示をテストしたい"><a href="#IE-モードでの表示をテストしたい" class="headerlink" title="IE モードでの表示をテストしたい"></a>IE モードでの表示をテストしたい</h2><p>IE モードのテストのために、毎回サイトリストを書き替えたり、ポリシーを設定しなおすことは大変な手間がかかります。<br>この手間を解消するために、以下の A, B どちらかの方法でメニューから IE モードもしくは Edge モードを切り替え、コンテンツを表示することが可能です。</p>
-<p><span style="color: #ff0000">これらの機能はテストを目的に用意されており、意図しないサイトで IE モードを利用することは、想定しない ActiveX の実行など、セキュリティのリスクがありますので十分ご注意ください。</span><br>以下の通知は、サイトリストを使用せずに後述の A, B の方法で手動で IE モードに切り替えた場合に表示されるものです。テスト モードでこのメッセージを抑止する方法はありません。サイトリストを使用して IE モードを利用する場合には表示されません。<br><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/iemodetest2.png" alt="このサイトは Internet Explorer モードで開かれています"></p>
-<p>なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のポリシーで IE モードを有効に設定してください。</p>
+<p><span style="color: #ff0000">これらの機能はテストを目的に用意されており、意図しないサイトで IE モードを利用することは、想定しない ActiveX の実行など、セキュリティのリスクがありますので十分ご注意ください。</span></p>
+<p>以下の通知は、サイトリストを使用せずに後述の A, B の方法で手動で IE モードに切り替えた場合に表示されるものです。テスト モードでこのメッセージを抑止する方法はありません。サイトリストを使用して IE モードを利用する場合には表示されません。</p>
+<p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/iemodetest2.png" alt="このサイトは Internet Explorer モードで開かれています"></p>
+<p>なお、テスト モードの利用は IE モードが構成されていることが前提となります。以下のポリシーで IE モードを有効に設定してください。</p>
 <pre><code>  [コンピューターの構成] or [ユーザーの構成]
    ＋[管理用テンプレート]
     ＋[Microsoft Edge]
@@ -232,7 +236,8 @@
 <p>B) “--ie-mode-test” オプションを付加して msedge.exe を実行する<br>実行例)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe&quot; --ie-mode-test</span><br></pre></td></tr></table></figure>
 
-<p>上記 A, B の方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。<br><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/iemodetest.png" alt="選択したモードで開く操作"></p>
+<p>上記 A, B の方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。</p>
+<p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/iemodetest.png" alt="選択したモードで開く操作"></p>
 <p>(参考)<br>グループ ポリシーを使用して Internet Explorer 統合を有効にする<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy">https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy</a></p>
 <h3 id="Internet-Explorerモードでサイトの再読み込みを許可"><a href="#Internet-Explorerモードでサイトの再読み込みを許可" class="headerlink" title="Internet Explorerモードでサイトの再読み込みを許可"></a>Internet Explorerモードでサイトの再読み込みを許可</h3><p>この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。<br>Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。<br>(なお上記は OS のエディションについてであり、Edge 自体に OOOO エディションのようなものはありません。)</p>
 <p><img src="/blog/internet-explorer-microsoft-edge/ie-mode-faq/reload-in-internet-explorer-mode.png" alt="Internet Explorer モードでサイトの再読み込みを許可"></p>
