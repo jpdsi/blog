@@ -86,6 +86,9 @@ resizable オプション指定は常に無視され、ユーザーはウィン�
 - fullscreen
 fullscreen オプション指定は常に無視され、全画面表示とはなりません。
 
+- channelmode
+channelmode オプション指定は常に無視され、シアター表示とはなりません。
+
 (参考情報)
 window.open - Web API | MDN
 https://developer.mozilla.org/ja/docs/Web/API/Window/open
