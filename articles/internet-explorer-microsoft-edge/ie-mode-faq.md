@@ -102,6 +102,8 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshar
 
 <span style="color: #ff0000;font-weight:bold;">※ 共有できる Cookie の種類は、有効期限のある永続 Cookie ではなく、有効期間のないセッション Cookie のみですのでご注意ください。</span>
 
+最も理想的な解決方法は、Cookie の共有が必要なコンテンツを全て Edge に移行させることです。
+
 - [目次へ](#目次)
 ---
 
