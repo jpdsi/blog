@@ -8,7 +8,8 @@ tags:
 
 更新履歴:
 2021/05/14 新規
-2021/05/19 更新: 追記しました
+2021/05/19 更新
+2021/06/15 更新
 
 ---
 
@@ -35,6 +36,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 ## 目次
 - [Web コンテンツのデバッグ方法](#Web-コンテンツのデバッグ方法)
 - [window.open による子ウィンドウの扱い](#window-open-による子ウィンドウの扱い)
+- [ウィンドウのクライアント領域のサイズ](#ウィンドウのクライアント領域のサイズ)
 - [Cookie の共有](#Cookie-の共有)
 - [ページ遷移時のブラウザー エンジンの切り替え](#ページ遷移時のブラウザー-エンジンの切り替え)
 - [ブラウザー エンジンの切り替え時の通信で起こること](#ブラウザー-エンジンの切り替え時の通信で起こること)
@@ -92,6 +94,18 @@ channelmode オプション指定は常に無視され、シアター表示と�
 (参考情報)
 window.open - Web API | MDN
 https://developer.mozilla.org/ja/docs/Web/API/Window/open
+
+- [目次へ](#目次)
+---
+
+## ウィンドウのクライアント領域のサイズ
+IE モードであっても、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。
+
+異なるブラウザー内での表示となるため、IE11 デスクトップ アプリと比較して、クライアント領域のサイズがわずかに異なります。
+コンテンツが 1 ピクセル単位で厳密な位置調整をしている場合、テキストの折り返しが発生する、表示しきれないなどの問題が生じることがあります。
+
+クライアント領域のサイズの差異によるレイアウトの崩れが起きていないか、実際に IE モードで動作させての確認を推奨します。
+もしレイアウトの崩れが発生する場合は、クライアント領域のサイズの差異に影響を受けないようなページ レイアウトへ変更してください。
 
 - [目次へ](#目次)
 ---
@@ -253,7 +267,7 @@ Windows 10 Enterprise エディションやドメイン参加環境の Pro エ�
 
 ![ドキュメント モードなどの確認](./ie-mode-faq/docmode.png)
 
-なお、ドキュメント モードはスタンドアロン IE と同じく [こちらにあるフロー](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/dn384051(v=vs.85)) に従って決定されます。
+なお、ドキュメント モードは IE11 デスクトップ アプリと同じく [こちらにあるフロー](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/dn384051(v=vs.85)) に従って決定されます。
 
 たとえば、エンタープライズ モードで Web ページを表示するように指定している場合に、対象の Web ページにて meta タグ (X-UA-Compatible) の指定や !DOCTYPE 宣言がないとドキュメント モードは IE5 となります。
 
