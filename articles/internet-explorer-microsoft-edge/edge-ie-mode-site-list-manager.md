@@ -39,7 +39,8 @@ Microsoft Edge に組み込まれた サイト リスト マネージャー を�
    IE モードについては [こちらのブログ記事](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/) をご参考ください。
 ![ブラウザーの選択](./edge-ie-mode-site-list-manager/4.png)
 
-5. Web サイトに合わせて互換モードを選択します。
+5. Web サイトに合わせて互換モードを選択します。いままでサイトリストでの制御をおこなっていない場合は "既定のモード" にします。
+
 ![IE モードで開く場合のドキュメント モードの指定](./edge-ie-mode-site-list-manager/5.png)
 
 6. 必要に応じてコメントを記載します。そして「追加」をクリックして Web サイトをエンタープライズ サイト リストに追加します。
