@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-5-14
+date: 2021-6-23
 tags: 
   - Microsoft Edge
   - IE モード
