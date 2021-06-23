@@ -248,7 +248,7 @@ B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 グループ ポリシーを使用して Internet Explorer 統合を有効にする
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy
 
-### Internet Explorerモードでサイトの再読み込みを許可
+### Internet Explorer モードでサイトの再読み込みを許可
 
 この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
 Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
