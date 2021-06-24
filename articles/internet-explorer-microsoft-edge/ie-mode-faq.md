@@ -30,7 +30,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 
 [IE モードのトラブルシューティングと FAQ](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq)
 
-[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/31/2021/05/a837387e3dad2d655f50ebc0e83c8edf.pdf)
+[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://aka.ms/IEModeGuideJP)
 
 ---
 
