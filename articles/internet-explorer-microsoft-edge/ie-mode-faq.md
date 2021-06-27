@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-5-14
+date: 2021-6-23
 tags: 
   - Microsoft Edge
   - IE モード
@@ -8,7 +8,9 @@ tags:
 
 更新履歴:
 2021/05/14 新規
-2021/05/19 更新: 追記しました
+2021/05/19 更新
+2021/06/15 更新
+2021/06/23 更新
 
 ---
 
@@ -28,16 +30,24 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 
 [IE モードのトラブルシューティングと FAQ](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq)
 
-[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://46c4ts1tskv22sdav81j9c69-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/31/2021/05/a837387e3dad2d655f50ebc0e83c8edf.pdf)
+[(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://aka.ms/IEModeGuideJP)
 
 ---
 
 ## 目次
-- [Web コンテンツのデバッグ方法](#Web-コンテンツのデバッグ方法)
+
+### 互換性に関する情報
+
 - [window.open による子ウィンドウの扱い](#window-open-による子ウィンドウの扱い)
+- [ウィンドウのクライアント領域のサイズ](#ウィンドウのクライアント領域のサイズ)
+- [ウィンドウをデスクトップ外に開けない](#ウィンドウをデスクトップ外に開けない)
+- [ブラウザー エンジンの切り替え時の通信で起こること](#ブラウザー-エンジンの切り替え時の通信で起こること)
+
+### How to/Tips
+
+- [Web コンテンツのデバッグ方法](#Web-コンテンツのデバッグ方法)
 - [Cookie の共有](#Cookie-の共有)
 - [ページ遷移時のブラウザー エンジンの切り替え](#ページ遷移時のブラウザー-エンジンの切り替え)
-- [ブラウザー エンジンの切り替え時の通信で起こること](#ブラウザー-エンジンの切り替え時の通信で起こること)
 - [IE モードでの表示をテストしたい](#IE-モードでの表示をテストしたい)
 - [サイトリストで指定しているサイトが IE モードで表示されない](#サイトリストで指定しているサイトが-IE-モードで表示されない)
 - [ドキュメント モードを確認したい](#ドキュメント-モードを確認したい)
@@ -45,8 +55,85 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 
 ---
 
+## window.open による子ウィンドウの扱い
+
+Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツ内で window.open メソッドを実行して表示される子ウィンドウは新しい Microsoft Edge のウィンドウとなります。
+
+IE モードでは、Web ページ コンテンツの表示 (レンダリング) やスクリプトは IE11 のブラウザー エンジンによって処理されますが、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。具体的には、以下の図の緑色の枠線内は IE モードによって処理されますが、枠の外側は Microsoft Edge によって処理されます。
+
+![ウィンドウの構造](./ie-mode-faq/windowopen1.png)
+
+上記動作に伴い、window.open(url, windowName, windowFeatures) の引数 windowFeatures で指定する以下のオプションは反映されません。
+なお、この動作は Microsoft Edge における想定された動作となります。
+
+- location
+引数 url で指定されるサイトがローカル イントラネットや信頼済みサイト ゾーンで、かつ、引数 windowFeatures において location=no と指定していても、以下のようにアドレス バーは表示されます (ただし、アドレス バーでの操作はできません)。
+
+![画面例](./ie-mode-faq/windowopen2.png)
+
+- resizable
+resizable オプション指定は常に無視され、ユーザーはウィンドウ サイズを変更することができます。
+
+- fullscreen
+fullscreen オプション指定は常に無視され、全画面表示とはなりません。
+
+- channelmode
+channelmode オプション指定は常に無視され、シアター表示とはなりません。
+
+(参考情報)
+window.open - Web API | MDN
+https://developer.mozilla.org/ja/docs/Web/API/Window/open
+
+- [目次へ](#目次)
+
+---
+
+## ウィンドウのクライアント領域のサイズ
+
+IE モードであっても、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。
+
+異なるブラウザー内での表示となるため、IE11 デスクトップ アプリと比較して、クライアント領域のサイズがわずかに異なります。
+<span style="color: #ff0000">コンテンツが 1 ピクセル単位で厳密な位置調整をしている場合、テキストの折り返しが発生する、表示しきれない</span>などの問題が生じることがあります。
+
+クライアント領域のサイズの差異によるレイアウトの崩れが起きていないか、実際に IE モードで動作させての確認を推奨します。
+もしレイアウトの崩れが発生する場合は、クライアント領域のサイズの差異に影響を受けないようなページ レイアウトへ変更してください。
+
+- [目次へ](#目次)
+
+---
+
+## ウィンドウをデスクトップ外に開けない
+
+IE11 デスクトップ アプリでは、セキュリティ設定の \[サイズや位置の制限なしにスクリプトでウィンドウを開くことを許可する\] が有効であれば、window.open メソッドや window.moveTo メソッドでデスクトップ外の座標を指定することにより、デスクトップ外でウィンドウを開くことができます。
+
+IE モードでもこれらの API の動作自体は変わりませんが、別途 Chromium のセキュリティ上の制約により、デスクトップ外に開いたウィンドウはデスクトップ内に戻されてしまいます。そのため、結果としては、<span style="color: #ff0000">IE モードでデスクトップ外にウィンドウを開くことができません。</span>
+
+デスクトップ外のウィンドウで処理を行うのではなく、表示されているウィンドウ内のスクリプトや iframe で処理を行うよう変更してください。
+
+- [目次へ](#目次)
+
+---
+
+## ブラウザー エンジンの切り替え時の通信で起こること
+
+ブラウザー エンジンの切り替え時 (Edge から IE モード、およびその逆) の通信は以下のようになります。
+
+- POST メソッドが GET メソッドになる
+- HTTP リクエスト ヘッダーに Referrer が含まれない
+
+ページ遷移時に POST リクエストではなく GET リクエストが Web サーバーに送信されている場合には、こちらの制限に該当していると言えます。
+POST リクエストが GET リクエストとなる動作は、異なるプロセス間での POST データのやり取りに対するセキュリティ的な懸念の観点と、技術的な制約からなる想定された動作となり、この動作を変更することはできません。
+
+元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。
+対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。
+
+- [目次へ](#目次)
+
+---
+
 ## Web コンテンツのデバッグ方法
-Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツに対して、Microsoft Edge の F12 開発者ツールを使用することはできません。
+
+Microsoft Edge の IE モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツに対して、Microsoft Edge の F12 開発者ツールを使用することはできません。
 IE モードで表示されている Web コンテンツをデバッグするには、IEChooser (Microsoft Edge 開発者ツール) を使用します。具体的には、以下の手順にてデバッグ作業を行います。
 
 ※ このトピックは、Windows 10 および Windows Server 2016、Windows Server 2019 以上の環境を前提としています。Windows 8.1 および Windows Server 2012 R2 以前の Windows プラットフォームについては、恐れ入りますが、後述の方法で IE モードで表示されている Web コンテンツをデバッグすることはできません。
@@ -63,36 +150,11 @@ IE モードで表示されている Web コンテンツをデバッグするに
 ![開発者ツール画面](./ie-mode-faq/IEChooser2.png)
 
 - [目次へ](#目次)
----
 
-## window.open による子ウィンドウの扱い
-Microsoft Edge の IE11 モードでは、IE11 のブラウザー エンジンで表示する必要のある Web サイトを Microsoft Edge 上のタブ内で表示しますが、IE モードで表示されている Web コンテンツ内で window.open() メソッドを実行して表示される子ウィンドウは新しい Microsoft Edge のウィンドウとなります。
-
-IE モードでは、Web ページ コンテンツの表示 (レンダリング) やスクリプトは IE11 のブラウザー エンジンによって処理されますが、ブラウザー ウィンドウとしての外枠 (フレーム) 部分は Microsoft Edge によって制御されます。具体的には、以下の図の緑色の枠線内は IE モードによって処理されますが、枠の外側は Microsoft Edge によって処理されます。
-
-![ウィンドウの構造](./ie-mode-faq/windowopen1.png)
-
-上記動作に伴い、window.open(url, windowName, windowFeatures) の引数 windowFeatures で指定する以下のオプションは反映されません。
-なお、この動作は Microsoft Edge における想定された動作となります。
-
-- location
-引数 url で指定されるサイトがローカル イントラネットや信頼済みサイト ゾーンで、かつ、引数 windowFeatures において location=no と指定していても、以下のようにアドレス バーは表示されます (ただし、アドレス バーでの操作はできません)。
-![画面例](./ie-mode-faq/windowopen2.png)
-
-- resizable
-resizable オプション指定は常に無視され、ユーザーはウィンドウ サイズを変更することができます。
-
-- fullscreen
-fullscreen オプション指定は常に無視され、全画面表示とはなりません。
-
-(参考情報)
-window.open - Web API | MDN
-https://developer.mozilla.org/ja/docs/Web/API/Window/open
-
-- [目次へ](#目次)
 ---
 
 ## Cookie の共有
+
 以下のドキュメントに詳細がまとまっていますが、<span style="color: #ff0000">セッション Cookie</span> に関して、Edge から IE モードにのみ共有することができます。
 <span style="color: #ff0000">セッション Cookie</span>を逆方向へ (IE モードから Edge へ) 共有することはできません。
 
@@ -101,10 +163,14 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshar
 
 <span style="color: #ff0000;font-weight:bold;">※ 共有できる Cookie の種類は、有効期限のある永続 Cookie ではなく、有効期間のないセッション Cookie のみですのでご注意ください。</span>
 
+最も理想的な解決方法は、Cookie の共有が必要なコンテンツを全て Edge に移行させることです。
+
 - [目次へ](#目次)
+
 ---
 
 ## ページ遷移時のブラウザー エンジンの切り替え
+
 以下のポリシーの設定状態によって、IE モードで表示しているページからの遷移時の動作が変わります。
 
 InternetExplorerIntegrationSiteRedirect
@@ -139,21 +205,7 @@ B) 遷移先のページが IE モードで表示される。
 A, B) 遷移先のページが IE モードで表示される。
 
 - [目次へ](#目次)
----
 
-## ブラウザー エンジンの切り替え時の通信で起こること
-ブラウザー エンジンの切り替え時 (Edge から IE モード、およびその逆) の通信は以下のようになります。
-
-- POST メソッドが GET メソッドになる
-- HTTP リクエスト ヘッダーに Referrer が含まれない
-
-ページ遷移時に POST リクエストではなく GET リクエストが Web サーバーに送信されている場合には、こちらの制限に該当していると言えます。
-POST リクエストが GET リクエストとなる動作は、異なるプロセス間での POST データのやり取りに対するセキュリティ的な懸念の観点と、技術的な制約からなる想定された動作となり、この動作を変更することはできません。
-
-元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。
-対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。
-
-- [目次へ](#目次)
 ---
 
 ## IE モードでの表示をテストしたい
@@ -163,7 +215,11 @@ IE モードのテストのために、毎回サイトリストを書き替え�
 
 <span style="color: #ff0000">これらの機能はテストを目的に用意されており、意図しないサイトで IE モードを利用することは、想定しない ActiveX の実行など、セキュリティのリスクがありますので十分ご注意ください。</span>
 
-なお、テストモードの利用は IE モードが構成されていることが前提となります。以下のポリシーで IE モードを有効に設定してください。
+以下の通知は、サイトリストを使用せずに後述の A, B の方法で手動で IE モードに切り替えた場合に表示されるものです。テスト モードでこのメッセージを抑止する方法はありません。サイトリストを使用して IE モードを利用する場合には表示されません。
+
+![このサイトは Internet Explorer モードで開かれています](./ie-mode-faq/iemodetest2.png)
+
+なお、テスト モードの利用は IE モードが構成されていることが前提となります。以下のポリシーで IE モードを有効に設定してください。
 
       [コンピューターの構成] or [ユーザーの構成]
        ＋[管理用テンプレート]
@@ -185,13 +241,26 @@ B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 ```
 
 上記 A, B の方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。
+
 ![選択したモードで開く操作](./ie-mode-faq/iemodetest.png)
 
 (参考)
 グループ ポリシーを使用して Internet Explorer 統合を有効にする
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy
 
+### Internet Explorer モードでサイトの再読み込みを許可
+
+この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
+Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
+(なお上記は OS のエディションについてであり、Edge 自体に OOOO エディションのようなものはありません。)
+
+![Internet Explorer モードでサイトの再読み込みを許可](./ie-mode-faq/reload-in-internet-explorer-mode.png)
+
+(参考) 以下の注釈部分でも触れています。
+[Microsoft Edge の Internet Explorer モード](https://support.microsoft.com/ja-jp/office/microsoft-edge-%e3%81%ae-internet-explorer-%e3%83%a2%e3%83%bc%e3%83%89-6604162f-e38a-48b2-acd2-682dbac6f0de?ui=ja-jp&rs=ja-jp&ad=jp)
+
 - [目次へ](#目次)
+
 ---
 
 ## サイトリストで指定しているサイトが IE モードで表示されない
@@ -201,6 +270,7 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 ![Edge が読み込んでいるサイトリストの内容](./ie-mode-faq/compat_enterprise.png)
 
 確認ポイント
+
 - URL 一覧の中に、IE モードで表示したい項目が存在するか。
 - 対象のサイトについて "エンジン" が "IE11" となっているか。
 - "エンジン"が "ニュートラル" となっている場合、遷移元のページが IE モードで表示されているか。
@@ -208,6 +278,7 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 もし想定していない状態であれば、なぜ意図したサイトリストが利用されていないのかを掘り下げていきます。
 
 確認ポイント
+
 - サイトリストのバージョンを更新したか。
 - [エンタープライズ モード スキーマ v.2 ガイダンス](https://docs.microsoft.com/ja-jp/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance) に沿っているか。
 - シンプルに１つだけ登録した状態であれば、Edge に反映されるか。
@@ -218,12 +289,14 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 ![診断情報の画面](./ie-mode-faq/compat_iediagnostic2.png)
 
 確認ポイント
+
 - "Internet Explorer モードの設定" で上記のようになっているかどうか。
 - "グループ ポリシーの設定" が想定したとおりになっているかどうか。
 
 設定について [IE モード ポリシーの構成](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies) のドキュメントをみながら構成を確認します。
 
 - [目次へ](#目次)
+
 ---
 
 ## ドキュメント モードを確認したい
@@ -232,7 +305,14 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 
 ![ドキュメント モードなどの確認](./ie-mode-faq/docmode.png)
 
+なお、ドキュメント モードは IE11 デスクトップ アプリと同じく [こちらにあるフロー](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/dn384051(v=vs.85)) に従って決定されます。
+
+たとえば、エンタープライズ モードで Web ページを表示するように指定している場合に、対象の Web ページにて meta タグ (X-UA-Compatible) の指定や !DOCTYPE 宣言がないとドキュメント モードは IE5 となります。
+
+![エンタープライズ モードでドキュメント モードが IE5 の例](./ie-mode-faq/docmode2.png)
+
 - [目次へ](#目次)
+
 ---
 
 ## ニュートラル サイト
@@ -243,12 +323,13 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 以下のような場面で利用します。
 
 ### 認証がうまくいかないケース
+
 IE モードを利用するとき『認証がうまくいかない』というお問い合せをよくいただきますので、ここで紹介します。
 
 認証がうまくいかないという話では [保護モードをまたいだ Cookie について](../cross-protected-mode-cookie/) という記事で、Azure AD (AAD) 認証を必要とする Web アプリケーションを例としました。
 対象の Web アプリケーションのドメインと認証時にアクセスする login.microsoftonline.com が異なったセキュリティ ゾーンに属していた場合、認証済みを示す Cookie がリクエストに含まれないことで、ユーザーがログオンしていないと判断され、再度認証を求められてしまうという現象を解説しました。
 
-IE モードを利用するとき『どの URL を IE モードで表示するか』を設定しますが、対象の Web アプリケーションの URL に加えて、**<font color="red">認証サーバー / シングル サインオン サーバーに対してのアクセスも IE モードで動作するように明示的に構成する</font>** 必要があります。
+IE モードを利用するとき『どの URL を IE モードで表示するか』を設定しますが、対象の Web アプリケーションの URL に加えて、<font color="red">**認証サーバー / シングル サインオン サーバーに対してのアクセスも IE モードで動作するように明示的に構成する**</font> 必要があります。
 認証サーバーも含めておかないと、以下のように IE モードと Edge とで行き来するときに認証に必要な Cookie が共有されずに認証ができません。
 
 1. 対象の Web アプリケーションの URL にアクセスします。(IE モードで動作します)
@@ -264,6 +345,7 @@ IE モードを利用するとき『どの URL を IE モードで表示する�
 (本来は IE モードを使わずに Edge でご覧いただくことをおすすめします)
 
 まずは以下のように対象サイト (office.com) だけを登録してみます。
+
 ```
 <site url="office.com">
     <open-in>IE11</open-in>
@@ -343,4 +425,5 @@ Internet Explorer モードでページ内ナビゲーションを保持する
 https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav
 
 - [目次へ](#目次)
+
 ---

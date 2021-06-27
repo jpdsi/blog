@@ -12,7 +12,7 @@ Microsoft Edge に組み込まれた サイト リスト マネージャー を�
 
 モダンなブラウザーにまだ対応できていないサイトを IE モードで表示させたい場合や、逆にモダンなサイトを IE で開こうとした場合に Edge に転送したい場合などにサイト リスト (.xml) をご利用いただいているかと思います。
 
-実はサイト リストは [スタンドアロンの Enterprise Mode Site List Manager というツール](https://docs.microsoft.com/ja-jp/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) だけではなく、Microsoft Edge の組み込みの機能で作成することもできます。
+これまでサイト リストの作成を支援するために [スタンドアロンの Enterprise Mode Site List Manager というツール](https://docs.microsoft.com/ja-jp/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager) を提供してきましたが、今後は機能の更新は行われませんので、代わりに Microsoft Edge の組み込みの機能をご利用ください。
 
 この機能は [Microsoft Edge の Enterprise Site List Manager](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-site-list-manager) でもご紹介していますが、今回は画面ショットを交えてご説明していきます。
 
@@ -39,7 +39,8 @@ Microsoft Edge に組み込まれた サイト リスト マネージャー を�
    IE モードについては [こちらのブログ記事](https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/ie-mode-faq/) をご参考ください。
 ![ブラウザーの選択](./edge-ie-mode-site-list-manager/4.png)
 
-5. Web サイトに合わせて互換モードを選択します。
+5. Web サイトに合わせて互換モードを選択します。いままでサイトリストでの制御をおこなっていない場合は "既定のモード" にします。
+
 ![IE モードで開く場合のドキュメント モードの指定](./edge-ie-mode-site-list-manager/5.png)
 
 6. 必要に応じてコメントを記載します。そして「追加」をクリックして Web サイトをエンタープライズ サイト リストに追加します。
