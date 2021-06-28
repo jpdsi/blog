@@ -1,5 +1,5 @@
 ---
-title: DebugDiag の取得方法について
+title: Debug Diagnostics Tool (DebugDiag) の取得方法について
 date: 2021-05-30
 tags: 
   - Internet Information Services
@@ -12,27 +12,29 @@ tags:
 こんにちは。IIS サポート チームです！  
 
 弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てる内容をご提供しております。
-今回は DebugDiag によりメモリダンプを取得する手順についてご説明いたします。
+今回は Debug Diagnostics Tool (以降 DebugDiag) によりメモリダンプを取得する手順についてご説明いたします。
 
 ## DebugDiag とは<!-- omit in toc -->
 
 DebugDiag とはメモリダンプを取得・解析するための強力なツールです。  
 DebudDiag は我々 IIS サポートチームのみならず、別のサポートチームにおいてでも様々なシナリオでダンプを取得し、ダンプを解析することで日々お客様の問題解決に貢献しております。
 
-## DebudDiag のメリット<!-- omit in toc -->
+### DebudDiag のメリット<!-- omit in toc -->
 
 DebugDiag でのダンプ採取のメリットとして、  
 柔軟なタイミングかつ、メモリの領域を指定して取得することが上げられます。
 
-取得するメモリの領域の指定は以下 2 つ可能です。なお通常、お問い合わせの調査には User Fulldump の取得をお願いしております。  
+取得するメモリの領域の指定は以下 2 つが可能です。
 
 - User Fulldump : プロセスの全領域を .dmp としてダンプします。サイズは大きいものの詳細な分析が行えます
 - User Minidump : プロセスの一部領域 を .dmp としてダンプします。サイズは小さいものの、限られた分析しか行なえません
 
+なお通常、お問い合わせの調査には User Fulldump の取得をお願いしております。  
+
 また取得するタイミングについても以下のように柔軟に変更できます。  
 
-- イベントログに、アプリケーションの例外コードが記録されたタイミングで取得する
-- イベントログに記録された文字列を発火点として取得する
+- イベントログにアプリケーションの例外コードが記録されたタイミングで取得する
+- イベントログに記録された文字列を起点として取得する
 
 またそれ以外のメリットとして、ログオフした状態であってもバックグラウンドでアプリを実行可能です。
 
@@ -43,10 +45,12 @@ DebugDiag でのダンプ採取のメリットとして、
 - [2. DebugDiag の取得設定](#2-DebugDiag-の取得設定)
   - [2.1. Enable Disable Performance Logging の 無効化](#2-1-Enable-Disable-Performance-Logging-の-無効化)
   - [2.2. Rule Type と Target Type の選択](#2-2-Rule-Type-と-Target-Type-の選択)
-- [3. 対象となる DebudDiag のターゲットタイプ が A specific IIS web application pool の場合](#3-対象となる-DebudDiag-のターゲットタイプ-が-A-specific-IIS-web-application-pool-の場合)
-  - [3.1. 特定の例外コードかつ First Chance でダンプを取得する場合](#3-1-特定の例外コードかつ-First-Chance-でダンプを取得する場合)
+- [3. 対象となる DebugDiag のターゲットタイプ が A specific IIS web application pool の場合](#3-対象となる-DebugDiag-のターゲットタイプ-が-A-specific-IIS-web-application-pool-の場合)
+  - [3.1. ダンプの取得タイミング が First Chance の場合](#3-1-ダンプの取得タイミング-が-First-Chance-の場合)
 - [4. ダンプ生成後ファイルの取得](#4-ダンプ生成後ファイルの取得)
 - [5. DebugDiag のアンインストール方法について](#5-DebugDiag-のアンインストール方法について)
+  - [5.1. DebugDiag のルールの削除](#5-1-DebugDiag-のルールの削除)
+  - [5.2. DebugDiag アプリケーション自体のアンインストール](#5-2-DebugDiag-アプリケーション自体のアンインストール)
 - [6. DebugDiag の検証方法について](#6-DebugDiag-の検証方法について)
   - [6.1. 前提条件](#6-1-前提条件)
   - [6.2. 例外を意図的に発生させるアプリケーションの配置](#6-2-例外を意図的に発生させるアプリケーションの配置)
@@ -57,17 +61,16 @@ DebugDiag でのダンプ採取のメリットとして、
 ### 1.1. 事前に準備が必要なものについて
 
 DebudDiag はインストールが必要かつ、フォアグラウンドまたはバックグラウンドで実行するツールになります。
-<インストールする DebugDiag のバージョン> に応じて、64bit 版、32bit 版のいずれかをダウンロードします。
 
-弊社から特に指定がない場合は、64bit 版をご利用ください。  
-ダンプを生成したい対象となるサイトのアプリケーションプールが [32ビット アプリケーションの有効化] を true にしている場合は、32 bit 版をダウンロードします。
+64bit 版の DebugDiag をインストールします。  
+※ OS が 32bit 版のみ 32bit 番の DebugDiag をインストールしてください。
 
-- 64bit 版の Debug Diag : [Debug Diagnostic Tool v2 Update 3](http://debugdiag.com/)
-- 32bit 版の Debug Diag : [Debug Diagnostic Tool v2 Update 2](https://www.microsoft.com/en-us/download/details.aspx?id=49924)
+- 64bit 版の DebugDiag : [Debug Diagnostic Tool v2 Update 3](http://debugdiag.com/)
+- 32bit 版の DebugDiag : [Debug Diagnostic Tool v2 Update 2](https://www.microsoft.com/en-us/download/details.aspx?id=49924)
 
-msi ファイルをダウンロードできたら、以下の手順でインストールします。
+.msi ファイルをダウンロードできたら、以下の手順でインストールします。
 
-- ダウンロードした msi ファイルを起動します。  
+- ダウンロードした .msi ファイルを起動します。  
 - 起動後、[Next] を押し、ライセンスを承諾します。  
 - デフォルトのフォルダパスは C:\Program Files\DebugDiag ですので、それ以外を設定したい場合は [Browse...] から任意のパスに変更します。
 - [Next]を押し、[Install] を実行してください。なおインストールには管理者権限が必要です。
@@ -92,10 +95,17 @@ msi ファイルをダウンロードできたら、以下の手順でインス�
 
 ### 2.2. Rule Type と Target Type の選択
 
-続けて、ウィンドウ下部の [Add Rules] ボタンを押します。
-表示された [Select Rule Type] 画面にて、<対象となる DebudDiag のルールタイプ> を選択し、[次へ] ボタンを押します。  
-※ 弊社から特別指定がない場合は [Crash] を選択してください。
+この辺りから取得する対象により設定方法が変わります。
 
+弊社から適宜 "<>" 内の設定項目が指定された場合はそちらに従ってください。  
+もし特に指定がない場合や、こちらのブログを参考に DebugDiag の取得を調査している場合は、
+例に従うことでアクセス違反発生時にダンプを取得する場合の設定手順をお試しいただけます。
+
+ウィンドウ下部の [Add Rules] ボタンを押します。
+表示された [Select Rule Type] 画面にて、<対象となる DebudDiag のルールタイプ> を選択し、[次へ] ボタンを押します。
+
+※ 例として、アクセス違反発生時にダンプを取得する場合は、 [Crash] を選択してください。  
+以下の画像のように設定をすることで、 Access Violation による例外発生によるダンプの取得を行います。  
 <!-- 
 [Crash] 以外についてはGUI上の表示も変わってくることから、
 今回の説明は Crash 後の選択に合わせた形でよいと考える。
@@ -103,27 +113,32 @@ msi ファイルをダウンロードできたら、以下の手順でインス�
 仮に Crash 以外の選択が必要になった場合は、別記事として分散させることを期待する。
 別記事じゃなくここの記事にRule Type 自体もヘッダー分けして書くと、非常に長くなりそうなため。
 
-Target Type は a specific IIS webapplication pool 以外も選択したことが過去にもあるため、そこは分岐がある想定でヘッダーを作成する。
-
+Target Type は a specific IIS webapplication pool 以外も選択したことが過去にもあるため、そこは分岐がある想定で目次のヘッダーの深さをターゲットタイプで ## になるように作成する。
 -->
 
-ここからは、 Target Type に合わせて取得方法が異なります。
-
-[Select Target Type] 画面にて、<対象となる DebudDiag のターゲットタイプ> を選択し、[次へ] をクリックします。  
-※ 弊社から特別指定がない場合は [A specific IIS web application pool] を選択してください。
+次に、[Select Target Type] 画面にて、<対象となる DebudDiag のターゲットタイプ> を選択し、[次へ] をクリックします。  
+※ 例として、アクセス違反発生時にダンプを取得する場合は、[A specific IIS web application pool] を選択してください。
 
 ![Rule Type と Target Type の選択画面図](./debugdiag/debugdiag_2021-05-24-00-17-36.png)
 
-## 3. 対象となる DebudDiag のターゲットタイプ が A specific IIS web application pool の場合
+<!--
+仮にここで分岐が起こる場合は、目次を挿入するのも良いとと考える
+-->
 
-<対象となる DebugDiag のターゲットタイプ> が A specific IIS web application pool の場合は、First Chance 等の要件により以下の手順を参考に設定してください。
+## 3. 対象となる DebugDiag のターゲットタイプ が A specific IIS web application pool の場合
 
-### 3.1. 特定の例外コードかつ First Chance でダンプを取得する場合
+ダンプの取得タイミングにより更に取得方法が分岐します。以下 2 つのうちどちらかのタイミングで取得します。
+
+- First Chance (例外が発生したタイミングで取得、例外処理をしていてアプリケーションがクラッシュしない場合でも取得)
+- Second Chance (例外が発生し、例外処理がされずにアプリケーションがクラッシュする直前のタイミングで取得)
+
+弊社より <ダンプの取得タイミング> について設定項目が指定された場合はそちらに従ってください。  
+※ 例として、アクセス違反発生時にダンプを取得する場合は、 <ダンプの取得タイミング> は First Chance を選択してください。  
+
+### 3.1. ダンプの取得タイミング が First Chance の場合
 
 First Chance とは、例外発生したタイミングでダンプを取得する方法になります。  
 例えば try/catch による例外処理をしていて、アプリケーションがクラッシュしない場合においても、First Chance により、例外が発生した瞬間にダンプを取得することができます。
-
-弊社より <ダンプの取得タイミング> について First Chance とお伝えした場合や、対象のアプリケーションプールでの例外発生時にダンプを取得したい場合はこちらの手順を行います。
 
 [Advanced Configuration (Optional)] 画面にて [Advanced Settings] -  [Exceptions…] をクリックします。  
 次に、 [First Chance Exception Configuration] - [Add Exception…] をクリックします。  
@@ -137,7 +152,8 @@ First Chance とは、例外発生したタイミングでダンプを取得す�
 - [Action Limit] : \<First Chance での取得するダンプの回数\>
 - [その他の設定項目] : \<First Chance でのその他の設定\>
 
-弊社より指示がない場合は、画像のように Access Violation による例外発生によるダンプの取得を行います。
+例として、今回ははアクセス違反発生時にダンプを取得する場合の設定条件を紹介します。
+以下の画像のように設定をすることで、 Access Violation による例外発生によるダンプの取得を行います。
 
 - [Exception Code (hex)] : C0000005 (Access Violation)
 - [Action Type] : Full Userdump
@@ -170,13 +186,17 @@ First Chance とは、例外発生したタイミングでダンプを取得す�
 
 ## 5. DebugDiag のアンインストール方法について
 
+### 5.1. DebugDiag のルールの削除
+
 DebugDiag の作成したルールの削除であれば作成したルールを [右クリック] し、[Remove Rule]を実行します。
+
+### 5.2. DebugDiag アプリケーション自体のアンインストール
 
 DebugDiag 自体を削除する場合は、有効化したルールすべてを削除します。  
 コントロールパネルを開き、[プログラムのアンインストールまたは変更] を開きます。  
 DebugDiag のアプリケーションを選択し、 [アンインストール] を実行してください。
 
-![](./debugdiag/debugdiag_2021-05-24-02-34-14.png)
+![DebugDiag のアンインストールの画面図](./debugdiag/debugdiag_2021-05-24-02-34-14.png)
 
 ## 6. DebugDiag の検証方法について
 
@@ -189,9 +209,10 @@ DebugDiag のアプリケーションを選択し、 [アンインストール] 
 以下のコードを .aspx という拡張子で保存して IIS 上の任意のサイトに配置します。
 
 コード中の <検証用の例外コード> には 例外コードを 10 進数で入力します。  
-例えば C0000005 の例外を発生させたい場合は、それを 10 進数で表した 3221225477 を入力してください。  
+例えば C0000005 の例外を発生させたい場合は、それを 10 進数で表した 3221225477 を入力します。  
 
-特に弊社から <検証用の例外コード> に指定がない場合は 0xC0000005 の例外コードを 10 進数表示した 3221225477 こちらを指定してください。
+以下例として、アクセス違反の例外を意図的に発生させます。  
+具体的にはアクセス違反の例外コードである 0xC0000005 を 10 進数表記した 3221225477 を <検証用の例外コード> 指定してください。
 
 ```cpp
 <%@ Import Namespace="System.Runtime.InteropServices" %>
@@ -227,6 +248,10 @@ protected void Button1_Click(object sender, EventArgs e)
 以下の項目を右に読み替えていただき、再度上の手順に従って、例外コードを設定します。
 
 - <対象となるアプリケーションプール>: テスト用の対象となるサイトが存在するアプリケーションプール
+- \<First Chance での対象となる例外コード\>: \<検証用の例外コード\>
+
+※ なお、Debug Diagnostic Tool ツール自体のサポートは私共技術サポートではご提供しておりません。  
+そのため、上記ツールのトラブルシューティングやツールの詳細なご紹介等はご支援できませんことをご了承ください。
 
 ### 6.3. 確認方法
 
