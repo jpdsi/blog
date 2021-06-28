@@ -21,15 +21,14 @@ DebudDiag は我々 IIS サポートチームのみならず、別のサポー�
 
 ### DebudDiag のメリット<!-- omit in toc -->
 
-DebugDiag でのダンプ採取のメリットとして、  
-柔軟なタイミングかつ、メモリの領域を指定して取得することが上げられます。
+DebugDiag でのダンプ採取のメリットとして、柔軟なタイミングかつ、メモリの領域を指定して取得することが上げられます。
 
-取得するメモリの領域の指定は以下 2 つが可能です。
+取得するメモリの領域の指定は以下 2 つが可能です。  
 
-- User Fulldump : プロセスの全領域を .dmp としてダンプします。サイズは大きいものの詳細な分析が行えます
-- User Minidump : プロセスの一部領域 を .dmp としてダンプします。サイズは小さいものの、限られた分析しか行なえません
+- **User Fulldump** : プロセスの全領域を .dmp としてダンプします。サイズは大きいものの詳細な分析が行えます
+- **User Minidump** : プロセスの一部領域 を .dmp としてダンプします。サイズは小さいものの、限られた分析しか行なえません
 
-なお通常、お問い合わせの調査には User Fulldump の取得をお願いしております。  
+なお通常、お問い合わせの調査には、前者の **User Fulldump** の取得をお願いしております。  
 
 また取得するタイミングについても以下のように柔軟に変更できます。  
 
@@ -63,7 +62,7 @@ DebugDiag でのダンプ採取のメリットとして、
 DebudDiag はインストールが必要かつ、フォアグラウンドまたはバックグラウンドで実行するツールになります。
 
 64bit 版の DebugDiag をインストールします。  
-※ OS が 32bit 版のみ 32bit 番の DebugDiag をインストールしてください。
+※ OS が 32bit 版のみ 32bit 版の DebugDiag をインストールしてください。
 
 - 64bit 版の DebugDiag : [Debug Diagnostic Tool v2 Update 3](http://debugdiag.com/)
 - 32bit 版の DebugDiag : [Debug Diagnostic Tool v2 Update 2](https://www.microsoft.com/en-us/download/details.aspx?id=49924)
@@ -73,7 +72,7 @@ DebudDiag はインストールが必要かつ、フォアグラウンドまた�
 - ダウンロードした .msi ファイルを起動します。  
 - 起動後、[Next] を押し、ライセンスを承諾します。  
 - デフォルトのフォルダパスは C:\Program Files\DebugDiag ですので、それ以外を設定したい場合は [Browse...] から任意のパスに変更します。
-- [Next]を押し、[Install] を実行してください。なおインストールには管理者権限が必要です。
+- [Next]を押し、[Install] を実行してください。なお**インストールには管理者権限が必要**です。
 
 ![DebugDiag のインストール設定画面の図](./debugdiag/debugdiag_2021-05-23-23-43-07.png)
 
@@ -103,8 +102,11 @@ DebudDiag はインストールが必要かつ、フォアグラウンドまた�
 
 ウィンドウ下部の [Add Rules] ボタンを押します。
 表示された [Select Rule Type] 画面にて、<対象となる DebudDiag のルールタイプ> を選択し、[次へ] ボタンを押します。
+次に、[Select Target Type] 画面にて、<対象となる DebudDiag のターゲットタイプ> を選択し、[次へ] をクリックします。  
 
-※ 例として、アクセス違反発生時にダンプを取得する場合は、 [Crash] を選択してください。  
+※ 例として、アクセス違反発生時にダンプを取得する場合は、[Select Rule Type] には [Crash] を選択し、  
+[Select Target Type] には [A specific IIS web application pool] を選択してください。  
+
 以下の画像のように設定をすることで、 Access Violation による例外発生によるダンプの取得を行います。  
 <!-- 
 [Crash] 以外についてはGUI上の表示も変わってくることから、
@@ -116,9 +118,6 @@ DebudDiag はインストールが必要かつ、フォアグラウンドまた�
 Target Type は a specific IIS webapplication pool 以外も選択したことが過去にもあるため、そこは分岐がある想定で目次のヘッダーの深さをターゲットタイプで ## になるように作成する。
 -->
 
-次に、[Select Target Type] 画面にて、<対象となる DebudDiag のターゲットタイプ> を選択し、[次へ] をクリックします。  
-※ 例として、アクセス違反発生時にダンプを取得する場合は、[A specific IIS web application pool] を選択してください。
-
 ![Rule Type と Target Type の選択画面図](./debugdiag/debugdiag_2021-05-24-00-17-36.png)
 
 <!--
@@ -129,8 +128,8 @@ Target Type は a specific IIS webapplication pool 以外も選択したこと�
 
 ダンプの取得タイミングにより更に取得方法が分岐します。以下 2 つのうちどちらかのタイミングで取得します。
 
-- First Chance (例外が発生したタイミングで取得、例外処理をしていてアプリケーションがクラッシュしない場合でも取得)
-- Second Chance (例外が発生し、例外処理がされずにアプリケーションがクラッシュする直前のタイミングで取得)
+- **First Chance** : 例外が発生したタイミングで取得する設定で、例外処理をしていてアプリケーションがクラッシュしない場合でも取得する
+- **Second Chance** : 例外が発生し、例外処理がされずにアプリケーションがクラッシュ場合のみ取得する設定で、クラッシュの直前のタイミングで取得する
 
 弊社より <ダンプの取得タイミング> について設定項目が指定された場合はそちらに従ってください。  
 ※ 例として、アクセス違反発生時にダンプを取得する場合は、 <ダンプの取得タイミング> は First Chance を選択してください。  
@@ -152,7 +151,7 @@ First Chance とは、例外発生したタイミングでダンプを取得す�
 - [Action Limit] : \<First Chance での取得するダンプの回数\>
 - [その他の設定項目] : \<First Chance でのその他の設定\>
 
-例として、今回ははアクセス違反発生時にダンプを取得する場合の設定条件を紹介します。
+※ 例として、今回ははアクセス違反発生時にダンプを取得する場合の設定条件を紹介します。
 以下の画像のように設定をすることで、 Access Violation による例外発生によるダンプの取得を行います。
 
 - [Exception Code (hex)] : C0000005 (Access Violation)
@@ -171,6 +170,8 @@ First Chance とは、例外発生したタイミングでダンプを取得す�
 [Advanced Configuration (Optional)] 画面に戻りますので、[次へ] ボタンを押します。  
 [Select Dump Location And Rule Name (Optional)] では、ダンプの出力先やルールの名前を設定できます。  
 \<DebugDiag の有効化時期\> について弊社から指定がない場合は、 [Rule Completed] - [Activate the rule now] を選択し、 [完了] をクリックします。
+
+※ 例として、今回ははアクセス違反発生時にダンプを取得する場合の設定の場合は画像の通り、[Activate the rule now] を選択し、[完了] をクリックします。
 
 ![DebugDiag の設定の有効化の設定図1](./debugdiag/debugdiag_2021-05-24-02-19-43.png)
 
