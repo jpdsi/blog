@@ -1,0 +1,10 @@
+{
+    "pasteImage.namePrefix": "${currentFileNameWithoutExt}_",
+    "pasteImage.path": "${currentFileDir}/${currentFileNameWithoutExt}",
+    "pasteImage.prefix":"./",
+    "pasteImage.showFilePathConfirmInputBox":true,
+    "pasteImage.filePathConfirmInputBoxMode":"onlyName",
+    "markdown.extension.toc.downcaseLink": false,
+    "markdown.extension.toc.slugifyMode": "gitea"
+
+}
