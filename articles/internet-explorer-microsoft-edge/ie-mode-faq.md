@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-6-23
+date: 2021-6-30
 tags: 
   - Microsoft Edge
   - IE モード
@@ -11,6 +11,7 @@ tags:
 2021/05/19 更新
 2021/06/15 更新
 2021/06/23 更新
+2021/06/30 更新
 
 ---
 
@@ -49,6 +50,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 - [Cookie の共有](#Cookie-の共有)
 - [ページ遷移時のブラウザー エンジンの切り替え](#ページ遷移時のブラウザー-エンジンの切り替え)
 - [IE モードでの表示をテストしたい](#IE-モードでの表示をテストしたい)
+- [Internet Explorer モードでサイトの再読み込みを許可](#Internet-Explorer-モードでサイトの再読み込みを許可)
 - [サイトリストで指定しているサイトが IE モードで表示されない](#サイトリストで指定しているサイトが-IE-モードで表示されない)
 - [ドキュメント モードを確認したい](#ドキュメント-モードを確認したい)
 - [ニュートラル サイト](#ニュートラル-サイト)
@@ -248,7 +250,11 @@ B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 グループ ポリシーを使用して Internet Explorer 統合を有効にする
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-internet-explorer-integration-using-group-policy
 
-### Internet Explorer モードでサイトの再読み込みを許可
+- [目次へ](#目次)
+
+---
+
+## Internet Explorer モードでサイトの再読み込みを許可
 
 この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
 Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
@@ -258,6 +264,10 @@ Windows 10 Enterprise エディションやドメイン参加環境の Pro エ�
 
 (参考) 以下の注釈部分でも触れています。
 [Microsoft Edge の Internet Explorer モード](https://support.microsoft.com/ja-jp/office/microsoft-edge-%e3%81%ae-internet-explorer-%e3%83%a2%e3%83%bc%e3%83%89-6604162f-e38a-48b2-acd2-682dbac6f0de?ui=ja-jp&rs=ja-jp&ad=jp)
+
+なお、バージョン 92 (2021/7/22 の週にリリース予定) から、以下のポリシーを有効にすることで、エンタープライズ環境でも「Internet Explorer モードでサイトの再読み込みを許可」を利用可能になります。
+
+[Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)
 
 - [目次へ](#目次)
 
