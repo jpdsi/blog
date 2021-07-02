@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-6-30
+date: 2021-7-2
 tags: 
   - Microsoft Edge
   - IE モード
@@ -12,6 +12,7 @@ tags:
 2021/06/15 更新
 2021/06/23 更新
 2021/06/30 更新
+2021/07/02 更新
 
 ---
 
@@ -32,6 +33,8 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 [IE モードのトラブルシューティングと FAQ](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq)
 
 [(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://aka.ms/IEModeGuideJP)
+
+※ [こちらの前提条件](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode#prerequisites)　に記載のとおり、IE モードは最新の OS 更新と最新の Edge であることが前提となっていますので、おや?? と思ったらまずは最新状態かどうかをご確認ください。
 
 ---
 
@@ -228,13 +231,14 @@ IE モードのテストのために、毎回サイトリストを書き替え�
         ＋[Microsoft Edge]
       「Internet Explorer 統合を構成する」有効にし IE モードを選択
 
-A) InternetExplorerIntegrationTestingAllowed (Internet Explorer モードのテストを許可) ポリシーを有効に設定する
-https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed
+A) [InternetExplorerIntegrationTestingAllowed (Internet Explorer モードのテストを許可) ポリシー](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) を有効に設定する
 
       [コンピューターの構成] or [ユーザーの構成]
        ＋[管理用テンプレート]
         ＋[Microsoft Edge]
       「Internet Explorer モードのテストを許可」有効
+
+※ 上記のポリシーはバージョン 95 から利用できなくなりますので、バージョン 92 (2021/7/22 の週にリリース予定) からは、[Internet Explorer モードでサイトの再読み込みを許可](#Internet-Explorer-モードでサイトの再読み込みを許可) をご利用ください。
 
 B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 実行例)
@@ -256,18 +260,20 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 
 ## Internet Explorer モードでサイトの再読み込みを許可
 
-この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
-Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
+現在この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
+Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できません(※) ので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
 (なお上記は OS のエディションについてであり、Edge 自体に OOOO エディションのようなものはありません。)
 
-![Internet Explorer モードでサイトの再読み込みを許可](./ie-mode-faq/reload-in-internet-explorer-mode.png)
+![Internet Explorer モードでサイトの再読み込みを許可 設定](./ie-mode-faq/reload-in-internet-explorer-mode.png)
+
+![Internet Explorer モードでサイトの再読み込みを許可 メニュー](./ie-mode-faq/ReloadInIEMode.png)
 
 (参考) 以下の注釈部分でも触れています。
 [Microsoft Edge の Internet Explorer モード](https://support.microsoft.com/ja-jp/office/microsoft-edge-%e3%81%ae-internet-explorer-%e3%83%a2%e3%83%bc%e3%83%89-6604162f-e38a-48b2-acd2-682dbac6f0de?ui=ja-jp&rs=ja-jp&ad=jp)
 
-なお、バージョン 92 (2021/7/22 の週にリリース予定) から、以下のポリシーを有効にすることで、エンタープライズ環境でも「Internet Explorer モードでサイトの再読み込みを許可」を利用可能になります。
+※ バージョン 92 (2021/7/22 の週にリリース予定) から、[Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーを有効にすることで、エンタープライズ環境でも「Internet Explorer モードでサイトの再読み込みを許可」を利用可能になります。
 
-[Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)
+※ [Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーで機能を利用するには、Windows 10 version 1909 では [KB5003698](https://support.microsoft.com/en-us/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) 以上、Windows 10 version 2004 / 20H2 / 21H1 では [KB5003690](https://support.microsoft.com/en-us/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) 以上を適用する必要があります。
 
 - [目次へ](#目次)
 
