@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-7-2
+date: 2021-7-19
 tags: 
   - Microsoft Edge
   - IE モード
@@ -13,6 +13,7 @@ tags:
 2021/06/23 更新
 2021/06/30 更新
 2021/07/02 更新
+2021/07/19 更新
 
 ---
 
@@ -131,6 +132,8 @@ POST リクエストが GET リクエストとなる動作は、異なるプロ�
 
 元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。
 対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。
+
+なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=Microsoft%2CEdge%2Cpost%2Cdata)が、[2021/10/21 の週にリリース予定のバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) から上記の制限がなくなる見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
 
 - [目次へ](#目次)
 
