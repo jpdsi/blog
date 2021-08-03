@@ -411,7 +411,7 @@ Windows 10 Enterprise エディションやドメイン参加環境の Pro エ�
 
 - "Internet Explorer モードの設定" で上記のようになっているかどうか。
 - "グループ ポリシーの設定" が想定したとおりになっているかどうか。
-- Edge と OS のそれぞれの更新状態は最新か。
+- Edge と Windows のそれぞれの更新状態は最新か。
 
 設定について [IE モード ポリシーの構成](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies) のドキュメントをみながら構成を確認します。
 
