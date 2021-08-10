@@ -18,7 +18,7 @@ tags:
 
 サイトリストに関するお問い合わせは多岐に及び、その原因もお客様の環境によって様々なため、画一的にこのログを取得すれば原因がわかるということはございません。
 
-ただし、お問い合わせいただいた最初の段階で、**問題の把握** のためによく取得をご依頼するログがあるため、それを **サイトリストの調査に必要な基本的なログ情報について** として以下おまとめいたしました。
+ただし、お問い合わせいただいた最初の段階で、**問題の把握** のためによく取得をご依頼するログがあるため、それを **サイトリストの調査に必要な基本的なログ情報** として以下おまとめいたしました。
 
 事象が発生した際は、こちらをご参考にログ採取を行い、弊社サポートチームにご提供いただけますと幸いです。
 
@@ -28,7 +28,7 @@ tags:
 ## 目次<!-- omit in toc -->
 
 - [取得いただきたいログについて](#取得いただきたいログについて)
-- [事前準備](#事前準備)
+- [事前準備が必要なものについて](#事前準備が必要なものについて)
   - [IEDigest のインストール](#IEDigest-のインストール)
 - [事象に関連する発生頻度、発生するサイトなど関連情報](#事象に関連する発生頻度-発生するサイトなど関連情報)
 - [PowerPoint の動画撮影、または、ステップ記録ツールによる事象の記録](#PowerPoint-の動画撮影-または-ステップ記録ツールによる事象の記録)
@@ -36,8 +36,10 @@ tags:
   - [PSR による事象の記録方法](#PSR-による事象の記録方法)
   - [PSR の事前設定](#PSR-の事前設定)
 - [IEDigest によるログ取得](#IEDigest-によるログ取得)
-- [edge://policy による Edge に関連するポリシー設定](#edge-policy-による-Edge-に関連するポリシー設定)
+- [edge://policy による Edge に関連するポリシー設定の取得](#edge-policy-による-Edge-に関連するポリシー設定の取得)
+- [edge://compat/iediagnostic による サイトリストに関連するポリシー設定の取得](#edge-compat-iediagnostic-による-サイトリストに関連するポリシー設定の取得)
 - [サイトリストとして設定されている .xml のスキーマファイル](#サイトリストとして設定されている-xml-のスキーマファイル)
+  - [edge://compat/iediagnostic で検索する場合](#edge-compat-iediagnostic-で検索する場合)
   - [GPO で検索する場合](#GPO-で検索する場合)
   - [レジストリで検索する場合](#レジストリで検索する場合)
 - [アップロードについて](#アップロードについて)
@@ -50,11 +52,12 @@ tags:
 - PowerPoint の動画撮影、または、ステップ記録ツールによる事象の記録
 - IEDigest による適用されている GPO や レジストリ設定
 - edge://policy による Edge に関連するポリシー設定
+- edge://compat/iediagnostic による サイトリストに関連するポリシー設定
 - サイトリストとして設定されている .xml のスキーマファイル
 
 それぞれについて説明を行います。
 
-## 事前準備
+## 事前準備が必要なものについて
 
 取得いただきたいログの中で、唯一事前にインストールが必要なのが IEDigest です。
 
@@ -153,15 +156,30 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 - [Compare] タブに出力先設定がございますので、保存されたログをご提供ください。
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-22-26-23.png)
 
-## edge://policy による Edge に関連するポリシー設定
+## edge://policy による Edge に関連するポリシー設定の取得
 
 - Edge を起動し、アドレスバーに edge://policy と入力します。
 - [JSON にエクスポート] を行い、その出力した JSON ファイルをご提供ください。
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-10-01-09-48.png)
 
+## edge://compat/iediagnostic による サイトリストに関連するポリシー設定の取得
+
+- Edge を起動し、 edge://compat/iediagnostic と入力します。
+- [診断データをエクスポート] という項目の [Export] をクリックし、出力される .xml ファイルをご提供ください。  
+  ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-10-18-44-44.png)
+
+  ※ なお、ダウンロードの際に Edge による警告が表示される場合もございますが、こちらは無視し […] から [保存] を選択ください。
+
 ## サイトリストとして設定されている .xml のスキーマファイル
 
-現在サイトリストとして参照されている .xml のスキーマファイルを GPO またはレジストリから参照し、取得します。
+現在サイトリストとして参照されている .xml のスキーマファイルを edge://compat/iediagnostic または GPO またはレジストリから参照し、取得します。
+
+### edge://compat/iediagnostic で検索する場合
+
+- edge://compat/iediagnostic のページの下部に存在する[エンタープライズ モード IE の Web サイト一覧を使用する (IE ポリシー)] と、
+[エンタープライズ モード サイトリストを構成する(Edge ポリシー)] のいずれかまたは両方において指定されているサイトリストをご提供ください。  
+  ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-10-18-46-38.png) 
+
 
 ### GPO で検索する場合
 
@@ -193,6 +211,7 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 - 動画ファイルまたは PSR の.zip ファイル
 - IEDigest の .zip ファイル
 - edge://policy の .json ファイル
+- edge://compat/iediagnostic の .xml ファイル
 - サイトリストの .xml スキーマファイル
 
 **これらすべてのログを 1 つの .zip ファイルにまとめ、ファイル名として 202X-XX-XX-SiteList-Basic-Log-Collection.zip のような形にしてご提供ください。**
