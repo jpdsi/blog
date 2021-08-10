@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-6-30
+date: 2021-7-30
 tags: 
   - Microsoft Edge
   - IE モード
@@ -12,6 +12,9 @@ tags:
 2021/06/15 更新
 2021/06/23 更新
 2021/06/30 更新
+2021/07/02 更新
+2021/07/19 更新
+2021/07/30 更新
 
 ---
 
@@ -33,6 +36,11 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 
 [(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド](https://aka.ms/IEModeGuideJP)
 
+※ [こちらの前提条件](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode#prerequisites)　に記載のとおり、IE モードは最新の OS 更新と最新の Edge であることが前提となっていますので、おや?? と思ったらまずは最新状態かどうかをご確認ください。
+
+※ Microsoft Edge の展開または IE モードの構成支援や IE から IE モードへの移行に関する互換性の動作に関して、上記「(PDF) Microsoft Edge + Internet Explorer モード Getting Started ガイド」の「リソース - サポート」項にて、ご利用いただける弊社サポートサービスを紹介しています。
+お困りのことがありましたらご利用をご検討ください。
+
 ---
 
 ## 目次
@@ -43,6 +51,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 - [ウィンドウのクライアント領域のサイズ](#ウィンドウのクライアント領域のサイズ)
 - [ウィンドウをデスクトップ外に開けない](#ウィンドウをデスクトップ外に開けない)
 - [ブラウザー エンジンの切り替え時の通信で起こること](#ブラウザー-エンジンの切り替え時の通信で起こること)
+- [クライアント証明書を要求する場合の制限](#クライアント証明書を要求する場合の制限)
 
 ### How to/Tips
 
@@ -128,6 +137,103 @@ POST リクエストが GET リクエストとなる動作は、異なるプロ�
 
 元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。
 対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。
+
+なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=Microsoft%2CEdge%2Cpost%2Cdata)が、[2021/10/21 の週にリリース予定のバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) から上記の制限がなくなる見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
+
+- [目次へ](#目次)
+
+---
+
+## クライアント証明書を要求する場合の制限
+
+ここでは、よくあるご質問の 1 つとして IE モードを使用する上で "SSL クライアント認証を使用しており、アクセスするサイトがクライアント証明書を要求する場合" の制限についてお伝えします。
+
+なお、以下は 2021 年 7 月 30 日現在の Edge の最新版（バージョン 92）の動作をもとに説明していますが、今後、この制限によるお客様へのインパクト状況などを鑑みて、当該動作の変更を再検討する可能性もあります。
+
+### IE モードを使用している場合に証明書の選択ダイアログが 2 回表示される動作について
+Edge 上で IE モードを使用し、SSL クライアント認証を使用しており、アクセスするサイトがクライアント証明書を要求する場合、サイトにアクセスしてページが表示されるまでに、クライアント証明書の要求ダイアログが合計 2 回表示される場合があります。
+
+具体的には、以下の 2 回のリクエストが Web サーバーに送信されるため、その都度 Web サーバーがクライアント証明書を要求するため、合計で 2 回のクライアント証明書選択ダイアログが表示されることになります。
+
+　1 回目
+　IE モードを動作させるプロセス（iexplore.exe）が、サイトにアクセスしてクライアント証明書を要求される
+
+　2 回目
+　Edge のプロセス（msedge.exe）が、ブラウザーのタブ部分に表示する Favicon ファイル（*）のリクエストのためにサイトにアクセスしてクライアント証明書を要求される
+
+　*Favicon ファイルとは Web ページのアイコン画像のことであり、Favicon の取得が行えない場合、Edge では Internet Explorer の画像を既定で表示させます
+
+![Favicon ファイルの表示部分のイメージ](./ie-mode-faq/favicon.png)
+
+![iexplore.exe が表示する証明書選択ダイアログ](./ie-mode-faq/clientcertificate1.png)
+
+![msedge.exe が表示する証明書選択ダイアログ](./ie-mode-faq/clientcertificate2.png)
+
+<補足>
+・2 回目の証明書選択ダイアログにて [キャンセル] をクリックしていただいても、Web ページ自体には影響はありません。ただ、Favicon ファイルは取得できなくなるため、Edge のタブ部分にはアイコン画像が表示されなくなります。
+
+・2 回目の証明書選択ダイアログにて [キャンセル] をクリックした後、別のページに遷移した場合には、再度 Favicon ファイルを要求するため、再度 2 回目のクライアント証明書選択ダイアログが表示されます。
+
+・Favicon ファイルは、その他のリソース（HTML, CSS ファイルなどと）同様ローカルにキャッシュされます。一度 Favicon ファイルがローカルにキャッシュされた場合、次回以降、Edge はローカルにあるキャッシュされた Favicon ファイルを使用するため、2 回目の証明書選択ダイアログは表示されなくなります。ただし、ブラウザー終了後にキャッシュを削除する設定、または明示的にキャッシュを削除した場合には、ローカルにキャッシュされた Favicon ファイルが削除されてしまうため、それ以降は再度 2 回目の証明書選択ダイアログが表示されることになります。
+
+・クライアント証明書を Smart Card などから取得する際には PIN が要求されるため、その場合はクライアント証明書選択ダイアログと PIN 入力画面が 2 回表示される動作となります。
+
+### 当該動作と IE モードの制限について
+Favicon を表示しているウィンドウ部分は、IE モードではなく、Edge が担う部分となるため、通信を発行する主体は Edge となります。なお、他社製のブラウザー同様、この Favicon へのリクエスト自体は想定された動作となります。
+
+ただ、上記 1 回目, 2 回目がそれぞれのプロセスにて実行されるのは、Edge と IE モードを安全に分離させる上での技術的な制約があるためです。Web ページを表示する IE と、それをホストする Edge を完全に分離してセキュアなブラウジングを維持するための制限であるため当該動作についてお困りの場合には後述の対処策のご検討をお願いいたします。
+
+### 対処策について
+2 回目の証明書選択ダイアログを非表示にする場合、以下の 2 つの方法が考えられます。
+
+　a) Web サーバーにて Favicon ファイルだけ、クライアント証明書を要求しないよう設定を変更する
+　b) ブラウザーがアクセスするサイトの head タグ内に、ダミーの Favicon ファイルへのリンクを埋め込み、Favicon ファイルへのリクエストの送信を抑止させる
+
+<span style="text-decoration: underline">a について手順イメージ</span>
+IIS マネージャーを使用されている場合には、まず SSL 設定にて [SSL が必要] をオン、そして "クライアント証明書:" を "必要" と指定します。
+その上で、"コンテンツ ビュー" を選択して、表示される Favicon ファイルを選択します。
+
+![IIS マネージャー上での "コンテンツ ビュー" のイメージ](./ie-mode-faq/contentsview.png)
+
+![IIS マネージャー上での "機能ビューに切り替え" のイメージ](./ie-mode-faq/functionview.png)
+
+画面右にある [機能ビューに切り替え] を押下し、画面左側のフレームに表示された
+Favicon ファイルに対して、再度 SSL 設定から [SSL が必要] をオフにします。
+
+![SSL の設定にて、Favicon ファイルにのみ [SSL が必要] をオフにするイメージ](./ie-mode-faq/needssl.png)
+
+<span style="text-decoration: underline">b について設定イメージ</span>
+head タグ内に記載するダミーの Favicon ファイルへのリンクは以下となります。
+
+```
+	<link rel="icon" href="data:,">
+```
+
+例えば IIS であれば、iisstart.htm 内に以下の様に埋め込みます。
+```
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="icon" href="data:,">
+	<title>IIS Windows</title>
+```
+
+<補足>
+ご参考までとはなりますが、サーバー側での対応策以外にも Edge の設定でもクライアント証明書選択ダイアログが 2 回表示される動作を回避することは可能です。
+
+シンプルな方法としては、例えば以下の Edge の拡張機能をインストールすることで特定に URL へのリクエストをブロックすることができるため、Favicon ファイルの
+URL を登録することで 2 回目のクライアント証明書選択ダイアログは表示されません。
+
+HTTP Request Blocker
+https://chrome.google.com/webstore/detail/http-request-blocker/eckpjmeijpoipmldfbckahppeonkoeko/related
+
+また、以下の Edge のグループ ポリシーを構成することで、特定のパターンの場合にはクライアント証明書を自動的に送信させることが可能となりますので、これらを構成した
+場合も、2 回目のクライアント証明書選択ダイアログを表示されないよう構成可能です。
+
+AutoSelectCertificateForUrls
+https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#autoselectcertificateforurls
+
+ForceCertificatePromptsOnMultipleMatches
+https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches
 
 - [目次へ](#目次)
 
@@ -228,13 +334,14 @@ IE モードのテストのために、毎回サイトリストを書き替え�
         ＋[Microsoft Edge]
       「Internet Explorer 統合を構成する」有効にし IE モードを選択
 
-A) InternetExplorerIntegrationTestingAllowed (Internet Explorer モードのテストを許可) ポリシーを有効に設定する
-https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed
+A) [InternetExplorerIntegrationTestingAllowed (Internet Explorer モードのテストを許可) ポリシー](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) を有効に設定する
 
       [コンピューターの構成] or [ユーザーの構成]
        ＋[管理用テンプレート]
         ＋[Microsoft Edge]
       「Internet Explorer モードのテストを許可」有効
+
+※ 上記のポリシーはバージョン 95 から利用できなくなりますので、バージョン 92 (2021/7/22 の週にリリース予定) からは、[Internet Explorer モードでサイトの再読み込みを許可](#Internet-Explorer-モードでサイトの再読み込みを許可) をご利用ください。
 
 B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 実行例)
@@ -256,18 +363,20 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies#enable-interne
 
 ## Internet Explorer モードでサイトの再読み込みを許可
 
-この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
-Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できませんので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
+現在この機能はコンシューマー向けであり、Windows 10 Home、あるいはドメイン不参加の Windows 10 Pro で利用可能です。
+Windows 10 Enterprise エディションやドメイン参加環境の Pro エディションでは使用できません(※) ので、上述の A もしくは B の方法で「サイトを Internet Explorer モードで開く」という機能を使用します。
 (なお上記は OS のエディションについてであり、Edge 自体に OOOO エディションのようなものはありません。)
 
-![Internet Explorer モードでサイトの再読み込みを許可](./ie-mode-faq/reload-in-internet-explorer-mode.png)
+![Internet Explorer モードでサイトの再読み込みを許可 設定](./ie-mode-faq/reload-in-internet-explorer-mode.png)
+
+![Internet Explorer モードでサイトの再読み込みを許可 メニュー](./ie-mode-faq/ReloadInIEMode.png)
 
 (参考) 以下の注釈部分でも触れています。
 [Microsoft Edge の Internet Explorer モード](https://support.microsoft.com/ja-jp/office/microsoft-edge-%e3%81%ae-internet-explorer-%e3%83%a2%e3%83%bc%e3%83%89-6604162f-e38a-48b2-acd2-682dbac6f0de?ui=ja-jp&rs=ja-jp&ad=jp)
 
-なお、バージョン 92 (2021/7/22 の週にリリース予定) から、以下のポリシーを有効にすることで、エンタープライズ環境でも「Internet Explorer モードでサイトの再読み込みを許可」を利用可能になります。
+※ バージョン 92 (2021/7/22 の週にリリース予定) から、[Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーを有効にすることで、エンタープライズ環境でも「Internet Explorer モードでサイトの再読み込みを許可」を利用可能になります。
 
-[Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)
+※ [Internet Explorer モードで未構成のサイトを再度読み込みできるようにする](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) ポリシーで機能を利用するには、Windows 10 version 1909 では [KB5003698](https://support.microsoft.com/en-us/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) 以上、Windows 10 version 2004 / 20H2 / 21H1 では [KB5003690](https://support.microsoft.com/en-us/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) 以上を適用する必要があります。
 
 - [目次へ](#目次)
 
@@ -302,6 +411,7 @@ Windows 10 Enterprise エディションやドメイン参加環境の Pro エ�
 
 - "Internet Explorer モードの設定" で上記のようになっているかどうか。
 - "グループ ポリシーの設定" が想定したとおりになっているかどうか。
+- Edge と Windows のそれぞれの更新状態は最新か。
 
 設定について [IE モード ポリシーの構成](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-policies) のドキュメントをみながら構成を確認します。
 
