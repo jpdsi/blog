@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/web-apps/iis-exclude-antivirus-scanning/</loc>
     
     <lastmod>2021-08-30</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/wcf-indexoutofrangeexception/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/isapi-wildcard/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/wcf-indexoutofrangeexception/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -31,41 +38,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/web-apps/freb/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/Rapid-Fail-Protection/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/VirtualDirectory/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/aspdotnet-samesitecookie/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/debugdiag/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/Isapi-wildcard/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -114,14 +86,28 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/Rapid-Fail-Protection/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/wpad/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/VirtualDirectory/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/aspdotnet-samesitecookie/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/debugdiag/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -135,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/</loc>
+    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -177,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-uninstall-edge/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/wpad/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-use-net-export/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -226,6 +212,20 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-uninstall-edge/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-use-net-export/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/</loc>
     
     <lastmod>2021-08-30</lastmod>
@@ -234,6 +234,13 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/SkypeMeetingWithEdge/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -254,6 +261,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-via-WU/</loc>
     
     <lastmod>2021-08-30</lastmod>
@@ -268,27 +282,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/SkypeMeetingWithEdge/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/</loc>
     
     <lastmod>2021-08-30</lastmod>
@@ -297,6 +290,13 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEtoEdgeRedirection/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -325,13 +325,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-GroupPolicyPreferences/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -387,6 +380,20 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/HighMemoryUsage/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-monitoring/</loc>
     
     <lastmod>2021-08-30</lastmod>
@@ -402,13 +409,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-cs-performance/</loc>
-    
-    <lastmod>2021-08-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/</loc>
     
     <lastmod>2021-08-30</lastmod>
     
@@ -690,13 +690,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/tags/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2021-08-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/tags/Azure-SignalR-Service/</loc>
     <lastmod>2021-08-30</lastmod>
     <changefreq>daily</changefreq>
@@ -747,6 +740,13 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/tags/FAQ/</loc>
+    <lastmod>2021-08-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/tags/%E3%83%8F%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%94%E3%83%B3%E3%82%B0/</loc>
     <lastmod>2021-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
