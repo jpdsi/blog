@@ -114,6 +114,20 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/side-by-side/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/wpad/</loc>
     
     <lastmod>2021-08-31</lastmod>
@@ -128,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
@@ -163,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/side-by-side/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/internet-explorer-app-end-of-support/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-deploy-edge-extensions/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
@@ -198,6 +212,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/flash/</loc>
     
     <lastmod>2021-08-31</lastmod>
@@ -206,27 +227,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/</loc>
-    
-    <lastmod>2021-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/</loc>
-    
-    <lastmod>2021-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-deploy-edge-extensions/</loc>
-    
-    <lastmod>2021-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-ie-mode-site-list-manager/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
@@ -254,6 +254,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-via-WU/</loc>
     
     <lastmod>2021-08-31</lastmod>
@@ -269,13 +276,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/SkypeMeetingWithEdge/</loc>
-    
-    <lastmod>2021-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
@@ -331,6 +331,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-plan/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-portal-log-collection/</loc>
     
     <lastmod>2021-08-31</lastmod>
@@ -380,7 +387,14 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-plan/</loc>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-monitoring/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
@@ -395,20 +409,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-cs-performance/</loc>
-    
-    <lastmod>2021-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/</loc>
-    
-    <lastmod>2021-08-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-monitoring/</loc>
     
     <lastmod>2021-08-31</lastmod>
     
