@@ -30,15 +30,15 @@ tags:
 - [取得いただきたいログについて](#取得いただきたいログについて)
   - [事前準備が必要なものについて](#事前準備が必要なものについて)
     - [IEDigest のインストール](#IEDigest-のインストール)
-- [事象に関連する発生頻度、発生するサイトなど関連情報](#事象に関連する発生頻度-発生するサイトなど関連情報)
-- [PowerPoint の動画撮影、または、ステップ記録ツールによる事象の記録](#PowerPoint-の動画撮影-または-ステップ記録ツールによる事象の記録)
+- [1 事象に関連する発生頻度や発生するサイトなど関連情報](#1-事象に関連する発生頻度や発生するサイトなど関連情報)
+- [2 PowerPoint の動画撮影またはステップ記録ツールによる事象の記録](#2-PowerPoint-の動画撮影またはステップ記録ツールによる事象の記録)
   - [PowerPoint の動画撮影による事象の記録方法](#PowerPoint-の動画撮影による事象の記録方法)
   - [PSR による事象の記録方法](#PSR-による事象の記録方法)
   - [PSR の事前設定](#PSR-の事前設定)
-- [IEDigest によるログ取得](#IEDigest-によるログ取得)
-- [edge://policy による Edge に関連するポリシー設定の取得](#edge-policy-による-Edge-に関連するポリシー設定の取得)
-- [edge://compat/iediagnostic による サイトリストに関連するポリシー設定の取得](#edge-compat-iediagnostic-による-サイトリストに関連するポリシー設定の取得)
-- [サイトリストとして設定されている .xml のスキーマファイル](#サイトリストとして設定されている-xml-のスキーマファイル)
+- [3 IEDigest によるログ取得](#3-IEDigest-によるログ取得)
+- [4 edge://policy による Edge に関連するポリシー設定の取得](#4-edge-policy-による-Edge-に関連するポリシー設定の取得)
+- [5 edge://compat/iediagnostic による サイトリストに関連するポリシー設定の取得](#5-edge-compat-iediagnostic-による-サイトリストに関連するポリシー設定の取得)
+- [6 サイトリストとして設定されている .xml のスキーマファイル](#6-サイトリストとして設定されている-xml-のスキーマファイル)
   - [edge://compat/iediagnostic で検索する場合](#edge-compat-iediagnostic-で検索する場合)
   - [GPO で検索する場合](#GPO-で検索する場合)
   - [レジストリで検索する場合](#レジストリで検索する場合)
@@ -48,12 +48,12 @@ tags:
 
 取得いただきたいログは以下 5 点ございます。
 
-- 事象に関連する発生頻度、発生するサイトなど関連情報
-- PowerPoint 等による動画撮影、または、ステップ記録ツールによる事象の記録
-- IEDigest による適用されている GPO や レジストリ設定
-- edge://policy による Edge に関連するポリシー設定
-- edge://compat/iediagnostic による サイトリストに関連するポリシー設定
-- サイトリストとして設定されている .xml のスキーマファイル
+- 1 事象に関連する発生頻度、発生するサイトなど関連情報
+- 2 PowerPoint 等による動画撮影、または、ステップ記録ツールによる事象の記録
+- 3 IEDigest による適用されている GPO や レジストリ設定
+- 4 edge://policy による Edge に関連するポリシー設定
+- 5 edge://compat/iediagnostic による サイトリストに関連するポリシー設定
+- 6 サイトリストとして設定されている .xml のスキーマファイル
 
 それぞれについて説明を行います。
 
@@ -72,7 +72,7 @@ IEDigest のインストーラを以下の URL よりダウンロードします
 基本的には、iedigest_NET4_XXX.exe がご利用頂けるかと存じます。
 こちらが実行できない場合には iedigest_NET2_XXX.exe をご利用ください。
 
-## 事象に関連する発生頻度、発生するサイトなど関連情報
+## 1 事象に関連する発生頻度や発生するサイトなど関連情報
 
 我々サポートチームが調査をするにあたって、「何をお客様が問題として捉えているのか、そして理想的な状態はどのようなものか」を明確に把握する必要がございます。  
 
@@ -87,7 +87,7 @@ IEDigest のインストーラを以下の URL よりダウンロードします
 - 事象が発生した以前にはサイトリストを設定できていたのか [YES/NO]
 - 事象が発生する以前と以後でなにか設定を行ったか [YES/NO, YES の場合はその詳細]
 
-## PowerPoint の動画撮影、または、ステップ記録ツールによる事象の記録
+## 2 PowerPoint の動画撮影またはステップ記録ツールによる事象の記録
 
 我々サポートチームが調査をするにあたって、「何をお客様が問題として捉えているのか、そして理想的な状態はどのようなものか」を明確に把握する必要がございます。  
 そのために事象を動画などで記録することをお願いしております。
@@ -145,7 +145,7 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 
 ステップ記録ツールの取得方法について: https://support.microsoft.com/ja-jp/help/22878/windows-10-record-steps
 
-## IEDigest によるログ取得
+## 3 IEDigest によるログ取得
 
 - ダウンロードした IEDigest のツール (.exe) をダブルクリックします。  
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-22-17-55.png)
@@ -156,13 +156,13 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 - [Compare] タブに出力先設定がございますので、保存されたログをご提供ください。
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-22-26-23.png)
 
-## edge://policy による Edge に関連するポリシー設定の取得
+## 4 edge://policy による Edge に関連するポリシー設定の取得
 
 - Edge を起動し、アドレスバーに edge://policy と入力します。
 - [JSON にエクスポート] を行い、その出力した JSON ファイルをご提供ください。
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-10-01-09-48.png)
 
-## edge://compat/iediagnostic による サイトリストに関連するポリシー設定の取得
+## 5 edge://compat/iediagnostic による サイトリストに関連するポリシー設定の取得
 
 - Edge を起動し、 edge://compat/iediagnostic と入力します。
 - [診断データをエクスポート] という項目の [Export] をクリックし、出力される .xml ファイルをご提供ください。  
@@ -170,7 +170,7 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 
   ※ なお、ダウンロードの際に Edge による警告が表示される場合もございますが、こちらは無視し […] から [保存] を選択ください。
 
-## サイトリストとして設定されている .xml のスキーマファイル
+## 6 サイトリストとして設定されている .xml のスキーマファイル
 
 現在サイトリストとして参照されている .xml のスキーマファイルを edge://compat/iediagnostic または GPO またはレジストリから参照し、取得します。
 
@@ -179,7 +179,6 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 - edge://compat/iediagnostic のページの下部に存在する[エンタープライズ モード IE の Web サイト一覧を使用する (IE ポリシー)] と、
 [エンタープライズ モード サイトリストを構成する(Edge ポリシー)] のいずれかまたは両方において指定されているサイトリストをご提供ください。  
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-10-18-46-38.png) 
-
 
 ### GPO で検索する場合
 
