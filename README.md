@@ -20,6 +20,7 @@
 - [IIS 観点でアンチ ウイルス スキャン対象から除外したいフォルダー](./articles/web-apps/iis-exclude-antivirus-scanning.md)
 - [ラピッド フェール保護機能について](./articles/web-apps/Rapid-Fail-Protection.md)
 - [ASP.NET Core SignalR から Azure SignalR Service への移行](./articles/web-apps/MigrationAzureSignalR.md)
+- [ASP.NET で 拡張子のない URL にてアクセスすると、追加したカスタム ISAPI 拡張ハンドラーが動作しない現象について](./articles/web-apps/isapi-wildcard.md)
 
 ## Internet Explorer / Microsoft Edge
 - [Internet Explorer のプロセス モデル](./articles/internet-explorer-microsoft-edge/process-model.md)
