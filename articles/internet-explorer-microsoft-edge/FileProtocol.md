@@ -1,6 +1,6 @@
 ---
 title: 新しい Microsoft Edge での file プロトコルの制限について
-date: 2021-04-01
+date: 2021-10-06
 tags: 
   - Microsoft Edge
   - Chromium
@@ -38,6 +38,7 @@ Internet Explorer の単体利用時と同様に file:// のリンク先を開�
 新しいバージョンの Microsoft Edge の "IE モード" について
 https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/
 
+**2021/10/06 追記:** なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/ja-jp/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=file%2Clinks)通り、早くて [2021/10/21 の週にリリース予定のバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) にて file:// のリンクを有効にできる新しいポリシーを追加する見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
 
 短いですが、今回は以上です。  
 それでは、また次回！
