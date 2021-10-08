@@ -124,7 +124,7 @@ IIS 上で ARR を動かしている場合は、ARR は内部で winhttp とい�
 1. 管理者権限でコマンド プロンプトを開きます 
 2. 次のコマンドを実行し、キャプチャを開始します
  
-　netsh trace start scenario=InternetClient_dbg capture=yes maxSize=1000MB
+　netsh trace start capture=yes maxSize=2000MB
 
 3. 現象が発生する操作を行います
 4. 次のコマンドを実行して、キャプチャを停止します (しばらく時間がかかります)
