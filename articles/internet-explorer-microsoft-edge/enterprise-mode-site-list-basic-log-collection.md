@@ -12,7 +12,7 @@ tags:
 
 みなさん、こんにちは!
 
-サイトにアクセスした際に、Edge や IE モードなど指定したブラウザでページを表示させるために設定する **Enterprise Mode Site List (以下、サイトリスト)** に関連して、  
+サイトにアクセスした際に、Edge や IE モードなど指定したブラウザでページを表示させるために設定する **Enterprise Mode Site List (以下、サイトリスト)** に関連して、
 「設定したのにうまく反映されない」、「IE モードで開かれない」、
 「Edge で開かれず IE ブラウザで開かれる」など、様々なお問い合わせをいただいております。
 
@@ -46,7 +46,7 @@ tags:
 
 ## 取得いただきたいログについて
 
-取得いただきたいログは以下 5 点ございます。
+取得いただきたいログは以下 6 点ございます。
 
 - 1 事象に関連する発生頻度、発生するサイトなど関連情報
 - 2 PowerPoint 等による動画撮影、または、ステップ記録ツールによる事象の記録
@@ -65,12 +65,23 @@ tags:
 
 IEDigest のインストーラを以下の URL よりダウンロードします。
 
-- IEDigest : https://www.microsoft.com/en-us/download/details.aspx?id=51694
+- IEDigest : https://aka.ms/iedigest
 
-![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-17-19-13.png)
+リンクをクリックすると自動的にダウンロードが開始されます。
 
-基本的には、iedigest_NET4_XXX.exe がご利用頂けるかと存じます。
-こちらが実行できない場合には iedigest_NET2_XXX.exe をご利用ください。
+端末によってはダウンロード時に以下のような警告が表示される場合がございますが、その場合は [もっと見る] からダウンロードを行ってください。 
+
+![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-10-11-16-55-02.png)
+
+ダウンロード後、以下の画像のように 2 つのファイルが確認できる場合は、iedigest.exe を利用します。
+
+![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-10-11-16-53-48.png)
+
+iedigest.exe を起動すると、最初はライセンスに同意するかと表示されますので、[Agree] を選択します。
+
+![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-10-11-16-56-16.png)
+
+事前準備はこれにて完了です。
 
 ## 1 事象に関連する発生頻度や発生するサイトなど関連情報
 
@@ -86,6 +97,8 @@ IEDigest のインストーラを以下の URL よりダウンロードします
 - いつから発生したか [XXXX/XX/XX XX:XX]
 - 事象が発生した以前にはサイトリストを設定できていたのか [YES/NO]
 - 事象が発生する以前と以後でなにか設定を行ったか [YES/NO, YES の場合はその詳細]
+
+特に時間については非常に重要なため、できる限り正確な日時をお答えください。まとめたら **CheckList.txt** などの名前としてテキストファイルを保存します。
 
 ## 2 PowerPoint の動画撮影またはステップ記録ツールによる事象の記録
 
@@ -114,7 +127,7 @@ IEDigest のインストーラを以下の URL よりダウンロードします
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-17-41-56.png)
 
   ※ なお PowerPoint がない場合は [Windows] + [G ボタン] でゲームバーを開き、そこから動画取得する方法もございますが、今回は詳述いたしませんので、PowerPoint がインストールされていない環境などではそちらをお調べいただき動画撮影をいただけますと幸いです。  
-  ※ もしくはディスプレイ自体をスマホなどで撮影頂く方法でも構いません。
+  ※ もしくはディスプレイ自体をスマホなどで撮影頂く方法でも構いません。(その場合は視認がしやすいように画質に注意してください。)
 
 ### PSR による事象の記録方法
 
@@ -147,9 +160,7 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 
 ## 3 IEDigest によるログ取得
 
-- ダウンロードした IEDigest のツール (.exe) をダブルクリックします。  
-  ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-22-17-55.png)
-
+- ダウンロードした IEDigest のツール (iedigest.exe) をダブルクリックします。  
 - [Reports] タブの [Create report] をクリックすると、ログが取得されます。  
   ![](./enterprise-mode-site-list-basic-log-collection/enterprise-mode-site-list-basic-log-collection_2021-08-09-22-17-37.png)
 
@@ -204,9 +215,9 @@ PSR は、画面上の操作（クリックなど）の際にスクリーンシ�
 
 ## アップロードについて
 
-以上のログ採取により以下 5 点のログ取得をいただきました。
+以上のログ採取により以下 6 点のログ取得をいただきました。
 
-- 事象に関連する発生頻度、発生するサイトなど関連情報についての .txt ファイル
+- 事象に関連する発生頻度、発生するサイトなど関連情報についての CheckList.txt ファイル
 - 動画ファイルまたは PSR の.zip ファイル
 - IEDigest の .zip ファイル
 - edge://policy の .json ファイル
