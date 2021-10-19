@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-10-1
+date: 2021-10-19
 tags: 
   - Microsoft Edge
   - IE モード
@@ -16,6 +16,7 @@ tags:
 2021/07/19 更新
 2021/07/30 更新
 2021/10/01 更新
+2021/10/19 更新
 
 ---
 
@@ -109,6 +110,15 @@ IE モードであっても、ブラウザー ウィンドウとしての外枠 
 
 クライアント領域のサイズの差異によるレイアウトの崩れが起きていないか、実際に IE モードで動作させての確認を推奨します。
 もしレイアウトの崩れが発生する場合は、クライアント領域のサイズの差異に影響を受けないようなページ レイアウトへ変更してください。
+
+**2021/10/19 追記:** バージョン 95 より追加される以下のふたつのポリシーにより、IE モードのサイトから window.open メソッドを介して生成されるポップアップ ウィンドウの高さと幅に対するカスタム調整値を指定できます。
+このカスタム調整値により、指定したピクセル数ぶん既定よりクライアント領域を広げることが可能になります。
+
+InternetExplorerIntegrationWindowOpenHeightAdjustment
+https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment
+
+InternetExplorerIntegrationWindowOpenWidthAdjustment
+https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment
 
 - [目次へ](#目次)
 
