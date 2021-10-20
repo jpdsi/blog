@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-10-19
+date: 2021-10-20
 tags: 
   - Microsoft Edge
   - IE モード
@@ -17,6 +17,7 @@ tags:
 2021/07/30 更新
 2021/10/01 更新
 2021/10/19 更新
+2021/10/20 更新
 
 ---
 
@@ -65,6 +66,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 - [サイトリストで指定しているサイトが IE モードで表示されない](#サイトリストで指定しているサイトが-IE-モードで表示されない)
 - [ドキュメント モードを確認したい](#ドキュメント-モードを確認したい)
 - [ニュートラル サイト](#ニュートラル-サイト)
+- [アドレス バーを非表示にする方法](#アドレス-バーを非表示にする方法)
 
 ---
 
@@ -149,7 +151,7 @@ POST リクエストが GET リクエストとなる動作は、異なるプロ�
 元のページから POST リクエストで通信を行った場合は GET リクエストに変わるため、POST リクエストの body に含まれる内容は消失します。
 対処策としては、データを引き渡す必要がないように、関連する一連のページをすべて IE モードで表示するか、Edge で開けるように統一するかのどちらかとなります。
 
-なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=Microsoft%2CEdge%2Cpost%2Cdata)が、早くて [2021/10/21 の週にリリース予定のバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) から上記の制限がなくなる見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
+**2021/10/20 変更:** なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=Microsoft%2CEdge%2Cpost%2Cdata)が、早くて [2021/11/18 の週にリリース予定のバージョン 96](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) から上記の制限がなくなる見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
 
 - [目次へ](#目次)
 
@@ -554,6 +556,23 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist
 
 Internet Explorer モードでページ内ナビゲーションを保持する
 https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav
+
+## アドレス バーを非表示にする方法
+**2021/10/20 追加:**
+[window.open による子ウィンドウの扱い](#window-open-による子ウィンドウの扱い) で説明している通り、Edge では基本的にアドレス バーを非表示にできません。
+ただし、Edge を [キオスク モード](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-configure-kiosk-mode) で起動したり、サイトを [PWA](https://docs.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/) としてインストールしたりすることで、そのサイトのアドレス バーは表示されなくなります。
+
+また、Chromium で提供している [--app コマンドライン スイッチ](https://peter.sh/experiments/chromium-command-line-switches/#app) を msedge.exe に指定して起動できる "アプリケーション モード" でも、そのサイトのアドレス バーは表示されなくなります。
+アプリケーション モードは、ユーザーが Web ページをコンピューター上のネイティブ アプリケーションに近い外観で動作させることを可能にします。つまり、ツール バーやアドレス バーをすべて非表示にして、Web ページの本文を中心に表示します。
+この機能は Edge で開発を行っているわけではありませんが、以下の通り、--app コマンドライン スイッチは現状のまま引き続き Edge で利用できます。
+
+> **Microsoft Edge における "--app" コマンドライン スイッチのサポート**
+私たちは、Google が Chromium から "--app" コマンドライン スイッチを削除できるかどうかを判断するためのオープンなバグを持っていることを理解しています。
+Google は現在、このスイッチが使用されているかどうか、また、このスイッチを削除することでお客様にどのような影響があるかを判断するために、より多くの使用情報を収集しています。
+Google が "--app" スイッチの廃止を決定した場合でも、Microsoft Edge 製品チームは、Edge 製品でこのスイッチを提供し続けることをお約束し、お客様のためにこの機能の継続性を確保します。
+>
+> Jason McConnell
+> Microsoft Edge プログラム マネージャー
 
 - [目次へ](#目次)
 
