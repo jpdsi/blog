@@ -7,7 +7,7 @@ tags:
   - ログ採取
 ---
 
-こんにちは。Azure Bot Service サポート チームです！  
+こんにちは。Azure Bot Service サポート チームの大嶋です！  
 
 以前 Azure Bot Service (Web App Bot もしくは Bot Channels Registration) のボットの動作に関する情報採取について以下をご紹介しましたが、今回は Azure Bot Service をご利用する際に、Azure Portal 上で問題が起こった際に必要となることが多い再現手順と通信ログの情報採取をご紹介いたします。
 

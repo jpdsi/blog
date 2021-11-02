@@ -10,7 +10,7 @@ tags:
 ※ これまで Azure Bot Service Support Team Blog にて公開していた記事を移しました。
 
 
-こんにちは。Azure Bot Service Support Team です。
+こんにちは。Azure Bot Service Support Team の大嶋です。
 
 Web App Bot をご利用の際に、ボットに ”暫く経ってからアクセスした際にレスポンスが遅いように感じる” といったような事がある場合があります。今回は、そんな時に事象解消の手助けができるような方法についてご紹介します。
 

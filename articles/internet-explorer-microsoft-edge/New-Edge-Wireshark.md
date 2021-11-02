@@ -11,7 +11,7 @@ tags:
 <font color="red">2020/8/7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。</font>
 
 
-こんにちは。Developer Support Internet チームです！
+こんにちは。Developer Support Internet チームの大嶋です！
 
 今回は、Chromium ベースの New Microsoft Edge で動作する Web アプリケーションにて、ネットワークに関連する問題が起こった際に、もしかしたら活用できるかもしれない Wireshark を用いたネットワークトレース取得方法の Tips をご紹介いたします。
 
