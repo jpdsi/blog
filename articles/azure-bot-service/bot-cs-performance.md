@@ -8,7 +8,7 @@ tags:
 ---
 
 こんにちは。
-Azure Bot Service サポートチームです。
+Azure Bot Service サポートチームの大嶋です。
 
 今回は、Web App Bot (Azure Bot Service) と Bot Framework SDK (C#) 利用時の Bot アプリケーションの応答パフォーマンスの遅延系に関する現象の調査に役立つようなログの採取方法をご紹介いたします。
 
