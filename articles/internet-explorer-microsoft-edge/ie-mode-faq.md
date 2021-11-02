@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-10-20
+date: 2021-11-2
 tags: 
   - Microsoft Edge
   - IE モード
@@ -18,6 +18,7 @@ tags:
 2021/10/01 更新
 2021/10/19 更新
 2021/10/20 更新
+2021/11/02 更新
 
 ---
 
@@ -361,6 +362,8 @@ B) "\-\-ie-mode-test" オプションを付加して msedge.exe を実行する
 ```
 "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --ie-mode-test
 ```
+
+**2021/11/2 追記:** --ie-mode-test オプションは、バージョン 95 で廃止されました (94 以下では利用可能です)
 
 上記 A, B の方法を利用することで、ポリシーの説明にもあるように [その他のツール] 以下に、[サイトを Internet Explorer モードで開く]、[サイトを Edge モードで開く] メニューが表示されます。
 
