@@ -1,10 +1,17 @@
 ---
 title: 新しい Microsoft Edge での file プロトコルの制限について
-date: 2021-10-06
+date: 2021-11-18
 tags: 
   - Microsoft Edge
   - Chromium
 ---
+
+更新履歴:
+2021/10/06 更新
+2021/11/18 更新
+
+---
+
 こんにちわ！
 
 今回は、新しい Microsoft Edge での file: プロトコルの制限についてお知らせします。  
@@ -39,6 +46,8 @@ Internet Explorer の単体利用時と同様に file:// のリンク先を開�
 https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/
 
 **2021/10/06 追記:** なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/ja-jp/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=file%2Clinks)通り、早くて [2021/10/21 の週にリリース予定のバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) にて file:// のリンクを有効にできる新しいポリシーを追加する見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
+
+**2021/11/18 追記:** [2021/10/21 にリリースされたバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-950102030-october-21) にて、"ローカル イントラネット" ゾーン、かつ HTTPS のサイトに限って、file:// のリンク押下した場合に、リンクの指定対象ファイル (もしくは対象フォルダ) の一階層上のフォルダ (親フォルダ) をエクスプローラーで開くことを可能とする [IntranetFileLinksEnabled ポリシー](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#intranetfilelinksenabled) をリリースしました。セキュリティ上の観点から、ファイルを直接開くわけではなく一階層上のフォルダを開く動作となっています。予めご了承ください。
 
 短いですが、今回は以上です。  
 それでは、また次回！
