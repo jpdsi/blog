@@ -25,27 +25,20 @@ PubSub の利点として、標準の WebSocket 接続をサポートしてお�
 
 また、WebSocket のサブプロトコルにも対応しており、 JSON/Protobuf のサブプロトコルを使用したり、独自にサブプロトコルを実装することもできます。(本記事を書いた際は JSON/Protobuf の 2 種類を用意しています。) 加えて、C# 以外にも JavaScript、Java、Python の SDK にも対応していることも PubSub の強みの 1 つです。
 
-Azure SignalR を使う利点としては既に ASP.NET Core 等で SignalR をご利用の場合には、
-比較的開発コストを抑えて Azure SignalR へ移行できます。また、.NET や .NET Core を
-使用したシステムと統合する必要がある場合(例えば Blazor との連携等) には有力な選択肢となります。
-また、PubSub と比べた時の大きな違いとしては、Azure SignalR は WebSocket だけでなく、
-Server Send Event や Long Porring 等にも対応しています。
-そのため、WebSocket に非対応のクライアントを利用している場合もサポートされる HTTP ベースの双方向通信の方式にフォールバックすることが可能です。
+Azure SignalR を使う利点としては既に ASP.NET Core 等で SignalR をご利用の場合には、比較的開発コストを抑えて Azure SignalR へ移行できます。また、.NET や .NET Core を使用したシステムと統合する必要がある場合(例えば Blazor との連携等) には有力な選択肢となります。
+
+また、PubSub と比べた時の大きな違いとしては、Azure SignalR は WebSocket だけでなく、Server Send Event や Long Porring 等にも対応しています。そのため、WebSocket に非対応のクライアントを利用している場合もサポートされる HTTP ベースの双方向通信の方式にフォールバックすることが可能です。
 
 これらのように、Azure SignalR と PubSub では得意なところや不得意なところがそれぞれありますので、もしこれらの利用を検討されている方は、ぜひご自身が作成しようとしているシステムがどのような特性を必要とするか、どのような言語やエコシステムを使用するか等に合わせて利用するサービスを検討してください！その他の違い等については[こちらの公開情報 (Azure SignalR Service と Azure Web PubSub サービスのどちらかを選択するにはどうすればよいですか?)](https://docs.microsoft.com/ja-jp/azure/azure-web-pubsub/resource-faq#how-do-i-choose-between-azure-signalr-service-and-azure-web-pubsub-service) でも纏められてます。
 
 
 
-なお、余談にはなりますが、もし 現在 ASP.NET Core の SignalR を使用していて、
-これから Azure SignalR への移行を検討してるという方は、
-ぜひ[本ブログのこちらの記事](https://jpdsi.github.io/blog/web-apps/MigrationAzureSignalR/) もご参考ください！
+なお、余談にはなりますが、もし 現在 ASP.NET Core の SignalR を使用していて、これから Azure SignalR への移行を検討してるという方は、ぜひ[本ブログのこちらの記事](https://jpdsi.github.io/blog/web-apps/MigrationAzureSignalR/) もご参考ください！
 
 # チュートリアルでの動作確認
 それでは実際にサンプルを動かしながら動作を確認していきましょう。
 
-PubSub ではいくつかの公式チュートリアルが用意されていて、コードを触らないで既に用意された[デモ用のサイトを利用するチュートリアル](https://docs.microsoft.com/ja-jp/azure/azure-web-pubsub/quickstart-live-demo)もありますが、
-今回は折角なので SDK を用いて各個人でサンプルを試すチュートリアルをいくつかご紹介します。
-また、Azure SignalR との差別化も含めて、今回は JaveScript(Node.js) の SDK を使用します。
+PubSub ではいくつかの公式チュートリアルが用意されていて、コードを触らないで既に用意された[デモ用のサイトを利用するチュートリアル](https://docs.microsoft.com/ja-jp/azure/azure-web-pubsub/quickstart-live-demo)もありますが、今回は折角なので SDK を用いて各個人でサンプルを試すチュートリアルをいくつかご紹介します。また、Azure SignalR との差別化も含めて、今回は JaveScript(Node.js) の SDK を使用します。
 
 ＊各チュートリアルを完全にトレースすると分量が多くなるので、要所要所をスクリーンショット等を添えて補足していきます。
 
@@ -70,9 +63,7 @@ $env:WebPubSubConnectionString="<connection-string>"
 $env コマンドの詳細は[こちらの公開情報](https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2#using-and-changing-environment-variables)をご確認ください。
 
 
-なお、上記の環境変数は PowerShell を閉じたり、別のウィンドウでは効力がありません。
-そのため、実際の利用等では `.env` という環境変数用のファイルを作成するのも良いかと思います。
-ご参考程度ですが、 npm の環境変数用のファイルを扱うモジュールとして、[dotenv というモジュール](https://www.npmjs.com/package/dotenv) 等があります。
+なお、上記の環境変数は PowerShell を閉じたり、別のウィンドウでは効力がありません。そのため、実際の利用等では `.env` という環境変数用のファイルを作成するのも良いかと思います。ご参考程度ですが、 npm の環境変数用のファイルを扱うモジュールとして、[dotenv というモジュール](https://www.npmjs.com/package/dotenv) 等があります。
 
 今回の記事では Windows の PowerShell で環境変数を設定していきます。
 
@@ -129,8 +120,7 @@ service.sendToAll(process.argv[2], { contentType: "text/plain" });
 
 ## WebSocket のサブプロトコルのチュートリアル
 ### WebSocket のサブプロトコルの概要
-PubSub の利点の一つとして Websocket のサブプロトコルを使用できます。
-Websocket のサブプロトコルの大まかなイメージとしては、WebSocket の接続を行う際に、送信するデータに JSON 等の形式の規則を指定できるイメージです。WebSocket のサブプロトコルの詳細については[RFC6455 の WebSocket の項目](https://datatracker.ietf.org/doc/html/rfc6455#section-1.9) をご参考ください。
+PubSub の利点の一つとして Websocket のサブプロトコルを使用できます。Websocket のサブプロトコルの大まかなイメージとしては、WebSocket の接続を行う際に、送信するデータに JSON 等の形式の規則を指定できるイメージです。WebSocket のサブプロトコルの詳細については[RFC6455 の WebSocket の項目](https://datatracker.ietf.org/doc/html/rfc6455#section-1.9) をご参考ください。
 
 
 ### チュートリアルの大まかな流れと実際の画面
@@ -151,8 +141,7 @@ Websocket のサブプロトコルの大まかなイメージとしては、WebS
 ![http://localhost:8080 での画面](./AzureWebPubSub-for-beginner/AzureWebPubSub-for-beginner_2021-12-16-01-01-20.png)
 
 ### プログラムの概要
-Web ページをホストするサーバー 側のプログラムは以下のようになっています。先程の subscriber のプログラムと大きく違う点として、
-express というモジュールを使用して、サーバーアプリ化していますね。
+Web ページをホストするサーバー 側のプログラムは以下のようになっています。先程の subscriber のプログラムと大きく違う点として、express というモジュールを使用して、サーバーアプリ化していますね。
 
 また、クライアントが使用する Token に WebPubSubServiceClient のインスタンスのメソッドを使って roles を指定してます。これにより、クライアントが stream グループに対してメッセージを送ることや、グループへの参加/脱退が可能となります。
 
@@ -176,8 +165,8 @@ app.use(express.static('public'));
 app.listen(8080, () => console.log('server started'));
 ```
 
-ブラウザー側で開いている .html ファイルより一部を抜粋したコードが以下です。
-WebSocket の message のイベントを検出した際に、ページ上にクライアントから送られてきたメッセージをログのように表示させます。また、WebSocket のインスタンスを作成する時に、第 2 引数として `'json.webpubsub.azure.v1'` と入力しています。これが、今回使用する JSON 向けに用意されたサブプロトコルです。
+ブラウザー側で開いている .html ファイルより一部を抜粋したコードが以下です。WebSocket の message のイベントを検出した際に、ページ上にクライアントから送られてきたメッセージをログのように表示させます。また、WebSocket のインスタンスを作成する時に、第 2 引数として `'json.webpubsub.azure.v1'` と入力しています。これが、今回使用する JSON 向けに用意されたサブプロトコルです。
+
 また、ws.send の際に JSON.stringfy() 関数で JSON に成形していることが確認できますね。
 
 ```html
@@ -213,8 +202,7 @@ WebSocket の message のイベントを検出した際に、ページ上にク�
 </body>
 ```
 
-クライアント側のプログラムは以下になります。先程のチュートリアルと比べると少し記述は増えてますね。
-先程の .html 同様に ws.send で送る値を JSON に変換しています。
+クライアント側のプログラムは以下になります。先程のチュートリアルと比べると少し記述は増えてますね。先程の .html 同様に ws.send で送る値を JSON に変換しています。
 
 ```javascript
 const WebSocket = require('ws');
@@ -244,7 +232,6 @@ main();
 ```
 
 # まとめ
-他にもいくつかチュートリアルはありますが、今回は分量など含めてここまでとなります。
-双方向通信の仕組みやサービスは色々と出回っていますが、ぜひ今後の選択肢として Azure Web PubSub サービスもご検討いただけたら嬉しいです！
+他にもいくつかチュートリアルはありますが、今回は分量など含めてここまでとなります。双方向通信の仕組みやサービスは色々と出回っていますが、ぜひ今後の選択肢として Azure Web PubSub サービスもご検討いただけたら嬉しいです！
 
 まだまだ一般公開されたばかりのサービスですので、今後もっと発展するとより皆さんのご要望にそった機能等も追加されるかもしれませんので、ぜひよろしくお願いします。それでは、また次回！
