@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-11-22
+date: 2021-12-29
 tags: 
   - Microsoft Edge
   - IE モード
@@ -19,6 +19,7 @@ tags:
 2021/10/19 更新
 2021/10/20 更新
 2021/11/22 更新
+2021/12/29 更新
 
 ---
 
@@ -156,10 +157,11 @@ POST リクエストが GET リクエストとなる動作は、異なるプロ�
 
 **2021/11/22 追記:** [バージョン 96](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-960105429-november-19) から既定の動作として上記の制限がなくなりました。なお、[Internet Explorer モードの開始時または終了時にフォーム データや HTTP ヘッダーを送信するかどうかを構成します](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) ポリシーを使用して、Microsoft Edge と Internet Explorer モードを切り替えるナビゲーションに含めるデータ型を指定できます。
 
-<span style="color: #ff0000;font-weight:bold;">注意 : この追加機能をご利用いただくには以下の更新プログラムの適用が必要です。(リストにない OS バージョンではご利用いただけません)</span>
-Windows 10 バージョン 1909 : [KB5007189](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-11-%E6%9C%88-9-%E6%97%A5-kb5007189-os-%E3%83%93%E3%83%AB%E3%83%89-18362-1916-91b4647c-9979-4d84-8e64-efc8674e8c1f) 以降
+**2021/12/29 変更:** <span style="color: #ff0000;font-weight:bold;">注意 : この追加機能をご利用いただくには以下の更新プログラムの適用が必要です。(リストにない OS バージョンではご利用いただけません)</span>
+Windows 11 : [KB5007262](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-11-%E6%9C%88-22-%E6%97%A5-kb5007262-os-%E3%83%93%E3%83%AB%E3%83%89-22000-348-%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC-7f3e18d7-4189-4882-b0e9-afc920253aee) 以降
+Windows Server 2022 : [KB5007254](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-11-%E6%9C%88-22-%E6%97%A5-kb5007254-os-%E3%83%93%E3%83%AB%E3%83%89-20348-380-%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC-9a960291-d62e-486a-adcc-6babe5ae6fc1) 以降
 Windows 10 バージョン 2004 以降、Windows Server 2004/20H2 : [KB5006738](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-10-%E6%9C%88-26-%E6%97%A5-kb5006738-os-%E3%83%93%E3%83%AB%E3%83%89-19041-1320-19042-1320-%E3%81%8A%E3%82%88%E3%81%B3-19043-1320-%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) 以降
-Windows 11、Windows Server 2022 : 近日公開予定
+Windows 10 バージョン 1909 : [KB5007189](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-11-%E6%9C%88-9-%E6%97%A5-kb5007189-os-%E3%83%93%E3%83%AB%E3%83%89-18362-1916-91b4647c-9979-4d84-8e64-efc8674e8c1f) 以降
 
 (参考)
 [IE モードのトラブルシューティングと FAQ](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported) も併せてご覧ください。
