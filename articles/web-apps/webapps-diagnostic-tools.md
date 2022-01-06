@@ -92,7 +92,7 @@ IIS サポートチームの大嶋です。
 
 ![Collect a Profiler Trace の取得開始](./webapps-diagnostic-tools/dotnet-profiler2.png)
 
-7. .NET Profiler のトレースを含む .zip 形式のファイルがダウンロードできるようになるので、zip ファイルのリンクをクリックしダウンロードする
+9. .NET Profiler のトレースを含む .zip 形式のファイルがダウンロードできるようになるので、zip ファイルのリンクをクリックしダウンロードする
 
 ---
 
@@ -106,13 +106,16 @@ IIS サポートチームの大嶋です。
 1. App Service Plan が Basic 以上の必要があるため、[スケールアップ] ブレードから B1 プランなど Basic 以上にスケールアップする
 2. 常時接続機能が有効である必要があるため、[構成] ブレードの [全般設定] タブから [常時接続] を [オン] に変更する
 
+<再現時の採取手順>
+3. Azure Portal 上で Azure Web Apps のリソースページ にて [問題の診断と解決] ブレードを開く
+4. 検索欄から [Collect Memory Dump] を開く
+
 ![Collect Memory Dump パネルの検索](./webapps-diagnostic-tools/memory-dump1.png)
 
-<再現時の採取手順>
-4. 新規作成もしくは既存の [Storage account] を選択する
-5. 取得する Instance(s) のチェックボックスにチェックする
-6. [Collect Memory Dump] ボタンを押す
-7. ダンプ取得が完了次第、.dmp ファイルが表示されるので、そのリンクからダンプファイルをダウンロードする
+5. 新規作成もしくは既存の [Storage account] を選択する
+6. 取得する Instance(s) のチェックボックスにチェックする
+7. [Collect Memory Dump] ボタンを押す
+8. ダンプ取得が完了次第、.dmp ファイルが表示されるので、そのリンクからダンプファイルをダウンロードする
 
 ---
 
