@@ -229,7 +229,7 @@ Windows 10 の 1809 から pktmon が搭載されており、上述の netsh と
 4-2. 管理者権限でコマンド プロンプトを開き、次のコマンドを実行し、キャプチャを開始します。
 
 ```
-　pktmon start --etw -p 0
+　pktmon start -c -f client.etl -s 2000 --pkt-size 0
 ```
 
 4-3. New Microsoft Edge にて該当のサイトを開き、素早く事象の再現を行う。
