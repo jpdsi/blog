@@ -300,6 +300,22 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshar
 
 最も理想的な解決方法は、Cookie の共有が必要なコンテンツを全て Edge に移行させることです。
 
+**2022/2/22 変更:** 以下の前提条件を満たすことで、Edge と Edge (IE モード) の双方向で Cookie の共有が可能となりました。
+- Windows 10 2004 or later, 2022.02C 以降の KB 適用
+- Edge ver. 98 or later
+
+`source-engine` 属性で、共有する方向を指定できます。
+- `MSEdge` (既定) : Edge → Edge (IE モード) への共有
+- `IE11` : Edge (IE モード) → Edge への共有
+- `both` : Edge ⇔ Edge (IE モード) の双方向共有
+
+```xml
+<site-listversion="1">
+    <shared-cookie source-engine="IE11" domain=".contoso.com" name="cookie1" ></shared-cookie>
+    <shared-cookie source-engine="both" host="subdomain.contoso.com" name="cookie2" path="/a/b/c"></shared-cookie>
+</site-list>
+```
+
 - [目次へ](#目次)
 
 ---
