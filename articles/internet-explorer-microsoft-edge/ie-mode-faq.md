@@ -310,7 +310,7 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshar
 - `both` : Edge ⇔ Edge (IE モード) の双方向共有
 
 ```xml
-<site-listversion="1">
+<site-list version="1">
     <shared-cookie source-engine="IE11" domain=".contoso.com" name="cookie1" ></shared-cookie>
     <shared-cookie source-engine="both" host="subdomain.contoso.com" name="cookie2" path="/a/b/c"></shared-cookie>
 </site-list>
