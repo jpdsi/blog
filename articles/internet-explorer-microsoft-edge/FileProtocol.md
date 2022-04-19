@@ -1,6 +1,6 @@
 ---
 title: 新しい Microsoft Edge での file プロトコルの制限について
-date: 2021-11-18
+date: 2022-04-15
 tags: 
   - Microsoft Edge
   - Chromium
@@ -9,8 +9,11 @@ tags:
 更新履歴:
 2021/10/06 更新
 2021/11/18 更新
+2022/04/15 更新
 
 ---
+
+※ 後述の追記の内容をご覧ください
 
 こんにちわ！
 
@@ -48,6 +51,8 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/
 **2021/10/06 追記:** なお、[こちらのロードマップにて情報公開されました](https://www.microsoft.com/ja-jp/microsoft-365/roadmap?filters=Microsoft%20Edge%2CRolling%20out%2CIn%20development&searchterms=file%2Clinks)通り、早くて [2021/10/21 の週にリリース予定のバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) にて file:// のリンクを有効にできる新しいポリシーを追加する見込みです。今後の予定についてはロードマップのドキュメントをご覧ください。
 
 **2021/11/18 追記:** [2021/10/21 にリリースされたバージョン 95](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-950102030-october-21) にて、"ローカル イントラネット" ゾーン、かつ HTTPS のサイトに限って、file:// のリンク押下した場合に、リンクの指定対象ファイル (もしくは対象フォルダ) の一階層上のフォルダ (親フォルダ) をエクスプローラーで開くことを可能とする [IntranetFileLinksEnabled ポリシー](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#intranetfilelinksenabled) をリリースしました。セキュリティ上の観点から、ファイルを直接開くわけではなく一階層上のフォルダを開く動作となっています。予めご了承ください。
+
+**2022/04/15 追記:** [2022/04/01 にリリースされたバージョン 100](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1000118529-april-1) から、上記のバージョン 95 と同じ条件でフォルダを開くことができますが、開く対象がフォルダであればそのものがエクスプローラーで開きます。開く対象がファイルであれば、そのファイルが存在するフォルダが開き、対象のファイルが選択された状態になります。
 
 短いですが、今回は以上です。  
 それでは、また次回！

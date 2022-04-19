@@ -66,7 +66,7 @@ Azure ポータルから Web App Bot 等の Azure Bot Service のリソースを
 
  
 Azure Bot Service の SLA
-https://azure.microsoft.com/ja-jp/support/legal/sla/bot-service/v1_0/
+https://azure.microsoft.com/ja-jp/support/legal/sla/bot-services/v1_0/
 
 
 上記のメッセージ数の上限や SLA を元にどちらのプランを選択されるか、ご検討ください。
