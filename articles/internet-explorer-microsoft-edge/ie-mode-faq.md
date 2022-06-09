@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2021-12-29
+date: 2022-06-09
 tags: 
   - Microsoft Edge
   - IE モード
@@ -20,6 +20,7 @@ tags:
 2021/10/20 更新
 2021/11/22 更新
 2021/12/29 更新
+2022/06/09 更新
 
 ---
 
@@ -69,6 +70,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 - [ドキュメント モードを確認したい](#ドキュメント-モードを確認したい)
 - [ニュートラル サイト](#ニュートラル-サイト)
 - [アドレス バーを非表示にする方法](#アドレス-バーを非表示にする方法)
+- [IE モードで互換表示を切り替えたい](#IE-モードで互換表示を切り替えたい)
 
 ---
 
@@ -157,6 +159,14 @@ POST リクエストが GET リクエストとなる動作は、異なるプロ�
 
 **2021/11/22 追記:** [バージョン 96](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-960105429-november-19) から既定の動作として上記の制限がなくなりました。なお、[Internet Explorer モードの開始時または終了時にフォーム データや HTTP ヘッダーを送信するかどうかを構成します](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) ポリシーを使用して、Microsoft Edge と Internet Explorer モードを切り替えるナビゲーションに含めるデータ型を指定できます。
 
+**2022/06/09 追記:**
+バージョン 101 より、InternetExplorerIntegrationComplexNavDataTypes ポリシーの既定の動作が変更となりました。
+具体的には、"フォーム データと追加のヘッダーを送信する" 動作から、"フォーム データのみ送信する" へ変わっています。
+既定で追加のヘッダーが含まれる動作に変更したことによる、サイトの互換性の問題が多く報告されたためです。
+<span style="color: #ff0000">バージョン 101 以降においては、Microsoft Edge と Internet Explorer モードを切り替えるナビゲーション時に、既定で Referrer などの追加のヘッダー情報は含まれません。</span>
+
+バージョン 100 以前と同様に追加のヘッダー情報を含めたい場合は、InternetExplorerIntegrationComplexNavDataTypes のポリシーにて **IncludeFormDataAndHeaders (3)** を指定してください。
+
 **2021/12/29 変更:** <span style="color: #ff0000;font-weight:bold;">注意 : この追加機能をご利用いただくには以下の更新プログラムの適用が必要です。(リストにない OS バージョンではご利用いただけません)</span>
 Windows 11 : [KB5007262](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-11-%E6%9C%88-22-%E6%97%A5-kb5007262-os-%E3%83%93%E3%83%AB%E3%83%89-22000-348-%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC-7f3e18d7-4189-4882-b0e9-afc920253aee) 以降
 Windows Server 2022 : [KB5007254](https://support.microsoft.com/ja-jp/topic/2021-%E5%B9%B4-11-%E6%9C%88-22-%E6%97%A5-kb5007254-os-%E3%83%93%E3%83%AB%E3%83%89-20348-380-%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC-9a960291-d62e-486a-adcc-6babe5ae6fc1) 以降
@@ -165,7 +175,6 @@ Windows 10 バージョン 1909 : [KB5007189](https://support.microsoft.com/ja-j
 
 (参考)
 [IE モードのトラブルシューティングと FAQ](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-faq#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported) も併せてご覧ください。
-
 
 - [目次へ](#目次)
 
@@ -571,7 +580,10 @@ https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-sitelist
 Internet Explorer モードでページ内ナビゲーションを保持する
 https://docs.microsoft.com/ja-jp/deployedge/edge-learnmore-inpage-nav
 
+- [目次へ](#目次)
+
 ## アドレス バーを非表示にする方法
+
 **2021/10/20 追加:**
 [window.open による子ウィンドウの扱い](#window-open-による子ウィンドウの扱い) で説明している通り、Edge では基本的にアドレス バーを非表示にできません。
 ただし、Edge を [キオスク モード](https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-configure-kiosk-mode) で起動したり、サイトを [PWA](https://docs.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/) としてインストールしたりすることで、そのサイトのアドレス バーは表示されなくなります。
@@ -587,6 +599,18 @@ Google が "--app" スイッチの廃止を決定した場合でも、Microsoft 
 >
 > Jason McConnell
 > Microsoft Edge プログラム マネージャー
+
+- [目次へ](#目次)
+
+## IE モードで互換表示を切り替えたい
+
+**2022/06/09 追加:**
+バージョン 102 より、IE モードのインジケーターから互換表示を切り替えることができる機能を利用できます。
+この機能により、IE11 の互換表示設定で、互換表示をする Web サイトを追加すると同等の効果が得られます。
+なお、この機能は [Internet Explorer モードでサイトの再読み込みを許可](#Internet-Explorer-モードでサイトの再読み込みを許可) により、手動で IE モードに切り替えた場合にのみ表示されます。
+組織のサイトリストで IE モードを設定しているサイトに関しては、サイトリストで必要な互換モードを設定ください。
+
+![IE モードで互換表示](./ie-mode-faq/iemode-compatibility.png)
 
 - [目次へ](#目次)
 
