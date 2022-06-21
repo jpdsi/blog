@@ -1,10 +1,13 @@
 ---
 title: .NET Framework で TLS 1.1 および TLS 1.2 を有効化する方法 - まとめ -
-date: 2020-11-25
+date: 2022-06-22
 tags: 
   - .NET Framewrork
   - TLS
 ---
+
+更新履歴:
+2022/06/22 更新
 
 > 本記事は Technet Blog の更新停止に伴い、もともとばらばらに存在していた記事を一つのブログに集約／移行したものです。
 > 元の記事の最新の更新情報については、本内容をご参照ください。
@@ -68,17 +71,19 @@ Windows OS 自体が TLS 1.1 および 1.2 を利用することができない�
 
 更新プログラム適用後、必要に応じて上記資料に記載のレジストリ値を設定します。  
 
+**2022/06/22 変更:** <span style="color: #ff0000;">DisabledByDefault に設定する値を 1 から 0 へ訂正</span>
+
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client]  
-    "DisabledByDefault"=dword:00000001  
+    "DisabledByDefault"=dword:00000000  
     
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client]  
-    "DisabledByDefault"=dword:00000001  
+    "DisabledByDefault"=dword:00000000  
     
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server]  
-    "DisabledByDefault"=dword:00000001  
+    "DisabledByDefault"=dword:00000000  
     
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server]  
-    "DisabledByDefault"=dword:00000001  
+    "DisabledByDefault"=dword:00000000  
 
 **設定のポイント**  
 クライアント OS として利用する場合 (任意のアプリケーションが別の Web サーバーに接続するような場合) には Client に設定します。  
