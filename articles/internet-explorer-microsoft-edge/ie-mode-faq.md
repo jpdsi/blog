@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2022-06-09
+date: 2022-08-04
 tags: 
   - Microsoft Edge
   - IE モード
@@ -21,6 +21,7 @@ tags:
 2021/11/22 更新
 2021/12/29 更新
 2022/06/09 更新
+2022/08/04 更新
 
 ---
 
@@ -299,8 +300,9 @@ IE モードで表示されている Web コンテンツをデバッグするに
 
 ## Cookie の共有
 
-以下のドキュメントに詳細がまとまっていますが、<span style="color: #ff0000">セッション Cookie</span> に関して、Edge から IE モードにのみ共有することができます。
-<span style="color: #ff0000">セッション Cookie</span>を逆方向へ (IE モードから Edge へ) 共有することはできません。
+以下のドキュメントに詳細がまとまっていますが、<span style="color: #ff0000">セッション Cookie</span> に関して、Edge から IE モードに共有することができます。
+**2021/08/04 変更:** バージョン 99 より、Edge と IE モード間で双方向にセッション Cookie を共有できるようになりました。
+ただし、<span style="color: #ff0000">Windows の更新プログラム適用の前提条件</span>がありますので、詳細は以下のドキュメントをよくご確認ください。
 
 Microsoft Edge から Internet Explorer への Cookie の共有
 https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode-add-guidance-cookieshare
