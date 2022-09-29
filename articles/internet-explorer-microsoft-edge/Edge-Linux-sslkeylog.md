@@ -106,7 +106,7 @@ export SSLKEYLOGFILE=~/tmp/sslkey.log
 
 <br />
 
-![Master secret log file name on Linux](./Edge-Linux-ssllogkey/premaster-linux.png)
+![Master secret log file name on Linux](./Edge-Linux-sslkeylog/premaster-linux.png)
 
 <br />
 <br />
@@ -132,7 +132,7 @@ export SSLKEYLOGFILE=~/tmp/sslkey.log
 
 2. 以下のように設定し、[今すぐクリア] ボタンをクリックします。
 
-![Clear Edge Browser Cache Data on Linux](./Edge-Linux-ssllogkey/clear-browsecache-linux.png)
+![Clear Edge Browser Cache Data on Linux](./Edge-Linux-sslkeylog/clear-browsecache-linux.png)
 
 <br />
 <br />
