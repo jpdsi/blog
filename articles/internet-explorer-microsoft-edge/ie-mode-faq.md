@@ -301,7 +301,7 @@ IE モードで表示されている Web コンテンツをデバッグするに
 ## Cookie の共有
 
 以下のドキュメントに詳細がまとまっていますが、<span style="color: #ff0000">セッション Cookie</span> に関して、Edge から IE モードに共有することができます。
-**2021/08/04 変更:** バージョン 99 より、Edge と IE モード間で双方向にセッション Cookie を共有できるようになりました。
+**2022/08/04 変更:** バージョン 99 より、Edge と IE モード間で双方向にセッション Cookie を共有できるようになりました。
 ただし、<span style="color: #ff0000">Windows の更新プログラム適用の前提条件</span>がありますので、詳細は以下のドキュメントをよくご確認ください。
 
 Microsoft Edge から Internet Explorer への Cookie の共有
