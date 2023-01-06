@@ -291,10 +291,10 @@ https://docs.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#updat
 -	値: 1 / 常に更新を許可する
 
 ※ 2023-01-06 追記：  
-{{< anchor "2023-01-06-appendix" >}}
-なお、Edge の更新用モジュールである MicrosoftEdgeUpdate.exe が 1.3.171.39 以降については、従来 UpdateDefault を 0 にしていた場合 Edge ブラウザだけではなく WebView2 の更新も抑止することが可能でしたが、こちらはデザイン上不具合として仕様を修正し、UpdateDefault を 0 に設定していてもWebView2 の更新は止まらなくなりました。
+<a name="2023-01-06-appendix"></a>
+なお、Edge の更新用モジュールである MicrosoftEdgeUpdate.exe はこれまで UpdateDefault を 0 にしていた場合 Edge ブラウザだけではなく WebView2 の更新も抑止することが可能でしたが、こちらはデザイン上不具合として仕様を修正し、1.3.171.39 以降は UpdateDefault を 0 に設定していてもWebView2 の更新は抑止されなくなりました。
 
-つまり、WebView2 の更新を無効化したい場合は上記の Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} を 0 にご設定いただくか、後述する AutoUpdateCheckPeriodMinutes を 0 にご設定いただく方法のいずれかのみになります。 AutoUpdateCheckPeriodMinutes を 0 に指定する方法は弊社として推奨していないため、Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} を 0 に設定する方法をご利用いただけますと幸いです。
+つまり、WebView2 の更新を抑止したい場合は上記の Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} を 0 に設定いただくか、後述する AutoUpdateCheckPeriodMinutes を 0 に設定いただく方法のいずれかのみになります。 AutoUpdateCheckPeriodMinutes を 0 に指定する方法は弊社として推奨していないため、Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} を 0 に設定する方法をご利用いただけますと幸いです。
 
 2023-01-06 追記終了  
 
