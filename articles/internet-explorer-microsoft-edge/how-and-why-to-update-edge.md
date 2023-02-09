@@ -167,12 +167,12 @@ https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channe
 ※ MECM/SCCM や WSUS による制御については後述します。  
 ※ **ドメイン管理外の端末においては下記の設定を行っても、設定は無視され自動更新されますのでご注意ください**。  
 
-- 1)Edge のインストールの制御
-- 2)WebView2 のインストールの制御
-- 3)Edge の更新の制御
-- 4)WebView2 の更新の制御
-- 5)更新タイミングについての制御
-- 6)Edge の自動更新用のモジュールの更新の制御
+- 1) Edge のインストールの制御
+- 2) WebView2 のインストールの制御
+- 3) Edge の更新の制御
+- 4) WebView2 の更新の制御
+- 5) 更新タイミングについての制御
+- 6) Edge の自動更新用のモジュールの更新の制御
 
 ### 1) Edge のインストールの制御
 
@@ -421,7 +421,7 @@ https://docs.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#autou
 Set this policy to the value 0 to disable all periodic network traffic by Microsoft Edge Update. This is not recommended, as it prevents Microsoft Edge Update itself from receiving stability and security updates.
 ```
 
-なおこちらの設定を頂いていた場合においても Edge が古くなりすぎるとセキュリティの脆弱性への対策のためにアップデートを行うモジュールが別途起動を行い、Edge が更新される場合がございます。こちらについては詳細は公開しておりません。
+なおこちらの設定を頂いていた場合においても Edge の自動更新用のモジュールが古くなりすぎるとセキュリティの脆弱性への対策のためにアップデートを行うモジュールが別途起動を行い、MicrosoftEdgeUpdate.exe が更新される場合がございます。こちらについては詳細は公開しておりません。
 
 ## その他更新の制御について
 
