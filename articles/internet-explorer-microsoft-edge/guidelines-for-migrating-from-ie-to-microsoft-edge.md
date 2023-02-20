@@ -1,9 +1,13 @@
 ---
 title: Internet Explorer から Microsoft Edge への移行ガイドライン
-date: 2021-5-20
+date: 2023-02-20
 tags: 
   - Microsoft Edge
   - IEからEdgeへの移行
+---
+
+[2023/02/20 更新: IE ショートカット アイコン](#2023-02-20-appendix)
+
 ---
 
 みなさんこんにちは！
@@ -103,6 +107,13 @@ IE モードがあれば IE デスクトップ アプリは必要ない状況に
       「Internet Explorer 11 をスタンドアロンブラウザーとして無効にする」
 
 参考 : [Internet Explorer 11 を無効にする](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-disable-ie11)
+
+<a name="2023-02-20-appendix"></a>
+2023/02/20 更新  
+\<補足\>  
+当該のポリシーを有効にした場合、IE を起動しようとすると Edge にリダイレクトされ、且つ、IE のショートカット アイコンは削除されます。  
+なお、更新プログラム適用することでスタート メニューの Windows アクセサリに IE のアイコンが再度表示される場合がございます。  
+再表示されたアイコンをクリックしても Edge にリダイレクトされ、且つ、IE のショートカット アイコンは再度削除されます。
 
 - [目次へ](#目次)
 ---
