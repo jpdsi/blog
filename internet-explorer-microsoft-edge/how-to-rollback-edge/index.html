@@ -6,12 +6,12 @@
   
   <title>Microsoft Edge のロールバック方法について | Japan Developer Support Internet Team Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくいただく Microsoft Edge (以下 Edge と呼称) のロールバックについてのお話をお伝えしたいと思います。 ロールバック手順については以下のドキュメントにまとめられております。 Microsoft Edge を以前のバージョンにロールバックする方法:https:&#x2F;&#x2F;learn.mic">
+  <meta name="description" content="更新履歴:2023&#x2F;02&#x2F;27 更新: 同一のバージョンにロールバックを行うと失敗する場合がある件について  みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくいただく Microsoft Edge (以下 Edge と呼称) のロールバックについてのお話をお伝えしたいと思います。 ロールバック手順については以下のドキュメントにまとめられております">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Microsoft Edge のロールバック方法について">
 <meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
-<meta property="og:description" content="みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくいただく Microsoft Edge (以下 Edge と呼称) のロールバックについてのお話をお伝えしたいと思います。 ロールバック手順については以下のドキュメントにまとめられております。 Microsoft Edge を以前のバージョンにロールバックする方法:https:&#x2F;&#x2F;learn.mic">
+<meta property="og:description" content="更新履歴:2023&#x2F;02&#x2F;27 更新: 同一のバージョンにロールバックを行うと失敗する場合がある件について  みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくいただく Microsoft Edge (以下 Edge と呼称) のロールバックについてのお話をお伝えしたいと思います。 ロールバック手順については以下のドキュメントにまとめられております">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/how-to-rollback-edge_2023-01-18-11-58-10.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/how-to-rollback-edge_2023-01-18-12-38-36.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/how-to-rollback-edge_2023-01-20-17-01-46.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/how-to-rollback-edge_2023-01-20-14-27-56.png">
 <meta property="article:published_time" content="2023-01-22T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-20T02:58:32.703Z">
+<meta property="article:modified_time" content="2023-02-27T08:15:53.325Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="Edge の更新管理">
@@ -111,12 +111,14 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+11bf261c-a46a-5487-9a7b-707e7b130e98%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BMicrosoft+Edge+%E3%81%AE%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fhow-to-rollback-edge%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fhow-to-rollback-edge.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fhow-to-rollback-edge.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/" data-id="clec8agll009w0omkdirzc555" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/" data-id="clemjpjpo009w0ops8ac1014c" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>みなさんこんにちは。日本マイクロソフトの IE/Edge サポートチームです。</p>
+        <p>更新履歴:<br><a href="#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">2023/02/27 更新: 同一のバージョンにロールバックを行うと失敗する場合がある件について</a></p>
+<hr>
+<p>みなさんこんにちは。日本マイクロソフトの IE/Edge サポートチームです。</p>
 <p>今回はお客様からよくいただく Microsoft Edge (以下 Edge と呼称) のロールバックについてのお話をお伝えしたいと思います。</p>
 <p>ロールバック手順については以下のドキュメントにまとめられております。</p>
 <p>Microsoft Edge を以前のバージョンにロールバックする方法:<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-rollback">https://learn.microsoft.com/ja-jp/deployedge/edge-learnmore-rollback</a></p>
@@ -129,6 +131,7 @@
 <li><a href="#%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E6%B0%B8%E4%B9%85%E3%81%AB%E5%A4%B1%E3%82%8F%E3%82%8C%E3%82%8B%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">データが永久に失われる危険性について</a></li>
 <li><a href="#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%8C%E9%9B%A3%E3%81%97%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ロールバックが難しい場合について</a></li>
 <li><a href="#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ロールバックするバージョンについて</a></li>
+<li><a href="#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ロールバックに失敗する場合について</a></li>
 </ul>
 </li>
 <li><a href="#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E6%96%B9%E6%B3%95%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ロールバック方法の種類について</a></li>
@@ -191,6 +194,10 @@
 <h3 id="ロールバックするバージョンについて"><a href="#ロールバックするバージョンについて" class="headerlink" title="ロールバックするバージョンについて"></a>ロールバックするバージョンについて</h3><p>下記ブログに記載しておりますように、弊社として支援している Edge のバージョンは <strong>Stable 版においては “最新版のバージョン - 2” まで</strong>になります。 <strong>Extended Stable 版においては “最新の偶数バージョン - 2”までがサポート範囲</strong>となっています。</p>
 <p>ロールバック先のバージョンが古い場合は、ロールバックに関するご質問についてもお答えしかねる場合がございますので、<strong>必ずロールバックについては弊社がサポートしているバージョンを対象にしていただけますと幸いです</strong>。</p>
 <p><strong>Edge の種類と Edge のサポート範囲について:</strong><br><a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-and-why-to-update-edge/#Edge-%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%A8-Edge-%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E7%AF%84%E5%9B%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-and-why-to-update-edge/#Edge-%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%A8-Edge-%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E7%AF%84%E5%9B%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6</a></p>
+<h3 id="ロールバックに失敗する場合について"><a href="#ロールバックに失敗する場合について" class="headerlink" title="ロールバックに失敗する場合について"></a>ロールバックに失敗する場合について</h3><p>Edge のロールバックにおいて、同一のバージョンに対して複数回のロールバックを<br>行った場合に、二回目以降のロールバック処理が失敗する事例がございます。</p>
+<p>例)<br>109.0.1518.69 → 108.0.1462.<strong>46</strong> (ロールバック) → 109.0.1518.69 (自動更新) →  108.0.1462.<strong>46</strong> (ロールバック失敗)</p>
+<p>回避策として、該当のバージョンとは異なるバージョンに対して一度ロールバックしていただくことで、ロールバックが可能である場合がございます。そのため、下記記載のロールバック手順を実施いただいた際に、Edge のバージョンが正しくロールバックされないといった場合には、一度こちらの回避方法をお試しいただければと存じます。</p>
+<p>例)<br>109.0.1518.69 → 108.0.1462.<strong>42</strong> →  108.0.1462.<strong>46</strong></p>
 <h2 id="ロールバック方法の種類について"><a href="#ロールバック方法の種類について" class="headerlink" title="ロールバック方法の種類について"></a>ロールバック方法の種類について</h2><hr>
 <p>大きくロールバックの方法としては以下 2 つに分けられます。</p>
 <ul>
