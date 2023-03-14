@@ -6,12 +6,12 @@
   
   <title>.NET Framework で TLS 1.1 および TLS 1.2 を有効化する方法 - まとめ - | Japan Developer Support Internet Team Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="更新履歴:2022&#x2F;06&#x2F;22 更新  本記事は Technet Blog の更新停止に伴い、もともとばらばらに存在していた記事を一つのブログに集約／移行したものです。元の記事の最新の更新情報については、本内容をご参照ください。  (※ 2018 年 10 月 11 日に Japan IE Support Team Blog に公開した情報をアーカイブする目的で、Microsoft 社員にて改めて">
+  <meta name="description" content="更新履歴:2022&#x2F;06&#x2F;22 更新2023&#x2F;03&#x2F;14 ターゲット バージョンについて補足  本記事は Technet Blog の更新停止に伴い、もともとばらばらに存在していた記事を一つのブログに集約／移行したものです。元の記事の最新の更新情報については、本内容をご参照ください。  (※ 2018 年 10 月 11 日に Japan IE Support Team Blog に公開した情報を">
 <meta property="og:type" content="article">
 <meta property="og:title" content=".NET Framework で TLS 1.1 および TLS 1.2 を有効化する方法 - まとめ -">
 <meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
-<meta property="og:description" content="更新履歴:2022&#x2F;06&#x2F;22 更新  本記事は Technet Blog の更新停止に伴い、もともとばらばらに存在していた記事を一つのブログに集約／移行したものです。元の記事の最新の更新情報については、本内容をご参照ください。  (※ 2018 年 10 月 11 日に Japan IE Support Team Blog に公開した情報をアーカイブする目的で、Microsoft 社員にて改めて">
+<meta property="og:description" content="更新履歴:2022&#x2F;06&#x2F;22 更新2023&#x2F;03&#x2F;14 ターゲット バージョンについて補足  本記事は Technet Blog の更新停止に伴い、もともとばらばらに存在していた記事を一つのブログに集約／移行したものです。元の記事の最新の更新情報については、本内容をご参照ください。  (※ 2018 年 10 月 11 日に Japan IE Support Team Blog に公開した情報を">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/dotnet-framework-versions-dependencies.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/os_common.png">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/windows-10-1809-windows-server-2019.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/windows-10-1903-to-20H2.png">
 <meta property="article:published_time" content="2022-06-21T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-27T08:15:53.313Z">
+<meta property="article:modified_time" content="2023-03-14T01:41:12.970Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content=".NET Framewrork">
 <meta property="article:tag" content="TLS">
@@ -115,12 +115,12 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+4327be81-d5ed-50f2-8b8b-bb7a1282c38f%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B.NET+Framework+%E3%81%A7+TLS+1.1+%E3%81%8A%E3%82%88%E3%81%B3+TLS+1.2+%E3%82%92%E6%9C%89%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95+-+%E3%81%BE%E3%81%A8%E3%82%81+-%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fdotnet-framework-tls12%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fdotnet-framework-tls12.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fdotnet-framework-tls12.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/" data-id="clemjpjpd00960opshrgegzf5" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/" data-id="clf7l7rx800960no2c2mt7k9f" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>更新履歴:<br>2022/06/22 更新</p>
+        <p>更新履歴:<br>2022/06/22 更新<br>2023/03/14 ターゲット バージョンについて補足</p>
 <blockquote>
 <p>本記事は Technet Blog の更新停止に伴い、もともとばらばらに存在していた記事を一つのブログに集約／移行したものです。<br>元の記事の最新の更新情報については、本内容をご参照ください。</p>
 </blockquote>
@@ -178,7 +178,8 @@
 <h3 id="Windows-Server-2008-R2-Windows-7"><a href="#Windows-Server-2008-R2-Windows-7" class="headerlink" title="Windows Server 2008 R2 / Windows 7"></a>Windows Server 2008 R2 / Windows 7</h3><p>OS としては TLS 1.1 および 1.2 を利用できますが、アプリケーション側より明示的に TLS 1.1 もしくは 1.2 を利用する指定がない限り利用されません。<br>アプリケーション側からの指定がなくとも利用されるように構成するには、上記の Windows Server 2008 SP2 に記載したレジストリ値 (DisabledByDefault) を必要に応じて設定します。<br>(参考) <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786418(v=ws.11)">TLS/SSL Settings</a>  </p>
 <h3 id="Windows-Server-2012-Windows-8-1-以降"><a href="#Windows-Server-2012-Windows-8-1-以降" class="headerlink" title="Windows Server 2012 / Windows 8.1 以降"></a>Windows Server 2012 / Windows 8.1 以降</h3><p>OS として TLS 1.1 および 1.2 を利用でき、かつ、既定の状態で TLS 1.1 および 1.2 が利用されるように構成されています。<br>追加で必要な設定はありません。  </p>
 <h2 id="3-NET-Framework-で利用される既定のプロトコル-バージョン"><a href="#3-NET-Framework-で利用される既定のプロトコル-バージョン" class="headerlink" title="3. .NET Framework で利用される既定のプロトコル バージョン"></a>3. .NET Framework で利用される既定のプロトコル バージョン</h2><hr>
-<p>.NET Framework では、HttpWebRequest クラスなどを利用した通信において ServicePointManager.SecurityProtocol プロパティに指定されたプロトコル バージョンが利用されます。<br>プログラム上で明示的に指定されている場合は指定されたプロトコル バージョンが利用されますが、指定されていない場合に利用される既定のプロトコル バージョンは下記のとおりです。<br>.NET Framework の各バージョンごとに、TLS 1.1 および 1.2 への対応状況と併せてまとめました。  </p>
+<p>.NET Framework では、HttpWebRequest クラスなどを利用した通信において ServicePointManager.SecurityProtocol プロパティに指定されたプロトコル バージョンが利用されます。<br><span style="color: red;"><strong>プログラム上で明示的に指定されている場合は指定されたプロトコル バージョンが利用されます</strong></span>が、指定されていない場合に利用される既定のプロトコル バージョンは下記のとおりです。<br>.NET Framework の各バージョンごとに、TLS 1.1 および 1.2 への対応状況と併せてまとめました。</p>
+<p>(2023/03/14 追記 ここから)<br>なお、本記事の 1 で『アプリケーションがターゲットしている .NET Framework のバージョンはいくつか』と示したように、<span style="color: red;"><strong>バージョンについて大事なことは、端末にインストールされている .NET Framework ランタイムのバージョンではなく、対象の .NET アプリ開発時にターゲットとして選択する .NET Framework のバージョンであることにご注意ください。</strong></span><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/visualstudio/ide/visual-studio-multi-targeting-overview?view=vs-2022#select-a-target-framework-version">参考画面イメージはこちら</a><br>具体的には、本記事の 8 に示すそれぞれの表の横軸について、確認対象のアプリがどのターゲット バージョンなのかをもとにみていきます。<br>(2023/03/14 追記 ここまで)</p>
 <h3 id="NET-Framework-3-5-3-5-1"><a href="#NET-Framework-3-5-3-5-1" class="headerlink" title=".NET Framework 3.5 (3.5.1)"></a>.NET Framework 3.5 (3.5.1)</h3><p>既定では TLS 1.1 および 1.2 は未対応<br>プロパティの既定値は SSL 3.0 および TLS 1.0  </p>
 <h3 id="NET-Framework-4-5-2"><a href="#NET-Framework-4-5-2" class="headerlink" title=".NET Framework 4.5.2"></a>.NET Framework 4.5.2</h3><p>TLS 1.1 / TLS 1.2 に対応済み<br>プロパティの既定値は SSL 3.0 および TLS 1.0  </p>
 <h3 id="NET-Framework-4-6-x"><a href="#NET-Framework-4-6-x" class="headerlink" title=".NET Framework 4.6.x"></a>.NET Framework 4.6.x</h3><p>TLS 1.1 / TLS 1.2 に対応済み<br>プロパティの既定値は TLS 1.0、1.1 および 1.2  </p>
