@@ -1,13 +1,14 @@
 ---
 title: Microsoft Edge の更新制御とサポート範囲について
-date: 2022-05-06
+date: 2023-04-27
 tags: 
   - Microsoft Edge
   - Edge の更新管理
 ---
 
-更新履歴:
-[2023/01/06 更新: UpdateDefault によって WebView2 の更新制御が行えなくなった旨](#2023-01-06-appendix)
+更新履歴:  
+[2023/01/06 更新: UpdateDefault によって WebView2 の更新制御が行えなくなった旨](#2023-01-06-appendix)  
+[2023/04/27 更新: WebView2 Runtime の強制インストールについては Install ポリシーの設定が必要な旨](#2023-04-27-appendix)
 
 ---
 
@@ -24,27 +25,27 @@ tags:
 こうしたアップデートに関する弊社のデザインとお客様のご要望のミスマッチはなぜ起きるのか。それは弊社の Edge に関するセキュリティへの考え方に理由があります。
 
 ## 目次<!-- omit in toc -->
-- [なぜ Edge は自動更新を行うのか](#なぜ-edge-は自動更新を行うのか)
-- [Edge の種類と Edge のサポート範囲について](#edge-の種類と-edge-のサポート範囲について)
-  - [Edge のバージョンの読み方について](#edge-のバージョンの読み方について)
-  - [Edge のバージョン アップデートの頻度について](#edge-のバージョン-アップデートの頻度について)
-    - [Extended Stable 版について](#extended-stable-版について)
-    - [最新版の確認方法](#最新版の確認方法)
-- [Edge のインストールおよび更新制御方法について](#edge-のインストールおよび更新制御方法について)
-  - [1) Edge のインストールの制御](#1-edge-のインストールの制御)
-  - [2) WebView2 のインストールの制御](#2-webview2-のインストールの制御)
-  - [3) Edge の更新制御](#3-edge-の更新制御)
-  - [4) WebView2 の更新制御](#4-webview2-の更新制御)
-- [Edge の更新タイミングの制御方法について](#edge-の更新タイミングの制御方法について)
-  - [Edge の更新の流れについて](#edge-の更新の流れについて)
-- [具体的な更新タイミングについての制御方法について](#具体的な更新タイミングについての制御方法について)
-  - [5) アップデートできない時間帯を指定する方法](#5-アップデートできない時間帯を指定する方法)
-  - [6) 更新チェック後の次の更新チェックまでの最低猶予時間を指定する方法](#6-更新チェック後の次の更新チェックまでの最低猶予時間を指定する方法)
-    - [UpdateSuppressed および AutoUpdateCheckPeriodMinutes が設定された場合](#updatesuppressed-および-autoupdatecheckperiodminutes-が設定された場合)
-  - [7) Edge の自動更新用のモジュールの更新の制御](#7-edge-の自動更新用のモジュールの更新の制御)
-- [その他更新の制御について](#その他更新の制御について)
-  - [MECM/SCCM および WSUS による Edge の更新制御](#mecm-sccm-および-wsus-による-edge-の更新制御)
-  - [ドメイン管理外の端末での更新制御方法について](#ドメイン管理外の端末での更新制御方法について)
+- [なぜ Edge は自動更新を行うのか](#%E3%81%AA%E3%81%9C-Edge-%E3%81%AF%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%82%92%E8%A1%8C%E3%81%86%E3%81%AE%E3%81%8B)
+- [Edge の種類と Edge のサポート範囲について](#Edge-%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%81%A8-Edge-%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E7%AF%84%E5%9B%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+  - [Edge のバージョンの読み方について](#Edge-%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AE%E8%AA%AD%E3%81%BF%E6%96%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+  - [Edge のバージョン アップデートの頻度について](#Edge-%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%AE%E9%A0%BB%E5%BA%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+    - [Extended Stable 版について](#Extended-Stable-%E7%89%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+    - [最新版の確認方法](#%E6%9C%80%E6%96%B0%E7%89%88%E3%81%AE%E7%A2%BA%E8%AA%8D%E6%96%B9%E6%B3%95)
+- [Edge のインストールおよび更新制御方法について](#Edge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%8A%E3%82%88%E3%81%B3%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+  - [1) Edge のインストールの制御](#1-Edge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%E5%88%B6%E5%BE%A1)
+  - [2) WebView2 のインストールの制御](#2-WebView2-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%AE%E5%88%B6%E5%BE%A1)
+  - [3) Edge の更新制御](#3-Edge-%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1)
+  - [4) WebView2 の更新制御](#4-WebView2-%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1)
+- [Edge の更新タイミングの制御方法について](#Edge-%E3%81%AE%E6%9B%B4%E6%96%B0%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AE%E5%88%B6%E5%BE%A1%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+  - [Edge の更新の流れについて](#Edge-%E3%81%AE%E6%9B%B4%E6%96%B0%E3%81%AE%E6%B5%81%E3%82%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+- [具体的な更新タイミングについての制御方法について](#%E5%85%B7%E4%BD%93%E7%9A%84%E3%81%AA%E6%9B%B4%E6%96%B0%E3%82%BF%E3%82%A4%E3%83%9F%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E5%88%B6%E5%BE%A1%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+  - [5) アップデートできない時間帯を指定する方法](#5-%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E6%99%82%E9%96%93%E5%B8%AF%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
+  - [6) 更新チェック後の次の更新チェックまでの最低猶予時間を指定する方法](#6-%E6%9B%B4%E6%96%B0%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E5%BE%8C%E3%81%AE%E6%AC%A1%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%BE%E3%81%A7%E3%81%AE%E6%9C%80%E4%BD%8E%E7%8C%B6%E4%BA%88%E6%99%82%E9%96%93%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
+    - [UpdateSuppressed および AutoUpdateCheckPeriodMinutes が設定された場合](#UpdateSuppressed-%E3%81%8A%E3%82%88%E3%81%B3-AutoUpdateCheckPeriodMinutes-%E3%81%8C%E8%A8%AD%E5%AE%9A%E3%81%95%E3%82%8C%E3%81%9F%E5%A0%B4%E5%90%88)
+  - [7) Edge の自動更新用のモジュールの更新の制御](#7-Edge-%E3%81%AE%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E7%94%A8%E3%81%AE%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E6%9B%B4%E6%96%B0%E3%81%AE%E5%88%B6%E5%BE%A1)
+- [その他更新の制御について](#%E3%81%9D%E3%81%AE%E4%BB%96%E6%9B%B4%E6%96%B0%E3%81%AE%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+  - [MECM/SCCM および WSUS による Edge の更新制御](#MECM-SCCM-%E3%81%8A%E3%82%88%E3%81%B3-WSUS-%E3%81%AB%E3%82%88%E3%82%8B-Edge-%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1)
+  - [ドメイン管理外の端末での更新制御方法について](#%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E7%AE%A1%E7%90%86%E5%A4%96%E3%81%AE%E7%AB%AF%E6%9C%AB%E3%81%A7%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 
 ## なぜ Edge は自動更新を行うのか
 
@@ -232,6 +233,28 @@ https://docs.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#insta
 -	値: 1 / 常にインストールを許可する (推奨)
 -	値: 4 / 常にコンピューター全体へのインストールが許可されますが、ユーザーごとのインストールは許可されません。
 -	値: 5 / 強制インストール (コンピューター全体)
+
+<a name="2023-04-27-appendix"></a>
+※ 2023-04-27 追記：  
+WebView2 Runtime に依存するアプリケーションが増えてきたこともあり、弊社は過去 [Unmanaged 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/06/27/delivering-the-microsoft-edge-webview2-runtime-to-windows-10-consumers/) および [Managed 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/12/14/delivering-microsoft-edge-webview2-runtime-to-managed-windows-10-devices/) をアナウンスしてきました。
+
+よって、上記のドキュメントにある前提条件を満たす場合については、WebView2 Runtime が自動的にエンドポイントより配布され、タイミングによっては同時多発的にインストールが起きるためにネットワーク帯域を圧迫するという事象を確認しております。
+
+Managed 環境においても、上記の [Managed 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/12/14/delivering-microsoft-edge-webview2-runtime-to-managed-windows-10-devices/) にございますように、 2023年 1 月 16 日以降においては自動配布される可能性があるため、もし当該の強制展開を抑止したい場合は、ドキュメントにございますように **Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} のポリシーを 0 (無効) にしていただく必要がございますのでご注意ください**。(なお Microsoft としては Install を無効化し WebView2 Runtime がインストールされない場合、WebView2 Runtime に依存するアプリケーションが強制終了したり、起動できないといった問題を引き起こすこともあるため推奨はしておりません。)
+
+```
+As a follow-up step to the Consumer rollout, we are also announcing that after January 16th, 2023, we will start rolling out WebView2 Runtime to managed/domain-joined devices with Windows 10 April 2018 Update or later.
+(…中略…)
+You may also opt out of the rollout by configuring the WebView2 install policy, although in most cases we do not recommend so as disabling WebView2 Runtime installation may severely impair the normal usage of WebView2 applications such as Outlook on your tenants’ device.
+```
+
+なお、<span style="color: red">**当該の Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} を 0 に設定した場合は、WebView2 Runtime のオフライン インストーラー、オンライン インストーラーにかかわらずインストールのブロックが行われますのでご注意ください。**</span>
+
+そのためどのような方法を取るにせよ <span style="color: red">**WebView2 Runtime をインストールしたい場合は、当該のポリシーを 1 (有効) または未設定にしていただく必要がございます。**</span>
+
+また、インストールのポリシーを無効化しても、すでにインストールされている環境の更新を制御するものではございません。その場合は Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} による制御が必要になりますので、ご注意ください。
+
+2023-04-27 追記終了  
 
 ### 3) Edge の更新制御
 
