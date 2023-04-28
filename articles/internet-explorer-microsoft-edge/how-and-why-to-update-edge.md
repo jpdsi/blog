@@ -238,7 +238,7 @@ https://docs.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#insta
 ※ 2023-04-27 追記：  
 WebView2 Runtime に依存するアプリケーションが増えてきたこともあり、弊社は過去 [Unmanaged 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/06/27/delivering-the-microsoft-edge-webview2-runtime-to-windows-10-consumers/) および [Managed 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/12/14/delivering-microsoft-edge-webview2-runtime-to-managed-windows-10-devices/) をアナウンスしてきました。
 
-Managed 環境においても、上記の [Managed 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/12/14/delivering-microsoft-edge-webview2-runtime-to-managed-windows-10-devices/) にございますように、 2023年 1 月 16 日以降においては自動配布される可能性があるため、もし当該の強制展開を抑止したい場合は、ドキュメントにございますように **Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} のポリシーを 0 (無効) にしていただく必要がございますのでご注意ください**。(なお Microsoft としては Install を無効化し WebView2 Runtime がインストールされない場合、WebView2 Runtime に依存するアプリケーションが強制終了したり、起動できないといった問題を引き起こすこともあるため推奨はしておりません。)
+Managed 環境においても、2023年 1 月 16 日以降においては WebView2 Runtime が自動配布される可能性があるため、もし当該の強制展開を抑止したい場合は、ドキュメントにございますように **Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} のポリシーを 0 (無効) にしていただく必要がございますのでご注意ください**。(なお Microsoft としては Install を無効化し WebView2 Runtime がインストールされない場合、WebView2 Runtime に依存するアプリケーションが強制終了したり、起動できないといった問題を引き起こすこともあるため推奨はしておりません。)
 
 ```
 As a follow-up step to the Consumer rollout, we are also announcing that after January 16th, 2023, we will start rolling out WebView2 Runtime to managed/domain-joined devices with Windows 10 April 2018 Update or later.
@@ -248,7 +248,7 @@ You may also opt out of the rollout by configuring the WebView2 install policy, 
 
 なお、<span style="color: red">**当該の Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} を 0 に設定した場合は、WebView2 Runtime のオフライン インストーラー、オンライン インストーラーにかかわらずインストールのブロックが行われますのでご注意ください。**</span>
 
-そのためどのような方法を取るにせよ <span style="color: red">**WebView2 Runtime をインストールしたい場合は、当該のポリシーを 1 (有効) または未設定にしていただく必要がございます。**</span>
+どのような方法を取るにせよ <span style="color: red">**WebView2 Runtime をインストールしたい場合は、当該のポリシーを 1 (有効) または未設定にしていただく必要がございます。**</span>
 
 また、インストールのポリシーを無効化しても、すでにインストールされている環境の更新を制御するものではございません。その場合は Update{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} による制御が必要になりますので、ご注意ください。
 
