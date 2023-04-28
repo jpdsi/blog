@@ -238,8 +238,6 @@ https://docs.microsoft.com/en-us/deployedge/microsoft-edge-update-policies#insta
 ※ 2023-04-27 追記：  
 WebView2 Runtime に依存するアプリケーションが増えてきたこともあり、弊社は過去 [Unmanaged 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/06/27/delivering-the-microsoft-edge-webview2-runtime-to-windows-10-consumers/) および [Managed 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/12/14/delivering-microsoft-edge-webview2-runtime-to-managed-windows-10-devices/) をアナウンスしてきました。
 
-よって、上記のドキュメントにある前提条件を満たす場合については、WebView2 Runtime が自動的にエンドポイントより配布され、タイミングによっては同時多発的にインストールが起きるためにネットワーク帯域を圧迫するという事象を確認しております。
-
 Managed 環境においても、上記の [Managed 環境においての WebView2 Runtime の強制展開](https://blogs.windows.com/msedgedev/2022/12/14/delivering-microsoft-edge-webview2-runtime-to-managed-windows-10-devices/) にございますように、 2023年 1 月 16 日以降においては自動配布される可能性があるため、もし当該の強制展開を抑止したい場合は、ドキュメントにございますように **Install{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5} のポリシーを 0 (無効) にしていただく必要がございますのでご注意ください**。(なお Microsoft としては Install を無効化し WebView2 Runtime がインストールされない場合、WebView2 Runtime に依存するアプリケーションが強制終了したり、起動できないといった問題を引き起こすこともあるため推奨はしておりません。)
 
 ```
