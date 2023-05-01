@@ -1,6 +1,6 @@
 ---
 title: IE モードのよくあるご質問
-date: 2022-08-04
+date: 2023-05-01
 tags: 
   - Microsoft Edge
   - IE モード
@@ -22,6 +22,7 @@ tags:
 2021/12/29 更新
 2022/06/09 更新
 2022/08/04 更新
+2023/05/01 更新
 
 ---
 
@@ -59,6 +60,7 @@ https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-ne
 - [ウィンドウをデスクトップ外に開けない](#ウィンドウをデスクトップ外に開けない)
 - [ブラウザー エンジンの切り替え時の通信で起こること](#ブラウザー-エンジンの切り替え時の通信で起こること)
 - [クライアント証明書を要求する場合の制限](#クライアント証明書を要求する場合の制限)
+- [WebBrowser コントロールからの window.open](#WebBrowser-コントロールからの-window-open)
 
 ### How to/Tips
 
@@ -271,6 +273,19 @@ https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#autoselectce
 
 ForceCertificatePromptsOnMultipleMatches
 https://docs.microsoft.com/ja-jp/deployedge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches
+
+- [目次へ](#目次)
+
+---
+
+## WebBrowser コントロールからの window.open
+
+**2023/05/01 追加:**
+
+WebBrowser コントロールからの window.open は IE モードで開きません。
+
+WebBrowser コントロールで表示している Web ページから window.open を実行したとき、既定の実装では新しいウィンドウは IE で開かれます。
+最初から IE が起動できない Windows 11 や、2023 年 2 月 14 日に IE11 デスクトップアプリケーションが完全に無効になった特定のバージョンの Windows 10 の環境でも、上記のこれまでの動きのまま変わりません。
 
 - [目次へ](#目次)
 
