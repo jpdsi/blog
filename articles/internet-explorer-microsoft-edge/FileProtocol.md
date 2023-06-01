@@ -15,14 +15,14 @@ tags:
 
 ※ 後述の追記の内容をご覧ください
 
-こんにちわ！
+こんにちは！
 
 今回は、新しい Microsoft Edge での file: プロトコルの制限についてお知らせします。  
 Chromium ベースの新しい Microsoft Edge では、セキュリティ上の制限により file: プロトコルのリンクは機能しません。  
 この制限は Chromium における制限となりますが、新しい Microsoft Edge 側でこの制限を解除可能なオプションを提供する予定は現状ありません。
 
-> File system search result link does not open on Firefox or Chrome
-https://support.google.com/gsa/answer/2664790?hl=en
+> Restrictions on File Urls
+https://textslashplain.com/2019/10/09/navigating-to-file-urls/
 
 新しい Microsoft Edge においても file プロトコルが使用できるようにするには、サードパーティー製の拡張機能ですが [Enable local file links](https://chrome.google.com/webstore/detail/enable-local-file-links/nikfmfgobenbhmocjaaboihbeocackld) などのご利用や、[IE モード](https://docs.microsoft.com/ja-jp/deployedge/edge-ie-mode) のご利用をご検討ください。
 
