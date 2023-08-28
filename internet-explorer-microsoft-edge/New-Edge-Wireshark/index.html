@@ -6,12 +6,12 @@
   
   <title>Wireshark による New Microsoft Edge のトレース取得方法 | Japan Developer Support Internet Team Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2020&#x2F;8&#x2F;7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。 こんにちは。Developer Support Internet チームの大嶋です！ 今回は、Chro">
+  <meta name="description" content="2020&#x2F;8&#x2F;7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。2023&#x2F;8&#x2F;28 更新 : 事前準備と環境変数 SSLKEYLOGFILE 追加時について見直しました">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Wireshark による New Microsoft Edge のトレース取得方法">
 <meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
-<meta property="og:description" content="2020&#x2F;8&#x2F;7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。 こんにちは。Developer Support Internet チームの大嶋です！ 今回は、Chro">
+<meta property="og:description" content="2020&#x2F;8&#x2F;7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。2023&#x2F;8&#x2F;28 更新 : 事前準備と環境変数 SSLKEYLOGFILE 追加時について見直しました">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/sslkeylogfile.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/stop.png">
@@ -19,8 +19,8 @@
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/premaster.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/wireshark.png">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/clearcache.png">
-<meta property="article:published_time" content="2020-05-31T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-14T06:02:37.920Z">
+<meta property="article:published_time" content="2023-08-27T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-28T06:39:58.739Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="ログ採取">
 <meta property="article:tag" content="Microsoft Edge">
@@ -106,18 +106,18 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2020-05-31T15:00:00.000Z" itemprop="datePublished">2020-06-01</time>
+  <time datetime="2023-08-27T15:00:00.000Z" itemprop="datePublished">2023-08-28</time>
 </a>
         
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+f070c304-eddc-5c2e-8810-79e1c06eb634%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BWireshark+%E3%81%AB%E3%82%88%E3%82%8B+New+Microsoft+Edge+%E3%81%AE%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2FNew-Edge-Wireshark%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2FNew-Edge-Wireshark.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2FNew-Edge-Wireshark.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/" data-id="cllagxayt00110nqr4bj48xj4" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/New-Edge-Wireshark/" data-id="clluif8gs00120op2e312cgoa" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><font color="red">2020/8/7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。</font></p>
+        <p><font color="red">2020/8/7 更新 : ブラウザーのキャッシュが利用されてキャプチャーに記録されないことを避けるために、InPrivate ブラウズをご利用いただく方法をご案内していますが、InPrivate ブラウズをご利用いただけない場合には、ログ取得前にブラウザーのキャッシュをすべて消去してください。</font><br><font color="red">2023/8/28 更新 : 事前準備と環境変数 SSLKEYLOGFILE 追加時について見直しました。</font></p>
 <p>こんにちは。Developer Support Internet チームの大嶋です！</p>
 <p>今回は、Chromium ベースの New Microsoft Edge で動作する Web アプリケーションにて、ネットワークに関連する問題が起こった際に、もしかしたら活用できるかもしれない Wireshark を用いたネットワークトレース取得方法の Tips をご紹介いたします。</p>
 <p>今回は Wireshark を利用して New Microsoft Edge で動作するクライアントアプリ側にてトレースを取得します。<br>なお、本方法では HTTPS の通信をキャプチャすることも可能ですが、TLS のバージョンや暗号化の種類等によっては正常に復号できない可能性もあり、全ての HTTPS 通信を分析できるものではありません。</p>
@@ -135,17 +135,13 @@
 <h2 id="1-事前準備"><a href="#1-事前準備" class="headerlink" title="1. 事前準備"></a>1. 事前準備</h2><ol>
 <li><p>この Blog の記事の手順や再現するアプリの URL 等をノート帳 (Notepad) で開けるテキストファイル (.txt) などにコピーし開いておきます。</p>
 </li>
-<li><p>New Microsoft Edge や Google Chrome を含めて、全てのブラウザを閉じます。</p>
+<li><p>New Microsoft Edge や Google Chrome を含めて、全てのブラウザを閉じます。なお、Microsoft Edge で edge://settings/system にあるスタートアップ ブーストがオンの場合は一時的にオフにしてください。このあとの環境変数の設定変更をすぐに反映させるためです。</p>
 </li>
-<li><p>ブラウザ以外のアプリも上記の 0 の手順のテキストファイル以外はすべて閉じます。</p>
+<li><p>ブラウザ以外のアプリも上記の 1. の手順のテキストファイル以外はすべて閉じます。</p>
 </li>
-<li><p>エクスプローラーにて、キーを保存する任意のフォルダ (C:\tmp) 等を作成しておきます。</p>
-</li>
-<li><p>コマンドプロンプトを開き、以下のコマンドで上記で作成した任意のフォルダ (ここでは C:\tmp と仮定) に空の新規ファイルを作成または既に存在する場合は同ファイルを空に上書きします。</p>
+<li><p>エクスプローラーにて、キーを保存する任意のフォルダ (C:\tmp) 等を作成しておきます。このフォルダーはこのあとの手順 2 で環境変数 SSLKEYLOGFILE のパスに含めるものです。</p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &gt; C:\tmp\ssl.txt</span><br></pre></td></tr></table></figure>
-
 <br />
 <br />
 
@@ -160,6 +156,7 @@
 <br />
 <br />
 
+<p>なお、上記で指定したファイル (例 : C:\tmp\ssl.txt) が存在している場合はファイルを削除しておきます。</p>
 <hr>
 <h2 id="3-Wireshark-の準備"><a href="#3-Wireshark-の準備" class="headerlink" title="3. Wireshark の準備"></a>3. Wireshark の準備</h2><ol>
 <li><p>Wireshark を開きます。</p>
@@ -291,19 +288,10 @@
     
 <nav id="article-nav">
   
-    <a href="../LetsSurfing-on-New-Edge/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">次の記事</strong>
-      <div class="article-nav-title">
-        
-          New Microsoft Edge でレッツ サーフィン
-        
-      </div>
-    </a>
   
-  
-    <a href="../IEMode/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../webview2-faq/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">新しいバージョンの Microsoft Edge の &#34;IE モード&#34; について</div>
+      <div class="article-nav-title">WebView2 のよくあるご質問</div>
     </a>
   
 </nav>
@@ -322,11 +310,15 @@
       <ul>
         
           <li>
-            <a href="../edge-faq/">Edge のよくあるご質問</a>
+            <a href="">Wireshark による New Microsoft Edge のトレース取得方法</a>
           </li>
         
           <li>
             <a href="../webview2-faq/">WebView2 のよくあるご質問</a>
+          </li>
+        
+          <li>
+            <a href="../edge-faq/">Edge のよくあるご質問</a>
           </li>
         
           <li>
@@ -335,10 +327,6 @@
         
           <li>
             <a href="../how-and-why-to-update-edge/">Microsoft Edge の更新制御とサポート範囲について</a>
-          </li>
-        
-          <li>
-            <a href="../guidelines-for-migrating-from-ie-to-microsoft-edge/">Internet Explorer から Microsoft Edge への移行ガイドライン</a>
           </li>
         
       </ul>

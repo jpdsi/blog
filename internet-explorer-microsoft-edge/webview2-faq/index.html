@@ -6,16 +6,16 @@
   
   <title>WebView2 のよくあるご質問 | Japan Developer Support Internet Team Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくご質問をいただく Microsoft Edge WebView2 (以下 WebView2) のお話をお伝えしたいと思います。 最近では WebView2 Runtime を利用する WebView2 アプリケーションも増えており、その折に端末に勝手に WebView2 Runtime がインストー">
+  <meta name="description" content="2023&#x2F;5&#x2F;23 本記事公開2023&#x2F;8&#x2F;28 更新 : WSUS による WebView2 Runtime の更新制御を追記しました。 みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくご質問をいただく Microsoft Edge WebView2 (以下 WebView2) のお話をお伝えしたいと思います。 最近では WebView2 Ru">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WebView2 のよくあるご質問">
 <meta property="og:url" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/webview2-faq/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
-<meta property="og:description" content="みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくご質問をいただく Microsoft Edge WebView2 (以下 WebView2) のお話をお伝えしたいと思います。 最近では WebView2 Runtime を利用する WebView2 アプリケーションも増えており、その折に端末に勝手に WebView2 Runtime がインストー">
+<meta property="og:description" content="2023&#x2F;5&#x2F;23 本記事公開2023&#x2F;8&#x2F;28 更新 : WSUS による WebView2 Runtime の更新制御を追記しました。 みなさんこんにちは。日本マイクロソフトの IE&#x2F;Edge サポートチームです。 今回はお客様からよくご質問をいただく Microsoft Edge WebView2 (以下 WebView2) のお話をお伝えしたいと思います。 最近では WebView2 Ru">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/webview2-faq/webview2-faq_2023-04-17-09-38-15.png">
-<meta property="article:published_time" content="2023-05-22T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-14T06:02:37.960Z">
+<meta property="article:published_time" content="2023-08-27T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-28T06:39:58.775Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="Microsoft WebView2 Runtime">
@@ -100,18 +100,19 @@
       <div class="article-share">
         Last Update: 
         <a href="" class="article-date-single">
-  <time datetime="2023-05-22T15:00:00.000Z" itemprop="datePublished">2023-05-23</time>
+  <time datetime="2023-08-27T15:00:00.000Z" itemprop="datePublished">2023-08-28</time>
 </a>
         
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+3b6d19c0-7648-53ee-8095-f1d48cb82cd2%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BWebView2+%E3%81%AE%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fwebview2-faq%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fwebview2-faq.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fwebview2-faq.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/webview2-faq/" data-id="cllagxb2m009i0nqr65o635pz" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/webview2-faq/" data-id="clluif8jy009j0op2a7296es0" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>みなさんこんにちは。日本マイクロソフトの IE/Edge サポートチームです。</p>
+        <p><font color="red">2023/5/23 本記事公開</font><br><font color="red">2023/8/28 更新 : WSUS による WebView2 Runtime の更新制御を追記しました。</font></p>
+<p>みなさんこんにちは。日本マイクロソフトの IE/Edge サポートチームです。</p>
 <p>今回はお客様からよくご質問をいただく Microsoft Edge WebView2 (以下 WebView2) のお話をお伝えしたいと思います。</p>
 <p>最近では WebView2 Runtime を利用する WebView2 アプリケーションも増えており、その折に端末に勝手に WebView2 Runtime がインストールされているのはなぜか？といったお問い合わせをよくいただきます。 WebView2 Runtime と WebView2 アプリケーションの違いや、そもそも Microsoft Edge とはなにが違うのかなど、よくいただく質問についてこちらのブログにまとめました。</p>
 <p>WebView2 に関しては下記 URL 関連するドキュメントにおいて、WebView2 のサンプル アプリケーションや WebView2 のアーキテクチャなどを詳述しています。<br>本ブログにおいて不明な点がございましたら、まずはドキュメントをご確認いただけますと幸いです。</p>
@@ -131,6 +132,7 @@
 </ul>
 </li>
 <li><a href="#WebView2-Runtime-%E3%81%AE%E8%87%AA%E5%8B%95%E5%B1%95%E9%96%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">WebView2 Runtime の自動展開について</a></li>
+<li><a href="#WSUS-%E3%81%AB%E3%82%88%E3%82%8B-WebView2-Runtime-%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1">WSUS による WebView2 Runtime の更新制御</a></li>
 </ul>
 <h2 id="WebView2-と-WebView2-Runtime-と-WebView2-SDK-はどのような違いがありますか"><a href="#WebView2-と-WebView2-Runtime-と-WebView2-SDK-はどのような違いがありますか" class="headerlink" title="WebView2 と WebView2 Runtime と WebView2 SDK はどのような違いがありますか"></a>WebView2 と WebView2 Runtime と WebView2 SDK はどのような違いがありますか</h2><hr>
 <p><strong>「WebView2」</strong> はご利用いただいているデスクトップ アプリケーションなどに、Edge のブラウザー機能を埋め込むためにご利用いただける機能 (コントロール) です。<br>WebView2 を利用することで、例えばネイティブ アプリ内でブラウジングの機能を実装したり、またネイティブ アプリより WebView2 のブラウザーを操作するなどが可能になります。</p>
@@ -252,6 +254,9 @@
 <p>固定バージョン配布の場合、<a target="_blank" rel="noopener" href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section">Download the WebView2 Runtime</a> のサイトの Fixed Version をアプリケーションに埋め込む必要があります。 </p>
 <h2 id="WebView2-Runtime-の自動展開について"><a href="#WebView2-Runtime-の自動展開について" class="headerlink" title="WebView2 Runtime の自動展開について"></a>WebView2 Runtime の自動展開について</h2><hr>
 <p>上述いたしましたように WebView2 Runtime はさまざまな Microsoft 製品での導入が進んでいることもあるため、2023 年 1 月 16 日以降ではすべての Windows 10 デバイスに対して WebView2 Runtime が自動的に展開されるようになっています。</p>
+<h2 id="WSUS-による-WebView2-Runtime-の更新制御"><a href="#WSUS-による-WebView2-Runtime-の更新制御" class="headerlink" title="WSUS による WebView2 Runtime の更新制御"></a>WSUS による WebView2 Runtime の更新制御</h2><hr>
+<p>WSUS による更新管理については弊社 WSUS チームより以下のブログがございますのでご確認いただけますと幸いです。</p>
+<p>WSUS による更新管理:<br><a target="_blank" rel="noopener" href="https://jpmem.github.io/blog/wsus/2023-03-27_01/">https://jpmem.github.io/blog/wsus/2023-03-27_01/</a></p>
 <hr>
 
       
@@ -277,19 +282,19 @@
     
 <nav id="article-nav">
   
-    <a href="../edge-faq/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../New-Edge-Wireshark/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">次の記事</strong>
       <div class="article-nav-title">
         
-          Edge のよくあるご質問
+          Wireshark による New Microsoft Edge のトレース取得方法
         
       </div>
     </a>
   
   
-    <a href="../ie-mode-faq/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="../edge-faq/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前の記事</strong>
-      <div class="article-nav-title">IE モードのよくあるご質問</div>
+      <div class="article-nav-title">Edge のよくあるご質問</div>
     </a>
   
 </nav>
@@ -308,11 +313,15 @@
       <ul>
         
           <li>
-            <a href="../edge-faq/">Edge のよくあるご質問</a>
+            <a href="../New-Edge-Wireshark/">Wireshark による New Microsoft Edge のトレース取得方法</a>
           </li>
         
           <li>
             <a href="">WebView2 のよくあるご質問</a>
+          </li>
+        
+          <li>
+            <a href="../edge-faq/">Edge のよくあるご質問</a>
           </li>
         
           <li>
@@ -321,10 +330,6 @@
         
           <li>
             <a href="../how-and-why-to-update-edge/">Microsoft Edge の更新制御とサポート範囲について</a>
-          </li>
-        
-          <li>
-            <a href="../guidelines-for-migrating-from-ie-to-microsoft-edge/">Internet Explorer から Microsoft Edge への移行ガイドライン</a>
           </li>
         
       </ul>
