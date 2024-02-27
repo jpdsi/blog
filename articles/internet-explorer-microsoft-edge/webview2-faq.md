@@ -1,11 +1,14 @@
 ---
 title: WebView2 のよくあるご質問
-date: 2023-05-23
+date: 2023-08-28
 tags: 
   - Microsoft Edge
   - Microsoft WebView2 Runtime
   - WebView2
 ---
+
+<font color="red">2023/5/23 本記事公開</font>
+<font color="red">2023/8/28 更新 : WSUS による WebView2 Runtime の更新制御を追記しました。</font>
 
 みなさんこんにちは。日本マイクロソフトの IE/Edge サポートチームです。
 
@@ -31,7 +34,7 @@ WebView2 に関しては下記 URL 関連するドキュメントにおいて、
   - [Evergreen 配布モードの WebView2 Runtime のダウンロードについて](#Evergreen-%E9%85%8D%E5%B8%83%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE-WebView2-Runtime-%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
   - [固定バージョン配布モードの WebView2 Runtime のダウンロードについて](#%E5%9B%BA%E5%AE%9A%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%85%8D%E5%B8%83%E3%83%A2%E3%83%BC%E3%83%89%E3%81%AE-WebView2-Runtime-%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 - [WebView2 Runtime の自動展開について](#WebView2-Runtime-%E3%81%AE%E8%87%AA%E5%8B%95%E5%B1%95%E9%96%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
-
+- [WSUS による WebView2 Runtime の更新制御](#WSUS-%E3%81%AB%E3%82%88%E3%82%8B-WebView2-Runtime-%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1)
 
 ## WebView2 と WebView2 Runtime と WebView2 SDK はどのような違いがありますか
 ***
@@ -213,5 +216,12 @@ Evergreen スタンドアローン インストーラーは最新版の WebView2
 ***
 
 上述いたしましたように WebView2 Runtime はさまざまな Microsoft 製品での導入が進んでいることもあるため、2023 年 1 月 16 日以降ではすべての Windows 10 デバイスに対して WebView2 Runtime が自動的に展開されるようになっています。
+
+## WSUS による WebView2 Runtime の更新制御
+***
+WSUS による更新管理については弊社 WSUS チームより以下のブログがございますのでご確認いただけますと幸いです。
+
+WSUS による更新管理:
+https://jpmem.github.io/blog/wsus/2023-03-27_01/
 
 ***
