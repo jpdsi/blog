@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/webapps-dotnet-profiler/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/web-apps/isapi-wildcard/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -23,20 +30,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/webapps-dotnet-profiler/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/web-apps/iis-exclude-antivirus-scanning/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -51,7 +44,28 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/frebdump/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/web-apps/frebdump-faq/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/aspdotnet-samesitecookie/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/debugdiag/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -73,34 +87,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/web-apps/VirtualDirectory/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/aspdotnet-samesitecookie/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/debugdiag/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/ConfigurationEditor/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -143,6 +129,20 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/web-apps/MigrationAzureSignalR/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/ConfigurationEditor/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -226,27 +226,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/flash/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-and-why-to-update-edge/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -268,6 +247,41 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/flash/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/guidelines-for-migrating-from-ie-to-microsoft-edge/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/enterprise-mode-site-list-basic-log-collection/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/edge-faq/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -282,7 +296,7 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/enterprise-mode-site-list-basic-log-collection/</loc>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/SkypeMeetingWithEdge/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -297,13 +311,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -331,20 +338,6 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/SkypeMeetingWithEdge/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -366,6 +359,13 @@
   </url>
   
   <url>
+    <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LAN-Settings/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-SecurityZones/</loc>
     
     <lastmod>2024-03-06</lastmod>
@@ -381,6 +381,20 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IE-Cache/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/general/career1-dsi-technologies/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/general/career2-intern-experience/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -457,21 +471,21 @@
   </url>
   
   <url>
-    <loc>https://jpdsi.github.io/blog/general/career1-dsi-technologies/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/general/career2-intern-experience/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-monitoring/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/</loc>
+    
+    <lastmod>2024-03-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
@@ -486,20 +500,6 @@
   
   <url>
     <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-cs-performance/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/</loc>
-    
-    <lastmod>2024-03-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/</loc>
     
     <lastmod>2024-03-06</lastmod>
     
