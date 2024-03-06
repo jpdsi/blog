@@ -15,7 +15,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-and-why-to-update-edge/how-and-why-to-update-edge_2023-01-16-23-47-49.png">
 <meta property="article:published_time" content="2024-02-29T15:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-06T08:06:23.045Z">
+<meta property="article:modified_time" content="2024-03-06T09:00:14.511Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Microsoft Edge">
 <meta property="article:tag" content="Edge の更新管理">
@@ -105,7 +105,7 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+eff0687b-5d7c-58c6-aa6f-5399eeaac44e%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BMicrosoft+Edge+%E3%81%AE%E6%9B%B4%E6%96%B0%E5%88%B6%E5%BE%A1%E3%81%A8%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E7%AF%84%E5%9B%B2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Finternet-explorer-microsoft-edge%2Fhow-and-why-to-update-edge%2F%29%0A*+Content+Source%3A+%5Barticles%2Finternet-explorer-microsoft-edge%2Fhow-and-why-to-update-edge.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Finternet-explorer-microsoft-edge%2Fhow-and-why-to-update-edge.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-and-why-to-update-edge/" data-id="cltfipe41001zqnosbjyd1lbm" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-and-why-to-update-edge/" data-id="cltfkkc32001zjvos78a30q9v" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
@@ -431,9 +431,9 @@
 <p>Microsoft Edge エンドポイントの許可リスト:<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/deployedge/microsoft-edge-security-endpoints#download-locations-for-microsoft-edge">https://docs.microsoft.com/en-us/deployedge/microsoft-edge-security-endpoints#download-locations-for-microsoft-edge</a></p>
 <p>大変恐縮ではございますが、ドメイン管理外の端末においては皆様にセキュリティとして安全なブラウザ体験をしていただくために更新管理を行わせていないこと、また弊社としてサポートする方法はない旨をご理解いただけますと幸いです。</p>
 <p><a name="2024-02-27-appendix"></a></p>
-<h3 id="Edge-や-WebView2-Runtime-がオフラインインストーラーで失敗する場合の切り分けについて"><a href="#Edge-や-WebView2-Runtime-がオフラインインストーラーで失敗する場合の切り分けについて" class="headerlink" title="Edge や WebView2 Runtime がオフラインインストーラーで失敗する場合の切り分けについて"></a>Edge や WebView2 Runtime がオフラインインストーラーで失敗する場合の切り分けについて</h3><p>過去に <a href="#https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ロールバックに失敗する場合について</a> の記事において、自動更新を挟んでロールバックする場合は問題が発生する可能性の旨を述べておりました。</p>
+<h3 id="Edge-や-WebView2-Runtime-がオフラインインストーラーで失敗する場合の切り分けについて"><a href="#Edge-や-WebView2-Runtime-がオフラインインストーラーで失敗する場合の切り分けについて" class="headerlink" title="Edge や WebView2 Runtime がオフラインインストーラーで失敗する場合の切り分けについて"></a>Edge や WebView2 Runtime がオフラインインストーラーで失敗する場合の切り分けについて</h3><p>過去に <a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-rollback-edge/#%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">ロールバックに失敗する場合について</a> の記事において、自動更新を挟んでロールバックする場合は問題が発生する可能性の旨を述べておりました。</p>
 <p>一方で、ロールバックに寄らない単純な Edge や WebView2 Runtime の更新についても、稀にオフラインインストーラーで失敗する場合がございます。<br>こちらは端末のインストール状態が正常ではない場合に発生するものであり、下記ドキュメントに記載された手順を実行することにより改善する可能性がございます。</p>
-<p><a href="#https://support.microsoft.com/ja-jp/windows/cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">プログラムのインストールまたは削除がブロックされる問題を解決する</a></p>
+<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/windows/cca7d1b6-65a9-3d98-426b-e9f927e1eb4d">プログラムのインストールまたは削除がブロックされる問題を解決する</a></p>
 <p>当該ツールは、上記の URL から入手できる MicrosoftProgram_Install_and_Uninstall.meta.diagcab を現象発生環境に配置し、ダブル クリックすることで実行することが可能です。<br>こちらを実施いただくことが可能な場合、まずは検証環境や影響が少ない環境にて実行いただくことを推奨いたします。</p>
 <p>トラブル シューティング ツールの利用手順の概要</p>
 <ol>
