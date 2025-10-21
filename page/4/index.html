@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   
   
-  <title>Japan Developer Support Internet Team Blog</title>
+  <title>Japan Developer Support Internet Team Blog (旧 blog)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日本マイクロソフトの Azure Bot Service &#x2F; Internet Information Services (IIS) &#x2F; Internet Explorer &#x2F; Microsoft Edge に関するサポート情報のブログです。">
+  <meta name="description" content="旧 blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Japan Developer Support Internet Team Blog">
+<meta property="og:title" content="Japan Developer Support Internet Team Blog (旧 blog)">
 <meta property="og:url" content="https://jpdsi.github.io/blog/page/4/index.html">
-<meta property="og:site_name" content="Japan Developer Support Internet Team Blog">
-<meta property="og:description" content="日本マイクロソフトの Azure Bot Service &#x2F; Internet Information Services (IIS) &#x2F; Internet Explorer &#x2F; Microsoft Edge に関するサポート情報のブログです。">
+<meta property="og:site_name" content="Japan Developer Support Internet Team Blog (旧 blog)">
+<meta property="og:description" content="旧 blog">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Azure Bot Service">
@@ -26,7 +26,7 @@
 <meta property="article:tag" content="Microsoft Edge">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog" type="application/atom+xml">
+    <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog (旧 blog)" type="application/atom+xml">
   
 
   <link rel="icon" href="../../favicon.ico">
@@ -74,11 +74,11 @@
     </div>
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="../../index.html" id="logo">Japan Developer Support Internet Team Blog</a>
+        <a href="../../index.html" id="logo">Japan Developer Support Internet Team Blog (旧 blog)</a>
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="../../index.html" id="subtitle">日本マイクロソフトの Azure Bot Service / Internet Information Services (IIS) / Internet Explorer / Microsoft Edge に関するサポート情報のブログです。</a>
+          <a href="../../index.html" id="subtitle">本サイトは、新サイトへのリダイレクト用に現在維持されております。</a>
         </h2>
       
     </div>
@@ -87,6 +87,59 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-web-apps/GrpcChatOnAspNetCore" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    <!-- post date -->
+    <div class="article-meta">
+      <a href="../../web-apps/GrpcChatOnAspNetCore/" class="article-date">
+  <time datetime="2020-09-14T15:00:00.000Z" itemprop="datePublished">2020-09-15</time>
+</a>
+      
+    </div>
+
+    
+    <!-- post title -->
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="../../web-apps/GrpcChatOnAspNetCore/">gRPC で動く CLI チャットアプリを ASP.NET Core で実装してみよう！</a>
+    </h1>
+  
+
+      </header>
+    
+
+    <!-- post caption -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは。Developer Support Internet チーム にてインターンをしている尾崎耀一と申します！
+今回は ASP.NET Core を用いて、 gRPC で動く CLI （コマンドライン）でチャットができるアプリを作る方法を紹介します。本記事を通じて、 ASP.NET Core を用いた gRPC サービスの開発が簡単にできることがわかると思います。皆様の開発の一助になると幸いです。
+まずはチャット アプリを作る前に ASP.NET Core についてご紹介します。
+
+ASP.NET Core についてASP.NET Core はクロスプラットフォームで動作するウェブアプリケーションフレームワークです。
+ASP.NET Core を用いることで簡単にウェブアプリを開発することができます。加えて、 ASP.NET Core はクロスプラットフォームに対応しているので、 ...
+        <p class="article-readmore">
+          <a href="../../web-apps/GrpcChatOnAspNetCore/">Read more</a>
+        </p>
+      
+    </div>
+
+    <footer class="article-footer">
+      <!--a data-url="https://jpdsi.github.io/blog/web-apps/GrpcChatOnAspNetCore/" data-id="cmh07z334002ws84zfygs9tl9" class="article-share-link">共有</a-->
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ASP-NET-Core/" rel="tag">ASP.NET Core</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/gRPC/" rel="tag">gRPC</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-internet-explorer-microsoft-edge/how-to-deploy-edge-extensions" class="article article-type-post" itemscope itemprop="blogPost">
 
@@ -116,16 +169,11 @@
     <!-- post caption -->
     <div class="article-entry" itemprop="articleBody">
       
-        こんにちは。
-今回は、自社開発などで Microsoft Store に登録されていない Microsoft Edge (Chromium) の拡張機能を、社内で自動展開する方法について紹介します。拡張機能のサンプルは チュートリアル からダウンロードできます。
-
-自動展開 (強制インストール) を行うには、Microsoft Active Directory ドメインに参加している Windows デバイスである必要があります。
-ドメインに参加していない Windows デバイスについては、強制インストールは Microsoft Store で利用できる拡張機能に限定されます。
-
-
-拡張機能のパック (CRX ファイルの作成) と ID の確認まずは開発した (用意した) 拡張機能をパッケージ化する必要があります。パッケージ化と ID の確認は以下の手順で行います。
-
-edge://ex...
+        お知らせ：本ページは新しいサイトに移行しました
+ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。
+本記事の移行先 : https://microsoft.github.io/jpbrowsers/internet-explorer-microsoft-edge/how-to-deploy-edge-extensions/
+移行先の Browsers ブログ URL   : https://aka.ms/jpbrowsersblog (Microsoft Edge, Internet Explorer など)
+...
         <p class="article-readmore">
           <a href="../../internet-explorer-microsoft-edge/how-to-deploy-edge-extensions/">Read more</a>
         </p>
@@ -133,7 +181,7 @@ edge://ex...
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-deploy-edge-extensions/" data-id="cmfufcirg0021ri0vgpdi0z5i" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-to-deploy-edge-extensions/" data-id="cmh07z32l0023s84z5znnfape" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Chromium/" rel="tag">Chromium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Extensions/" rel="tag">Extensions</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Microsoft-Edge/" rel="tag">Microsoft Edge</a></li></ul>
@@ -173,10 +221,11 @@ edge://ex...
     <!-- post caption -->
     <div class="article-entry" itemprop="articleBody">
       
-        こんにちは。
-Internet Explorer は Web コンテンツ (html や CSS、JavaScript、画像、動画などなど) を表示 / 動作させるための、いわば「プラットフォーム」です。Web コンテンツ自体の構成やその中で行われている処理が、プラットフォームであるInternet Explorer に影響を及ぼすことも多くあります。また、Internet Explorer  を取り巻く環境に影響を受けることも多々あります。例えば、アドオンやサードパーティ製のソフトウェアの影響を受けてしまうことも。
-このような状況で Internet Explorer を使っていると、「Internet Explorer は動作を停止しました」や「XXXX は応答していません」という事象が発生することがあります。そんなとき、原因究明の最初の一歩となる情報がダンプ ファイルです。
-ダンプ ...
+        お知らせ：本ページは新しいサイトに移行しました
+ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。
+本記事の移行先 : https://microsoft.github.io/jpbrowsers/internet-explorer-microsoft-edge/dump/
+移行先の Browsers ブログ URL   : https://aka.ms/jpbrowsersblog (Microsoft Edge, Internet Explorer など)
+...
         <p class="article-readmore">
           <a href="../../internet-explorer-microsoft-edge/dump/">Read more</a>
         </p>
@@ -184,7 +233,7 @@ Internet Explorer は Web コンテンツ (html や CSS、JavaScript、画像、
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/" data-id="cmfufcira001lri0vckxv0pzi" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dump/" data-id="cmh07z32b001ns84z7j2bfzl1" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Dump/" rel="tag">Dump</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Internet-Explorer/" rel="tag">Internet Explorer</a></li></ul>
@@ -224,12 +273,11 @@ Internet Explorer は Web コンテンツ (html や CSS、JavaScript、画像、
     <!-- post caption -->
     <div class="article-entry" itemprop="articleBody">
       
-        今回は、Internet Explorer は可能な限り利用せずに Microsoft Edge などモダン ブラウザーを利用しましょうという話です。
-「Internet Explorer の今後について」という記事を公開してから１年ちょっと経ちました。
-
-Windows 10 においては、Microsoft Edge と Internet Explorer というふたつのブラウザーが搭載されていますが、弊社としましては、Internet Explorer との後方互換性が必要な業務 Web システムには Internet Explorer を利用いただき、Internet Explorer でなければならない場合以外は Microsoft Edgeをご利用いただくことを提案してきました。
-
-2015 年に Microsoft Edge をリリースして以降、Internet Explore...
+        お知らせ：本ページは新しいサイトに移行しました
+ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。
+本記事の移行先 : https://microsoft.github.io/jpbrowsers/internet-explorer-microsoft-edge/how-about-using-new-edge/
+移行先の Browsers ブログ URL   : https://aka.ms/jpbrowsersblog (Microsoft Edge, Internet Explorer など)
+...
         <p class="article-readmore">
           <a href="../../internet-explorer-microsoft-edge/how-about-using-new-edge/">Read more</a>
         </p>
@@ -237,7 +285,7 @@ Windows 10 においては、Microsoft Edge と Internet Explorer というふ�
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/" data-id="cmfufcire001xri0v1l7ich58" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/how-about-using-new-edge/" data-id="cmh07z32j001zs84za0to3bdm" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/IE-%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">IE モード</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Microsoft-Edge/" rel="tag">Microsoft Edge</a></li></ul>
@@ -277,11 +325,11 @@ Windows 10 においては、Microsoft Edge と Internet Explorer というふ�
     <!-- post caption -->
     <div class="article-entry" itemprop="articleBody">
       
-        皆様、いい波乗ってますか？2020 年 5 月、New Microsoft Edge 安定版 83 がリリースされました。いくつかの機能追加や修正が加えられていますが、今回私たち Microsoft ブラウザサポートチームから紹介するのはこれ！
-
-これまで隠し機能として搭載されていたサーフ ゲームが誰でも遊べるようになりました。
-  Introducing the new surf game in Microsoft Edge  https://blogs.windows.com/msedgedev/2020/05/26/surf-game-edge-stable/
-このゲームへのアクセス方法は簡単！New Microsoft Edge のアドレスバーに “edge://surf” と入力するだけです。もしまだ New Microsoft Edge をインストールされていなければ、こちらの...
+        お知らせ：本ページは新しいサイトに移行しました
+ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。
+本記事の移行先 : https://microsoft.github.io/jpbrowsers/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/
+移行先の Browsers ブログ URL   : https://aka.ms/jpbrowsersblog (Microsoft Edge, Internet Explorer など)
+...
         <p class="article-readmore">
           <a href="../../internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/">Read more</a>
         </p>
@@ -289,7 +337,7 @@ Windows 10 においては、Microsoft Edge と Internet Explorer というふ�
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/" data-id="cmfufcir50016ri0v83cuc6he" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/LetsSurfing-on-New-Edge/" data-id="cmh07z31y0018s84z7pvdfksg" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Chromium/" rel="tag">Chromium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Microsoft-Edge/" rel="tag">Microsoft Edge</a></li></ul>
@@ -329,12 +377,11 @@ Windows 10 においては、Microsoft Edge と Internet Explorer というふ�
     <!-- post caption -->
     <div class="article-entry" itemprop="articleBody">
       
-        更新履歴:2020/05/29 新規2021/05/18 更新: IE モードのよくあるご質問の記事へのリンクを追加しました。
-
-こんにちは。今回は IE モードを紹介します。
-IE モードは、一言で表すと『Microsoft Edge の画面の中で Internet Explorer が動く』というものです。
-構成方法などを含めた詳細は以下のドキュメントをご覧いただければと思いますが、適切に制御することで、ユーザーが Internet Explorer と Microsoft Edge を意識的に使い分ける操作をせずに、Internet Explorer を必要とする古い技術で作られた Web アプリケーションを、Microsoft Edge の中でシームレスに閲覧できるようになります。
-IE モードの登場により『Internet Explorer を単独で動かすのではなく、IE/Edg...
+        お知らせ：本ページは新しいサイトに移行しました
+ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。
+本記事の移行先 : https://microsoft.github.io/jpbrowsers/internet-explorer-microsoft-edge/IEMode/
+移行先の Browsers ブログ URL   : https://aka.ms/jpbrowsersblog (Microsoft Edge, Internet Explorer など)
+...
         <p class="article-readmore">
           <a href="../../internet-explorer-microsoft-edge/IEMode/">Read more</a>
         </p>
@@ -342,7 +389,7 @@ IE モードの登場により『Internet Explorer を単独で動かすので�
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/" data-id="cmfufcir30010ri0v0m1rgycp" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/IEMode/" data-id="cmh07z31v0012s84zhhdo1inc" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/IE-%E3%83%A2%E3%83%BC%E3%83%89/" rel="tag">IE モード</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Microsoft-Edge/" rel="tag">Microsoft Edge</a></li></ul>
@@ -392,7 +439,7 @@ IndexOutOfRangeException in MessageSecurityOverHttpElement when creating WCF cli
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/web-apps/wcf-indexoutofrangeexception/" data-id="cmfufcisg003zri0v8bg06gm9" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/web-apps/wcf-indexoutofrangeexception/" data-id="cmh07z33o0042s84z87r8atml" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Internet-Information-Services/" rel="tag">Internet Information Services</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/WCF/" rel="tag">WCF</a></li></ul>
@@ -446,7 +493,7 @@ Azure Por...
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-portal-log-collection/" data-id="cmfufciqm0009ri0v5dau5qu3" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-portal-log-collection/" data-id="cmh07z31c0009s84zefgj25ha" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-Bot-Service/" rel="tag">Azure Bot Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-Portal/" rel="tag">Azure Portal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%AD%E3%82%B0%E6%8E%A1%E5%8F%96/" rel="tag">ログ採取</a></li></ul>
@@ -502,7 +549,7 @@ Web App Bot をご利用の際に、ボットに ”暫く経ってからアク�
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-alwayson/" data-id="cmfufciqa0000ri0v7r87fqb4" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-alwayson/" data-id="cmh07z30v0000s84z28oqfq62" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-App-Service/" rel="tag">Azure App Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-Bot-Service/" rel="tag">Azure Bot Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E8%A8%AD%E5%AE%9A/" rel="tag">設定</a></li></ul>
@@ -556,61 +603,10 @@ Azure ポータルから Web App Bot 等の Azure Bot Service のリソースを
     </div>
 
     <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-plan/" data-id="cmfufciql0008ri0vhyksa3or" class="article-share-link">共有</a-->
+      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-plan/" data-id="cmh07z31b0008s84zcx6q7de3" class="article-share-link">共有</a-->
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-Bot-Service/" rel="tag">Azure Bot Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E6%96%99%E9%87%91%E3%83%97%E3%83%A9%E3%83%B3/" rel="tag">料金プラン</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-azure-bot-service/bot-log-collection" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    <!-- post date -->
-    <div class="article-meta">
-      <a href="../../azure-bot-service/bot-log-collection/" class="article-date">
-  <time datetime="2020-04-21T15:00:00.000Z" itemprop="datePublished">2020-04-22</time>
-</a>
-      
-    </div>
-
-    
-    <!-- post title -->
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="../../azure-bot-service/bot-log-collection/">Azure Bot Service の調査に必要な基本的な情報について</a>
-    </h1>
-  
-
-      </header>
-    
-
-    <!-- post caption -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        こんにちは。Azure Bot Service サポート チームの大嶋です！  
-弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てるのではないかということで、今回の記事の執筆に至っています。
-Azure Bot Service (Web App Bot もしくは Bot Channels Registration) をご利用の場合、問題の原因はクライアントアプリケーション起因やホストする Bot アプリケーション起因、それらをホストする基盤起因、弊社管理のコネクタサーバー等多岐に渡るため、複数の情報を正確に把握し調査を進めていく必要があります。
-お問い合わせいただいた後、これらの把握のために複数の情報をご提供いただくようお願いしておりますが、今回の記事で、その採取方法についてご紹介いたします！現象により必要な情報は異なりますが、今回はほとんどの現象の調査に対し...
-        <p class="article-readmore">
-          <a href="../../azure-bot-service/bot-log-collection/">Read more</a>
-        </p>
-      
-    </div>
-
-    <footer class="article-footer">
-      <!--a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-log-collection/" data-id="cmfufciqi0003ri0va9nj6bwy" class="article-share-link">共有</a-->
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/Azure-Bot-Service/" rel="tag">Azure Bot Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/%E3%83%AD%E3%82%B0%E6%8E%A1%E5%8F%96/" rel="tag">ログ採取</a></li></ul>
 
     </footer>
   </div>
@@ -636,6 +632,10 @@ Azure Bot Service (Web App Bot もしくは Bot Channels Registration) をご利
       <ul>
         
           <li>
+            <a href="../../general/blog-migration/">本ブログは新しいサイトに移行しました。</a>
+          </li>
+        
+          <li>
             <a href="../../internet-explorer-microsoft-edge/webview2-faq/">WebView2 のよくあるご質問</a>
           </li>
         
@@ -649,10 +649,6 @@ Azure Bot Service (Web App Bot もしくは Bot Channels Registration) をご利
         
           <li>
             <a href="../../internet-explorer-microsoft-edge/edge-faq/">Edge のよくあるご質問</a>
-          </li>
-        
-          <li>
-            <a href="../../internet-explorer-microsoft-edge/ie-mode-faq/">IE モードのよくあるご質問</a>
           </li>
         
       </ul>
@@ -675,7 +671,7 @@ Azure Bot Service (Web App Bot もしくは Bot Channels Registration) をご利
   <div class="widget-wrap">
     <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">2024 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/08/">2023 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/05/">2023 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/02/">2023 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/01/">2023 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">2022 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/06/">2022 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/05/">2022 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">2022 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/06/">2021 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">2021 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">2020 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">2020 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/06/">2020 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">2020 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">2020 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">2020 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">2020 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">2020 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">2019 / 12</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2025/10/">2025 / 10</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2024/03/">2024 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/08/">2023 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/05/">2023 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/02/">2023 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/01/">2023 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/09/">2022 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/06/">2022 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/05/">2022 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/04/">2022 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2022/01/">2022 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/12/">2021 / 12</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/11/">2021 / 11</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/09/">2021 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/08/">2021 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/06/">2021 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/05/">2021 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/04/">2021 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/02/">2021 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/09/">2020 / 09</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/08/">2020 / 08</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/06/">2020 / 06</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/05/">2020 / 05</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/04/">2020 / 04</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/03/">2020 / 03</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/02/">2020 / 02</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2020/01/">2020 / 01</a></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2019/12/">2019 / 12</a></li></ul>
     </div>
   </div>
 
