@@ -6,28 +6,21 @@
   
   <title>失敗した要求トレースを契機とするメモリダンプ (FREBDump) のよくあるご質問 | Japan Developer Support Internet Team Blog (旧 blog)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは。IIS サポート チームです！   弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てる内容をご提供させていただきます。  FREBDump について、今回はよくいただくご質問についてまとめました。 目次  FREBDump の検証手順について FREB の [トレースするコンテンツの指定] での [カスタム] の注意点について  FREBDump の検証手">
+  <meta name="description" content="お知らせ：本ページは新しいサイトに移行しましたご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。 本記事の移行先 : https:&#x2F;&#x2F;microsoft.github.io&#x2F;jpwebapps&#x2F;web-apps&#x2F;frebdump-faq&#x2F; 移行先の WebA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="失敗した要求トレースを契機とするメモリダンプ (FREBDump) のよくあるご質問">
 <meta property="og:url" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog (旧 blog)">
-<meta property="og:description" content="こんにちは。IIS サポート チームです！   弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てる内容をご提供させていただきます。  FREBDump について、今回はよくいただくご質問についてまとめました。 目次  FREBDump の検証手順について FREB の [トレースするコンテンツの指定] での [カスタム] の注意点について  FREBDump の検証手">
+<meta property="og:description" content="お知らせ：本ページは新しいサイトに移行しましたご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。 本記事の移行先 : https:&#x2F;&#x2F;microsoft.github.io&#x2F;jpwebapps&#x2F;web-apps&#x2F;frebdump-faq&#x2F; 移行先の WebA">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-02-46.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-00-59.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-20-13.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-22-28.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-12-53-09.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-13-20-16.png">
 <meta property="article:published_time" content="2021-05-26T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-21T07:02:22.495Z">
+<meta property="article:modified_time" content="2025-10-23T14:19:04.595Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="ログ採取">
 <meta property="article:tag" content="Internet Information Services">
 <meta property="article:tag" content="FREBDump">
 <meta property="article:tag" content="FAQ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpdsi.github.io/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-02-46.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog (旧 blog)" type="application/atom+xml">
   
@@ -112,46 +105,15 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+fd22747f-bfea-5f85-9ac9-a90716217bda%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5B%E5%A4%B1%E6%95%97%E3%81%97%E3%81%9F%E8%A6%81%E6%B1%82%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%92%E5%A5%91%E6%A9%9F%E3%81%A8%E3%81%99%E3%82%8B%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%80%E3%83%B3%E3%83%97+%28FREBDump%29+%E3%81%AE%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Fweb-apps%2Ffrebdump-faq%2F%29%0A*+Content+Source%3A+%5Barticles%2Fweb-apps%2Ffrebdump-faq.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Fweb-apps%2Ffrebdump-faq.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/web-apps/frebdump-faq/" data-id="cmh07z33j003qs84zg2n634nj" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/web-apps/frebdump-faq/" data-id="cmh3iecpw003qqf4z9zh67xuv" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは。IIS サポート チームです！  </p>
-<p>弊社にお問い合わせいただくお客様に、スムーズな解決をご提供するためにお役に立てる内容をご提供させていただきます。 </p>
-<p>FREBDump について、今回はよくいただくご質問についてまとめました。</p>
-<h2 id="目次"><a href="#目次" class="headerlink" title="目次 "></a>目次 <!-- omit in toc --></h2><ul>
-<li><a href="#FREBDump-%E3%81%AE%E6%A4%9C%E8%A8%BC%E6%89%8B%E9%A0%86%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">FREBDump の検証手順について</a></li>
-<li><a href="#FREB-%E3%81%AE-%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%81%99%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E6%8C%87%E5%AE%9A-%E3%81%A7%E3%81%AE-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0-%E3%81%AE%E6%B3%A8%E6%84%8F%E7%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">FREB の [トレースするコンテンツの指定] での [カスタム] の注意点について</a></li>
-</ul>
-<h2 id="FREBDump-の検証手順について"><a href="#FREBDump-の検証手順について" class="headerlink" title="FREBDump の検証手順について"></a>FREBDump の検証手順について</h2><p>以下簡易ではありますが、FREBDump が問題なく取得できるか確認するための取得手順をおまとめいたしました。<br>事前検証が必要な場合は、こちらによりメモリダンプが生成されているかご確認いただけますと幸いです。</p>
-<h3 id="ウェブサイトの作成"><a href="#ウェブサイトの作成" class="headerlink" title="ウェブサイトの作成"></a>ウェブサイトの作成<!-- omit in toc --></h3><p>IIS 上にウェブサイトを作成し、ウェブ アクセスした際に 200 レスポンスが返されることを契機として、メモリダンプを取得します。</p>
-<p>以下の画像のように、ウェブサイトを作成し、メモ帳などで作成した iisstart.htm を C:\inetpub\wwwroot 以下に作成します。問題なくアクセスできることを確認します。</p>
-<p><img src="/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-02-46.png" alt="IIS 上でのウェブサイトの作成手順説明図"></p>
-<h3 id="失敗した要求トレースの設定"><a href="#失敗した要求トレースの設定" class="headerlink" title="失敗した要求トレースの設定"></a>失敗した要求トレースの設定<!-- omit in toc --></h3><p>トレース条件の定義として、200 を指定します。<br>サイトにアクセスすることで、FREB の出力先に .xml 形式の出力があるかを確認します。</p>
-<p><img src="/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-00-59.png" alt="失敗した要求トレースの出力の確認図"></p>
-<h3 id="構成エディター-での-ProcDump-の設定"><a href="#構成エディター-での-ProcDump-の設定" class="headerlink" title="構成エディター での ProcDump の設定"></a>構成エディター での ProcDump の設定<!-- omit in toc --></h3><p>画像を参考に、サーバーにおいて構成エディタにて customActionEnabled の有効化を行います。<br>その後、サイトの構成エディターにおいて、[customActionExe]、[customeActionParams]、[customActionTriggerLimit] を以下の値で設定します。</p>
-<ul>
-<li>[customActionExe] : C:\Procdump\procdump.exe などのインストールした .exe のパス</li>
-<li>[customActionParams] : -accepteula -ma -s 30 -n 2 %1% &lt;任意のダンプの出力先のフォルダ&gt;</li>
-<li>[customActionTriggerLimit] : 1</li>
-</ul>
-<p><img src="/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-20-13.png"></p>
-<h3 id="ダンプ生成の確認"><a href="#ダンプ生成の確認" class="headerlink" title="ダンプ生成の確認"></a>ダンプ生成の確認<!-- omit in toc --></h3><p>作成したサイトにウェブ アクセスを行います。<br>200 レスポンスが返答されたことを契機として FREBDump が取得されます。<br>FREB、 ProcDump の出力先に ファイルが生成されていることをご確認ください。</p>
-<p><img src="/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-00-22-28.png"></p>
-<h2 id="FREB-の-トレースするコンテンツの指定-での-カスタム-の注意点について"><a href="#FREB-の-トレースするコンテンツの指定-での-カスタム-の注意点について" class="headerlink" title="FREB の [トレースするコンテンツの指定] での [カスタム] の注意点について"></a>FREB の [トレースするコンテンツの指定] での [カスタム] の注意点について</h2><p>カスタムにてパスを指定した際に、[既定のドキュメント] の設定によりサイトアクセスが “/“ ディレクトリでアクセスできる場合、FREB がうまく発火しない場合がございます。</p>
-<p>例えば、<a target="_blank" rel="noopener" href="http://localhost/iisstart.htm">http://localhost/iisstart.htm</a> がフルパスになるような iisstart.htm のファイルをサイトに配置します。</p>
-<p>既定の設定では、[既定のドキュメント] に iisstart.htm が存在するため、 https://&lt;サイト名/&gt; でアクセスが可能です。</p>
-<p><img src="/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-12-53-09.png"></p>
-<p>この場合、[カスタム] のパスに iisstart.htm や /iisstart.htm を設定していると、 “/“ などのディレクトリアクセスの時は FREB は発火しません。</p>
-<p><img src="/blog/web-apps/frebdump-faq/frebdump-faq_2021-05-20-13-20-16.png"></p>
-<p>[カスタム] の設定は FREB を仕掛けたいアプリケーションを制限する場合に有用な設定ですが、そのアプリケーションやウェブページが [既定のドキュメント] に存在する場合は以上の注意が必要になります。</p>
-<!-- 
+        <h2 id="お知らせ：本ページは新しいサイトに移行しました"><a href="#お知らせ：本ページは新しいサイトに移行しました" class="headerlink" title="お知らせ：本ページは新しいサイトに移行しました"></a>お知らせ：本ページは新しいサイトに移行しました</h2><p>ご覧いただき誠にありがとうございます。<br>恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。<br>最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。</p>
+<p>本記事の移行先 : <a target="_blank" rel="noopener" href="https://microsoft.github.io/jpwebapps/web-apps/frebdump-faq/">https://microsoft.github.io/jpwebapps/web-apps/frebdump-faq/</a></p>
+<p>移行先の WebApps ブログ URL : <a target="_blank" rel="noopener" href="https://aka.ms/jpwebappsblog">https://aka.ms/jpwebappsblog</a> (IIS / Azure Bot Service / Azure Web PubSub / ASP.NET など)</p>
 
-- FREBDump の customActionExe, customeActionParam, customeActionTrigger の説明
-- ProcDump のオプションについて
-
--->
       
       
         <div class="article-disclaimer">

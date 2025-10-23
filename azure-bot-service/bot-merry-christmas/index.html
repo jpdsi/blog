@@ -6,38 +6,18 @@
   
   <title>Bot Framework Composer を用いた Azure Bot 構築 | Japan Developer Support Internet Team Blog (旧 blog)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ちょっと早いですが Merry Christmas！Azure Bot Service サポート チームの石沢です！ 皆様、Bot Framework Composer をご存じですか？なんとこれを利用すればノンコーディングでも Bot を構築することが可能です！Bot でサービス構築したいけどコーディングはちょっと…という方でも GUI を操作するだけで構築完了してしまう優れものです。今回は初め">
+  <meta name="description" content="お知らせ：本ページは新しいサイトに移行しました ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。 本記事の移行先 : https:&#x2F;&#x2F;microsoft.github.io&#x2F;jpwebapps&#x2F;azure-bot-service&#x2F;bot-merry-chr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bot Framework Composer を用いた Azure Bot 構築">
 <meta property="og:url" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/index.html">
 <meta property="og:site_name" content="Japan Developer Support Internet Team Blog (旧 blog)">
-<meta property="og:description" content="ちょっと早いですが Merry Christmas！Azure Bot Service サポート チームの石沢です！ 皆様、Bot Framework Composer をご存じですか？なんとこれを利用すればノンコーディングでも Bot を構築することが可能です！Bot でサービス構築したいけどコーディングはちょっと…という方でも GUI を操作するだけで構築完了してしまう優れものです。今回は初め">
+<meta property="og:description" content="お知らせ：本ページは新しいサイトに移行しました ご覧いただき誠にありがとうございます。恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。 本記事の移行先 : https:&#x2F;&#x2F;microsoft.github.io&#x2F;jpwebapps&#x2F;azure-bot-service&#x2F;bot-merry-chr">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-01.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-02.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-03.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-04.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-05.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-06.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-07.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-08.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-09.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-10.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-11.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-12.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-13.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-14.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-15.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-16.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-17.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-18.png">
-<meta property="og:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-18.png">
 <meta property="article:published_time" content="2021-12-07T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-10-21T07:02:22.439Z">
+<meta property="article:modified_time" content="2025-10-23T14:19:04.583Z">
 <meta property="article:author" content="Developer Support Internet Japan">
 <meta property="article:tag" content="Azure Bot Service">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-01.png">
   
     <link rel="alternate" href="../../atom.xml" title="Japan Developer Support Internet Team Blog (旧 blog)" type="application/atom+xml">
   
@@ -122,65 +102,15 @@
         
         <a href="https://github.com/jpdsi/blog/issues/new?title=&body=%0A%0A---%0A%0A%23%23%23%23+Document+Details%0A%0A%E2%9A%A0+*Do+not+edit+this+section.%0A%0A*+ID%3A+6c749af3-fc71-5676-8a05-bd02a700ae9e%0A*+%E5%AF%BE%E8%B1%A1%E8%A8%98%E4%BA%8B%3A+%5BBot+Framework+Composer+%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F+Azure+Bot+%E6%A7%8B%E7%AF%89%5D%28https%3A%2F%2Fjpdsi.github.io%2Fblog%2Fazure-bot-service%2Fbot-merry-christmas%2F%29%0A*+Content+Source%3A+%5Barticles%2Fazure-bot-service%2Fbot-merry-christmas.md%5D%28https%3A%2F%2Fgithub.com%2Fjpdsi%2Fblog%2Fblob%2Fmain%2Farticles%2Fazure-bot-service%2Fbot-merry-christmas.md%29%0A*+Author%3A+" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
         
-        <a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/" data-id="cmh07z3180004s84z8yiz5fvs" class="article-share-link">共有</a>
+        <a data-url="https://jpdsi.github.io/blog/azure-bot-service/bot-merry-christmas/" data-id="cmh3iecng0004qf4zbl9kb3dj" class="article-share-link">共有</a>
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ちょっと早いですが Merry Christmas！Azure Bot Service サポート チームの石沢です！</p>
-<p>皆様、Bot Framework Composer をご存じですか？なんとこれを利用すればノンコーディングでも Bot を構築することが可能です！<br>Bot でサービス構築したいけどコーディングはちょっと…という方でも GUI を操作するだけで構築完了してしまう優れものです。<br>今回は初めての Bot Framework Composer を利用される方向けに、Merry Christmas と話しかけると Merry Christmas と返してくれる、こちらから話しかけた内容をそのままオウム返ししてくる Bot を Azure 上に構築してみます。</p>
-<hr>
-<p>Bot Framework Composer を利用するにあたって、以下のソフトウェアのインストールする必要があります。<br>本記事では、Node.js は 17.2.0、.NET Core SDK は 3.1.21、Composer は 2.0.0 バージョンを使用しました。</p>
-<p>・Node.js (<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a>)</p>
-<p>・.NET Core SDK 3.1 以降 (<a target="_blank" rel="noopener" href="https://dotnet.microsoft.com/download/dotnet/3.1">https://dotnet.microsoft.com/download/dotnet/3.1</a>)</p>
-<p>・Composer (<a target="_blank" rel="noopener" href="https://aka.ms/bf-composer-download-win">https://aka.ms/bf-composer-download-win</a>)</p>
-<p>参考：Install Bot Framework Composer - Prerequisites<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/composer/install-composer?tabs=windows#prerequisites">https://docs.microsoft.com/en-us/composer/install-composer?tabs=windows#prerequisites</a></p>
-<hr>
-<h1 id="1-Composer-を起動して-Bot-を作成しよう！"><a href="#1-Composer-を起動して-Bot-を作成しよう！" class="headerlink" title="1. Composer を起動して Bot を作成しよう！"></a>1. Composer を起動して Bot を作成しよう！</h1><p>それでは早速インストールした Composer を起動しましょう。<br>Composer を起動すると以下の画面が表示されますので、おもむろに [+ Create New] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-01.png" alt="Step1"></p>
-<p>表示された画面で、最もシンプルな Bot のテンプレートである “Empty Bot” を選択して、[Next] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-02.png" alt="Step2"></p>
-<p>次の画面ではこの Bot のプロジェクトに名前を付けてあげましょう。あわせて Bot が保存されるフォルダも指定してあげてください。<br>ここでは Runtime type は “Azure Web App” が設定されていることを確認して、[Create] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-03.png" alt="Step3"></p>
-<hr>
-<h1 id="2-Bot-を編集しよう！"><a href="#2-Bot-を編集しよう！" class="headerlink" title="2. Bot を編集しよう！"></a>2. Bot を編集しよう！</h1><p>さて、Create が無事完了すると以下のような画面に遷移します。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-04.png" alt="Step4"></p>
-<p>ここで左のナビゲーションパネルから、”Unknown intent” をクリックして、さらに “Send a response” をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-05.png" alt="Step5"></p>
-<p>“Unknown intent” では、ユーザーの入力が Bot 側でよくわからないものと認識された場合の処理フローが示されています。<br>今回の “Empty Bot” テンプレートの場合は、入力を認識するような処理は入っていないので、ユーザーの全ての入力がこのフローに入ります。<br>なんとなく想像できるのではないかと思いますが、ここでユーザーの入力をそのまま返すようにフローを書き替えるだけで、Merry Christmas という入力にたいして Merry Christmas という応答を返す Bot が完成します。<br>フローを書き替えるためには、まず右のパネルに表示された “Add alternative” をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-06.png" alt="Step6"></p>
-<p>ここで Bot が返すテキストを設定できるのですが、入力されたユーザーのテキストを示すプロパティを選択します。”{x}” をクリックして、”turn.activity.text” を選択します。 </p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-07.png" alt="Step7"></p>
-<p>選択できたら、”Sorry, I didn’t get that.” というレスポンスは不要なので、”Remove variation” をクリックして削除してしまいましょう。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-08.png" alt="Step8"></p>
-<p>これでオウム返しする Bot が完成しました！</p>
-<hr>
-<h1 id="3-Bot-を-ローカルでテストしよう！"><a href="#3-Bot-を-ローカルでテストしよう！" class="headerlink" title="3. Bot を ローカルでテストしよう！"></a>3. Bot を ローカルでテストしよう！</h1><p>Composer ではローカルでのテストも容易に行うことができます！<br>後日記事を追記いたしますので、今しばらくお待ちください。</p>
-<hr>
-<h1 id="4-Bot-を-Publishしよう！"><a href="#4-Bot-を-Publishしよう！" class="headerlink" title="4. Bot を Publishしよう！"></a>4. Bot を Publishしよう！</h1><p>さて、あとは作成した Bot を Azure 上に Deploy して Publish するだけです。<br>これも GUI でぽちぽちするだけでできます。Composer の雲のマークのメニューを選択して、”Publishing profile” タブを選択して、さらに [Add new] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-09.png" alt="Step9"></p>
-<p>ここで Publish 用のプロファイルを作成します。Name は任意のものを入力し、Publishing target には “Publish bot to Azure” を選択して、[Next] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-10.png" alt="Step10"><br>次に Bot を動作させるために新しいリソースを作成するか、既存のリソースをインポートするかを選択します。<br>ここでは、新しくリソースを作成するため “Create new resources” を選択して、[Next] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-11.png" alt="Step11"></p>
-<p>Azure アカウントへのログインが求められるのでログインします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-12.png" alt="Step12"></p>
-<p>ログインできたら、利用するサブスクリプションや Resource group についての設定を行い、[Next] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-13.png" alt="Step13"></p>
-<p>次に追加するリソースを選択します。今回の目的の通り動作させるだけであれば “Required” 以外は追加しなくても問題ありません。</p>
-<p>確認画面が出てくるので、問題なさそうであれば [Create] をクリックして、リソースのデプロイが完了するのを待ちましょう。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-14.png" alt="Step14"></p>
-<p>以下のようなメッセージが表示されれば OK です！</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-15.png" alt="Step15"></p>
-<p>次に “Publish” タブを選択してから、パブリッシュしたい Bot にチェックを入れて、先ほど作成したプロファイルを “Publish target” に設定したら [Publish selected bots] をクリックします。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-16.png" alt="Step16"></p>
-<p>次の画面では、Comments に任意のコメントを入れて、[Okay] をクリックして Publish の完了を待ちましょう。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-17.png" alt="Step17"></p>
-<p>Publish が成功しているかどうかは、Message に ”Success” と表示されていることで確認できます。</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-18.png" alt="Step18"></p>
-<hr>
-<h1 id="5-Bot-の動作確認をしよう！"><a href="#5-Bot-の動作確認をしよう！" class="headerlink" title="5. Bot の動作確認をしよう！"></a>5. Bot の動作確認をしよう！</h1><p>ここでは詳細は割愛しますが、Azure Portal にアクセスして、作成した Azure Bot リソースから、”Web チャットでテスト” で実際に動作させてみるのが最も簡単な動作確認方法でしょう。<br>当初の目的であった “Merry Christmas と話しかけると Merry Christmas と返してくれる Bot を Azure 上に構築する” が達成できたことを確認できます！</p>
-<p><img src="/blog/azure-bot-service/bot-merry-christmas/bot-merry-christmas-18.png" alt="Step19"></p>
-<p>というわけで 1 つもコーディングせずに Bot の構築ができてしまいました！<br>今回は以上です。それでは、また次回！</p>
+        <p>お知らせ：本ページは新しいサイトに移行しました</p>
+<p>ご覧いただき誠にありがとうございます。<br>恐れ入りますが、本ページの内容は、以下の URL に移転いたしました。<br>最新の情報や更新内容は以下の URL にてご確認くださいますようお願い申し上げます。</p>
+<p>本記事の移行先 : <a target="_blank" rel="noopener" href="https://microsoft.github.io/jpwebapps/azure-bot-service/bot-merry-christmas/">https://microsoft.github.io/jpwebapps/azure-bot-service/bot-merry-christmas/</a></p>
+<p>移行先の WebApps ブログ URL : <a target="_blank" rel="noopener" href="https://aka.ms/jpwebappsblog">https://aka.ms/jpwebappsblog</a> (IIS / Azure Bot Service / Azure Web PubSub / ASP.NET など)</p>
 
       
       
